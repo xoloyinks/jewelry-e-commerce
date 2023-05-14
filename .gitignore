@@ -27,4 +27,7 @@ yarn-error.log*
 
 *node_modules/
 
+<<<<<<< HEAD
 *src/pages/images
+=======
+>>>>>>> master
