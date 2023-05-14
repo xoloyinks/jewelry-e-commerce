@@ -1,0 +1,19 @@
+body{
+    width: 100vw;
+    overflow-x: hidden;
+}
+
+.exibit{
+    position: absolute;
+    
+    z-index: 0;
+}
+.banner{
+    z-index: 1;
+}
+.nav{
+    background: rgba(0, 0, 0, 0.5);
+}
+#ex{
+    object-fit: cover;
+}
