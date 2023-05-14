@@ -24,3 +24,5 @@ yarn-error.log*
 
 *src/input.css
 *tailwind.config.js
+
+*node_modules/
