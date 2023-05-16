@@ -1,29 +1,49 @@
 import React from 'react'
 import { BsBag } from 'react-icons/bs'
-import { AiOutlineUser } from 'react-icons/ai'
+
+
+
+const nav_change = () => {
+    if(document.documentElement.scrollTop > 100){
+        document.getElementById('nav').style.cssText = 'background-color:white; transition:0.5s;';
+        document.getElementById('logo').style.cssText = 'color:black;';
+        document.getElementById('bar-1').style.cssText = "border:solid 2px black;";
+        document.getElementById('bar-2').style.cssText = "border:solid 2px black;";
+        document.getElementById('bar-3').style.cssText = "border:solid 2px black;";
+        document.querySelector('.cart').style.cssText = "color:black;";
+    }else{
+        document.getElementById('nav').style.cssText = 'background-color:none; transition:0.5s;';
+        document.getElementById('logo').style.cssText = 'color:white; transition:0.5s;';
+        document.getElementById('bar-1').style.cssText = "border:solid 2px white; transition:0.5s;";
+        document.getElementById('bar-2').style.cssText = "border:solid 2px white; transition:0.5s;";
+        document.getElementById('bar-3').style.cssText = "border:solid 2px white; transition:0.5s;";
+        document.querySelector('.cart').style.cssText = "color:white; transition:0.5s;";
+        return;
+    }
+
+}
+
+window.addEventListener('scroll', nav_change, true);
 
 export default function Nav() {
   return (
     <>
-        <section className='nav flex items-center justify-between px-3 py-8 fixed w-screen'>
-            <button className=' h-[27px] w-[47px]'>
-                <div className='flex flex-col justify-between w-[27px] h-full'>
-                    <div className='border-2 border-white w-full'></div>
-                    <div className='border-2 border-white w-7/12'></div>
-                    <div className='border-2 border-white w-full'></div>
+        <section id='nav' className='nav flex items-center justify-between px-3 py-8 fixed w-screen'>
+            <button className=' h-[fit-content] w-[47px] p-3'>
+                <div className='flex flex-col justify-between w-[27px] h-[24px]'>
+                    <div id='bar-1' className='bar border-2 border-white w-full rounded-full'></div>
+                    <div id='bar-2' className='bar border-2 border-white w-7/12 rounded-full'></div>
+                    <div id='bar-3' className='bar border-2 border-white w-full rounded-full'></div>
                 </div>
             </button>
-            <div className='text-2xl text-white'> 
+            <div id='logo' className='text-xl text-white font-bold'> 
                 Shynel
             </div>
             <div className='w-[50px] flex justify-between text-xl'>
-            <button>
-                    <AiOutlineUser color='white' />
+                <button className='relative p-2'>
+                    <BsBag className='cart font-bold text-white' />
+                    <span className='__marked flex items-center bg-white absolute h-[20px] px-[5px] text-[11px] rounded-full top-0 right-0 font-[10px]'>0</span>
                 </button>
-                <button>
-                    <BsBag color='white' />
-                </button>
-                
             </div>
         </section>
     </>
