@@ -44,7 +44,7 @@ const Each_item = ({image ,caption,amount,id}) => {
         <>
             <div id={id} className='flex w-[95%] pop_item snap-always snap-center '>
                 <div className='h-full'>
-                    <img src={image} alt="Rings" className='h-[400px]' />
+                    <img src={image} alt="Rings" className='h-[420px]' />
                     <div className='py-3 flex justify-between'>
                         <span className='w-10/12 text-sm'>{caption.toUpperCase()}</span>
                         <button className=' px-4 text-[20px]'><FaRegHeart /></button>
@@ -104,7 +104,7 @@ export default function Popular() {
                 <h1 className='w-[fit-content] px-3 text-[9px]'>DISCOVER OUR MOST LOVED ACCESSORIES!</h1>
             </div>   
             <div id='carousel_control' className='scroll-smooth w-[full] px-2 overflow-x-scroll snap-x snap-mandatory py-5'>
-                <div className='flex flex-nowrap w-[1050px] justify-between '>
+                <div className='flex flex-nowrap w-[1150px] justify-between '>
                     <Pop_item />
                 </div>
             </div>

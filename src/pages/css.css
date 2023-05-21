@@ -13,7 +13,7 @@ body{
 }
 .exibit{
     position: absolute;
-    background-image: url(images/pexels-nataliya-vaitkevich-8100402.jpg);
+    background-image: url(images/pexels-cottonbro-studio-5359322.jpg);
     background-size: cover;
     z-index: 0;
 }
@@ -24,7 +24,7 @@ body{
     z-index: 111;
 }
 .__banner{
-    /* background: rgba(0, 0, 0, 0.6); */
+    background: rgba(202, 202, 202, 0.6);
 }
 
 #ex{
@@ -37,7 +37,7 @@ body{
 .upgrade{
     color: transparent;
     -webkit-text-stroke: 2px black;
-    text-stroke:3px white;
+    /* text-stroke:3px white; */
     text-shadow:none;
 }
 
