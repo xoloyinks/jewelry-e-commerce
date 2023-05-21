@@ -12,13 +12,13 @@ export default function Banner() {
             </div>
             <div className='tpx-10 px-5 text-white top-[150px] absolute '>
               <p className='upgrade text-black text-7xl tracking-wide'>Upgrade</p>
-              <p className='text-5xl text-black font-bold px-5 tracking-wider'>your style.</p>
+              <p className='text-5xl text-yellow-500 font-bold px-5 tracking-wider'>your style.</p>
             </div>
             
-            <div className='absolute bottom-[100px] text-black px-10 font-bold'>
+            <div className='absolute bottom-[100px] text-white px-10 font-bold'>
                 SHOP NOW
-                <button className='px-3 py-3 border-2 border-black rounded-full mx-3'>
-                    <FaGreaterThan className='text-black rotate-90' />
+                <button className='px-3 py-3 border-2 border-white rounded-full mx-3'>
+                    <FaGreaterThan className='text-white rotate-90' />
                 </button>
             </div>
         </section>
