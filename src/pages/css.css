@@ -13,7 +13,7 @@ body{
 }
 .exibit{
     position: absolute;
-    background-image: url(images/pexels-bestbe-models-2301285.jpg);
+    background-image: url(images/pexels-nataliya-vaitkevich-8100402.jpg);
     background-size: cover;
     z-index: 0;
 }
@@ -24,7 +24,7 @@ body{
     z-index: 111;
 }
 .__banner{
-    background: rgba(0, 0, 0, 0.6);
+    /* background: rgba(0, 0, 0, 0.6); */
 }
 
 #ex{
@@ -36,8 +36,8 @@ body{
 
 .upgrade{
     color: transparent;
-    -webkit-text-stroke: 1px white;
-    text-stroke:2px white;
+    -webkit-text-stroke: 2px black;
+    text-stroke:3px white;
     text-shadow:none;
 }
 
@@ -57,7 +57,9 @@ body{
     margin-left: 10px;
     margin-right: 10px;
 }
-
+.pop_item:last-child{
+    margin-right: 0;
+}
 .golden{
     background-image: url(images/pexels-dids-1302307.jpg);
     background-size: cover;

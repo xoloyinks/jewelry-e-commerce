@@ -613,6 +613,11 @@ video {
   margin-right: 0.75rem;
 }
 
+.mx-\[3px\] {
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
 .flex {
   display: flex;
 }
@@ -783,6 +788,10 @@ video {
 
 .w-\[800px\] {
   width: 800px;
+}
+
+.w-\[1050px\] {
+  width: 1050px;
 }
 
 .rotate-90 {
@@ -970,6 +979,11 @@ video {
   padding-bottom: 0.5rem;
 }
 
+.py-10 {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
 .pl-5 {
   padding-left: 1.25rem;
 }
@@ -1073,6 +1087,11 @@ video {
 .text-gray-500 {
   --tw-text-opacity: 1;
   color: rgb(107 114 128 / var(--tw-text-opacity));
+}
+
+.text-black {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
 .ring {

@@ -13,11 +13,11 @@ const nav_change = () => {
         document.querySelector('.cart').style.cssText = "color:black;";
     }else{
         document.getElementById('nav').style.cssText = 'background-color:none; transition:0.5s;';
-        document.getElementById('logo').style.cssText = 'color:white; transition:0.5s;';
-        document.getElementById('bar-1').style.cssText = "border:solid 2px white; transition:0.5s; background-color:white;";
-        document.getElementById('bar-2').style.cssText = "border:solid 2px white; transition:0.5s; background-color:white;";
-        document.getElementById('bar-3').style.cssText = "border:solid 2px white; transition:0.5s; background-color:white;";
-        document.querySelector('.cart').style.cssText = "color:white; transition:0.5s;";
+        document.getElementById('logo').style.cssText = 'color:black; transition:0.5s;';
+        document.getElementById('bar-1').style.cssText = "border:solid 2px black; transition:0.5s; background-color:black;";
+        document.getElementById('bar-2').style.cssText = "border:solid 2px black; transition:0.5s; background-color:black;";
+        document.getElementById('bar-3').style.cssText = "border:solid 2px black; transition:0.5s; background-color:black;";
+        document.querySelector('.cart').style.cssText = "color:black; transition:0.5s;";
         return;
     }
 

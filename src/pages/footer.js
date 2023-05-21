@@ -7,7 +7,7 @@ import {SlSocialFacebook} from 'react-icons/sl'
 export default function Footer() {
   return (
     <>
-        <section className='py-5 p-5'>
+        <section className='py-10 p-5'>
             <div>
                 <h1 className='w-9/12'>
                     SUBSCRIBE TO OUR NEWSLETTER 
@@ -27,16 +27,16 @@ export default function Footer() {
             <div className='text-[14px] tracking-wide h-[25vh] flex justify-between'>
                 <div className='flex flex-col h-full w-[40%]'>
                     <span className='py-3 font-bold'>NAVIGATION</span>
-                    <a href='#' className='py-3'>ABOUT US</a>
-                    <a href='#' className='py-3'>MOST POPULAR</a>
-                    <a href='#' className='py-3'>SPECIAL</a>
-                    <a href='#' className='py-3'>NEW IN</a>
+                    <a href='#' className='py-3 w-[fit-content]'>ABOUT US</a>
+                    <a href='#' className='py-3 w-[fit-content]'>MOST POPULAR</a>
+                    <a href='#' className='py-3 w-[fit-content]'>SPECIAL</a>
+                    <a href='#' className='py-3 w-[fit-content]'>NEW IN</a>
                 </div>
                 <div className='flex flex-col h-full w-[40%]'>
                     <span className='py-3 font-bold'>INFO</span>
-                    <a href='#' className='py-3'>CONTACTS</a>
-                    <a href='#' className='py-3'>SHIPPING AND PAYMENT</a>
-                    <a href='#' className='py-3'>FAQ</a>
+                    <a href='#' className='py-3 w-[fit-content]'>CONTACTS</a>
+                    <a href='#' className='py-3 w-[fit-content]'>SHIPPING AND PAYMENT</a>
+                    <a href='#' className='py-3 w-[fit-content]'>FAQ</a>
                 </div>
             </div>
             <br />
