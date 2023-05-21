@@ -41,4 +41,41 @@ body{
     text-shadow:none;
 }
 
+.carousel{
+    background-color: #d1d5db;
+}
+.ticked{
+    background-color: #ca8a04;
+    transition: 0.5s;
+}
+
+.item_container{
+    transition: 0.5s;
+}
+
+.pop_item:nth-child(even){
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.golden{
+    background-image: url(images/pexels-dids-1302307.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.promotion{
+    background-image: url(images/pexels-rafael-barros-1716539.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+.promotion_caption{
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+input:focus{
+    outline: none;
+}
+
 /* https://jewelry-git-master-xoloyinks.vercel.app/ */
