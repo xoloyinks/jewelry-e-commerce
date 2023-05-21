@@ -603,6 +603,14 @@ video {
   top: 200px;
 }
 
+.top-\[100px\] {
+  top: 100px;
+}
+
+.top-\[150px\] {
+  top: 150px;
+}
+
 .mx-2 {
   margin-left: 0.5rem;
   margin-right: 0.5rem;

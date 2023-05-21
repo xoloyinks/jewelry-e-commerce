@@ -10,7 +10,7 @@ export default function Banner() {
             <div className='exibit w-screen h-screen'>
                 <div className='__banner w-screen h-screen'></div>
             </div>
-            <div className='tpx-10 px-5 text-white top-[200px] absolute '>
+            <div className='tpx-10 px-5 text-white top-[150px] absolute '>
               <p className='upgrade text-black text-7xl tracking-wide'>Upgrade</p>
               <p className='text-5xl text-black font-bold px-5 tracking-wider'>your style.</p>
             </div>
