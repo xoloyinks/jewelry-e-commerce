@@ -28,7 +28,7 @@ window.addEventListener('scroll', nav_change, true);
 export default function Nav() {
   return (
     <>
-        <section id='nav' className='nav flex items-center justify-between px-3 py-8 fixed w-screen'>
+        <section id='nav' className='nav flex items-center justify-between px-3 py-5 fixed w-screen'>
             <button className=' h-[fit-content] w-[47px] p-3'>
                 <div className='flex flex-col justify-between w-[27px] h-[24px]'>
                     <div id='bar-1' className='bar border-2 border-white bg-white w-full rounded-full'></div>
@@ -36,7 +36,7 @@ export default function Nav() {
                     <div id='bar-3' className='bar border-2 border-white bg-white w-full rounded-full'></div>
                 </div>
             </button>
-            <div id='logo' className='text-xl text-white font-bold'> 
+            <div id='logo' className='text-2xl text-white font-bold'> 
                 Shynel
             </div>
             <div className='w-[50px] flex justify-between text-xl'>

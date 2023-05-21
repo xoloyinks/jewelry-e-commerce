@@ -26,14 +26,14 @@ export default function Footer() {
             <br />
             <div className='text-[14px] tracking-wide h-[25vh] flex justify-between'>
                 <div className='flex flex-col h-full w-[40%]'>
-                    <span className='py-3'>NAVIGATION</span>
+                    <span className='py-3 font-bold'>NAVIGATION</span>
                     <a href='#' className='py-3'>ABOUT US</a>
                     <a href='#' className='py-3'>MOST POPULAR</a>
                     <a href='#' className='py-3'>SPECIAL</a>
                     <a href='#' className='py-3'>NEW IN</a>
                 </div>
                 <div className='flex flex-col h-full w-[40%]'>
-                    <span className='py-3'>INFO</span>
+                    <span className='py-3 font-bold'>INFO</span>
                     <a href='#' className='py-3'>CONTACTS</a>
                     <a href='#' className='py-3'>SHIPPING AND PAYMENT</a>
                     <a href='#' className='py-3'>FAQ</a>
@@ -45,7 +45,7 @@ export default function Footer() {
                 <a href='#'><IoLogoInstagram /></a>
                 <a href='#'><SlSocialFacebook /></a>
             </div>
-            <div className='flex justify-between px-5 py-2'>
+            <div className='flex justify-between items-center px-2 py-2'>
                 <span className='text-[13px]'>&copy; 2023 XOLO. All rights reserved</span>
                 <span className='text-[10px]'>Privacy Statement</span>
             </div>

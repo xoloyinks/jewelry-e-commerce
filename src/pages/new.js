@@ -31,9 +31,9 @@ const Each_item = ({image, title, price}) => {
         <>
             <div className='flex w-[95%] pop_item snap-always snap-center '>
                 <div className='h-full'>
-                    <img src={image} alt="Rings" className='h-[500px]' />
+                    <img src={image} alt="Rings" className='h-[400px]' />
                     <div className='py-3 flex justify-between'>
-                        <span className='w-10/12'>{title.toUpperCase()}</span>
+                        <span className='w-10/12 text-sm'>{title.toUpperCase()}</span>
                         <button className=' px-4 text-[20px]'><FaRegHeart /></button>
                     </div>
                     <div className='py text-yellow-600'>
@@ -48,13 +48,13 @@ const Each_item = ({image, title, price}) => {
 export default function New() {
   return (
     <>
-        <section className='w-screen h-[85vh] py-5'>
+        <section className='w-screen h-[72vh] py-5'>
             <div className='p-2 flex items-center '>
                 <span className='text-[14px] tracking-wide pr-2 font-bold w-[20%]' >NEW IN</span>
                 <span className='text-[9px] text-right w-[78%] border-b-[1px] border-black'><button>See more</button></span>
             </div>
             <div id='carousel_control' className='scroll-smooth w-[full] px-2 overflow-x-scroll snap-x snap-mandatory py-5'>
-                <div className='flex flex-nowrap w-[1000px] justify-between '>
+                <div className='flex flex-nowrap w-[800px] justify-between '>
                     <New_items />
                 </div>
             </div>

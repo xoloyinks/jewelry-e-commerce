@@ -4,6 +4,7 @@ import ring from "./images/pexels-fernando-arcos-204427.jpg"
 import bracelet from "./images/pexels-gökhan-yetimova-15291703.jpg"
 import chain from "./images/pexels-monstera-6979015.jpg"
 import { FaHeart, FaRegHeart } from 'react-icons/fa'
+import {RxDot} from 'react-icons/rx'
 
 
 const data = [
@@ -36,9 +37,9 @@ const Each_item = ({image ,caption,amount,id}) => {
         <>
             <div id={id} className='flex w-[95%] pop_item snap-always snap-center '>
                 <div className='h-full'>
-                    <img src={image} alt="Rings" className='h-[500px]' />
+                    <img src={image} alt="Rings" className='h-[400px]' />
                     <div className='py-3 flex justify-between'>
-                        <span className='w-10/12'>{caption.toUpperCase()}</span>
+                        <span className='w-10/12 text-sm'>{caption.toUpperCase()}</span>
                         <button className=' px-4 text-[20px]'><FaRegHeart /></button>
                     </div>
                     <div className='py text-yellow-600'>
@@ -80,13 +81,13 @@ export default function Popular() {
     }
   return (
     <>
-        <section className='w-screen h-[90vh] py- flex flex-col justify-center'>
+        <section className='w-screen h-[75vh] pt-5 flex flex-col justify-center'>
             <div className='p-2 flex items-center w-full'>
                 <h1 className=' border-r-2 border-black font-bold pr-2 text-[14px] tracking-wide'>MOST POPULAR</h1>
                 <h1 className='w-[fit-content] px-3 text-[9px]'>DISCOVER OUR MOST LOVED ACCESSORIES!</h1>
             </div>   
             <div id='carousel_control' className='scroll-smooth w-[full] px-2 overflow-x-scroll snap-x snap-mandatory py-5'>
-                <div className='flex flex-nowrap w-[1000px] justify-between '>
+                <div className='flex flex-nowrap w-[800px] justify-between '>
                     <Pop_item />
                 </div>
             </div>
