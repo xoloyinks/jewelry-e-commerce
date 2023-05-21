@@ -35,10 +35,18 @@ body{
 }
 
 .upgrade{
-    color: transparent;
-    -webkit-text-stroke: 2px white;
+    background-color: red;
+    background-image: linear-gradient(45deg,gold,rgb(252, 159, 159),  #ca8a04);
+    background-size: 100%;
+    /* -webkit-text-stroke: 2px white; */
     /* text-stroke:3px white; */
-    text-shadow:none;
+    /* text-shadow:none; */
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+
 }
 
 .carousel{

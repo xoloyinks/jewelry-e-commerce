@@ -11,8 +11,8 @@ export default function Banner() {
                 <div className='__banner w-screen h-screen'></div>
             </div>
             <div className='tpx-10 px-5 text-white top-[150px] absolute '>
-              <p className='upgrade text-black text-7xl tracking-wide'>Upgrade</p>
-              <p className='text-5xl text-yellow-500 font-bold px-5 tracking-wider'>your style.</p>
+              <p className='upgrade text-black text-7xl tracking-wider p-2 font-bold'>Upgrade</p>
+              <p className='text-3xl text-yellow-500 font-bold px-5 tracking-wider'>your style.</p>
             </div>
             
             <div className='absolute bottom-[100px] text-white px-10 font-bold'>
