@@ -26,9 +26,8 @@ yarn-error.log*
 *tailwind.config.js
 
 *node_modules/
-*src/pages/images
 
 <<<<<<< HEAD
-*src/pages/images
+
 =======
 >>>>>>> master
