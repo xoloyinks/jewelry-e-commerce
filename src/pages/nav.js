@@ -12,6 +12,7 @@ const nav_change = () => {
         document.getElementById('bar-2').style.cssText = "border:solid 2px black; background-color:black;";
         document.getElementById('bar-3').style.cssText = "border:solid 2px black; background-color:black;";
         document.querySelector('.cart').style.cssText = "color:black;";
+        document.querySelector('.__marked').style.cssText = "color:black; background-color:white;";
     }else{
         document.getElementById('nav').style.cssText = 'background-color: transperent; transition:0.5s;';
         document.querySelector('.info').style.cssText = 'display:block';
@@ -20,6 +21,7 @@ const nav_change = () => {
         document.getElementById('bar-2').style.cssText = "border:solid 2px black; transition:0.5s; background-color:black;";
         document.getElementById('bar-3').style.cssText = "border:solid 2px black; transition:0.5s; background-color:black;";
         document.querySelector('.cart').style.cssText = "color:black; transition:0.5s;";
+        document.querySelector('.__marked').style.cssText = "color:white;";
         return;
     }
 
@@ -37,18 +39,18 @@ export default function Nav() {
             <div className='flex items-center justify-between px-3 py-5 '>
                 <button className=' h-[fit-content] w-[47px] p-3'>
                     <div className='flex flex-col justify-between w-[27px] h-[24px]'>
-                        <div id='bar-1' className='bar border-2 border-white bg-white w-full rounded-full'></div>
-                        <div id='bar-2' className='bar border-2 border-white bg-white w-7/12 rounded-full'></div>
-                        <div id='bar-3' className='bar border-2 border-white bg-white w-full rounded-full'></div>
+                        <div id='bar-1' className='bar border-2 border-black bg-black w-full rounded-full'></div>
+                        <div id='bar-2' className='bar border-2 border-black bg-black w-7/12 rounded-full'></div>
+                        <div id='bar-3' className='bar border-2 border-black bg-black w-full rounded-full'></div>
                     </div>
                 </button>
-                <div id='logo' className='text-2xl text-white font-bold'> 
+                <div id='logo' className='text-2xl  font-bold'> 
                     Shynel
                 </div>
                 <div className='w-[50px] flex justify-between text-xl'>
                     <button className='relative p-2'>
-                        <BsBag className='cart font-bold text-white' />
-                        <span className='__marked flex items-center bg-white absolute h-[20px] px-[5px] text-[11px] rounded-full top-0 right-0 font-[10px]'>0</span>
+                        <BsBag className='cart font-bold text-black' />
+                        <span className='__marked flex items-center bg-black text-white absolute h-[20px] px-[5px] text-[11px] rounded-full top-0 right-0 font-[10px]'>0</span>
                     </button>
                 </div>
             </div>
