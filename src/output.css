@@ -623,6 +623,14 @@ video {
   bottom: 60px;
 }
 
+.-bottom-\[30px\] {
+  bottom: -30px;
+}
+
+.-bottom-\[50px\] {
+  bottom: -50px;
+}
+
 .z-50 {
   z-index: 50;
 }
@@ -701,6 +709,14 @@ video {
 
 .h-\[94\%\] {
   height: 94%;
+}
+
+.h-\[90\%\] {
+  height: 90%;
+}
+
+.h-\[92\%\] {
+  height: 92%;
 }
 
 .w-10\/12 {
@@ -1085,6 +1101,14 @@ video {
 
 .font-bold {
   font-weight: 700;
+}
+
+.font-light {
+  font-weight: 300;
+}
+
+.font-thin {
+  font-weight: 100;
 }
 
 .tracking-wide {
