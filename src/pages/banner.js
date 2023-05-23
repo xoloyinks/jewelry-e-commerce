@@ -67,7 +67,7 @@ const Cover = () => {
                 <div className=' text-2xl tracking-widest font-thin my-3'>{banner[bannerIndex].title.toUpperCase()}</div>
                 <button className='px-10 py-4 text-sm bg-gray-700 tracking-widest'>{banner[bannerIndex].buttonCaption.toUpperCase()}</button>
                 <ul className='flex mt-5 text-2xl'>
-                  {banner.map((datum) =>  <li key={datum.id}><a ref={changeBanner} onClick={addMean} className='text-white'><RxDot /></a></li>)}
+                  {banner.map((datum) =>  <li key={datum.id}><button ref={changeBanner} onClick={addMean} className='text-white'><RxDot /></button></li>)}
                 </ul>
               </div>
              
