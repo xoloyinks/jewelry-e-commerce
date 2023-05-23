@@ -631,6 +631,14 @@ video {
   bottom: -50px;
 }
 
+.-bottom-\[70px\] {
+  bottom: -70px;
+}
+
+.-bottom-\[40px\] {
+  bottom: -40px;
+}
+
 .z-50 {
   z-index: 50;
 }
@@ -1014,6 +1022,11 @@ video {
 .px-8 {
   padding-left: 2rem;
   padding-right: 2rem;
+}
+
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .pl-5 {
