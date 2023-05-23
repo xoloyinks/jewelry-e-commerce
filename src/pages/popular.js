@@ -98,7 +98,7 @@ export default function Popular() {
     }
   return (
     <>
-        <section className='w-screen h-[75vh] pt-5 flex flex-col justify-center'>
+        <section id='popular' className='w-screen h-[75vh] pt-5 flex flex-col justify-center'>
             <div className='p-2 flex items-center w-full'>
                 <h1 className=' border-r-2 border-black font-bold pr-2 text-[14px] tracking-wide'>MOST POPULAR</h1>
                 <h1 className='w-[fit-content] px-3 text-[9px]'>DISCOVER OUR MOST LOVED ACCESSORIES!</h1>

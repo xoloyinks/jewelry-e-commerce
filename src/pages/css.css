@@ -12,10 +12,10 @@ body{
     font-family: 'Great Vibes', cursive;
 }
 .exibit{
-    position: absolute;
-    background-image: url(images/pexels-bestbe-models-2301285.jpg);
+    background-image: url(images/header-1_x800.jpg);
     background-size: cover;
-    z-index: 0;
+    background-position-x: 70%;
+    background-repeat: no-repeat;
 }
 .banner{
     z-index: 1;
@@ -24,7 +24,8 @@ body{
     z-index: 111;
 }
 .__banner{
-    background: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    background: rgba(0, 0, 0, 0.2);
 }
 
 #ex{

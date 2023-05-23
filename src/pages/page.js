@@ -16,6 +16,7 @@ export default function Page() {
   return (
     <>
         <section ref={scrollRef}>
+            
             <Nav />
             <Banner />
             <Popular />
