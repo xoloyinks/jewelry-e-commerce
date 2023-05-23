@@ -14,7 +14,7 @@ body{
 .exibit{
     background-image: url(images/header-1_x800.jpg);
     background-size: cover;
-    background-position-x: 70%;
+    background-position: 70% 50%;
     background-repeat: no-repeat;
 }
 .banner{

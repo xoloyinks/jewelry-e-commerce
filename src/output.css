@@ -639,6 +639,10 @@ video {
   bottom: -40px;
 }
 
+.-bottom-\[20px\] {
+  bottom: -20px;
+}
+
 .z-50 {
   z-index: 50;
 }
@@ -725,6 +729,10 @@ video {
 
 .h-\[92\%\] {
   height: 92%;
+}
+
+.h-\[92vh\] {
+  height: 92vh;
 }
 
 .w-10\/12 {
