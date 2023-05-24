@@ -62,40 +62,40 @@ const Each_item = ({image ,caption,amount,id}) => {
 
 
 export default function Popular() {
-    const carousel_1 = useRef();
-    const carousel_2 = useRef();
-    const carousel_3 = useRef();
-    const carousel_4 = useRef();
+    // const carousel_1 = useRef();
+    // const carousel_2 = useRef();
+    // const carousel_3 = useRef();
+    // const carousel_4 = useRef();
 
-    const carousel_container = document.getElementById('carousel_control');
+    // const carousel_container = document.getElementById('carousel_control');
 
 
-    const carousel_one = (e) => {
-        // e.preventDefault();
-        // window.scrollBy(0,500);
-        carousel_1.current.classList.add('ticked');
-        carousel_2.current.classList.remove('ticked');
-        carousel_3.current.classList.remove('ticked');
-        carousel_4.current.classList.remove('ticked');
-    }
-    const carousel_two = () => {
-        carousel_1.current.classList.remove('ticked');
-        carousel_2.current.classList.add('ticked');
-        carousel_3.current.classList.remove('ticked');
-        carousel_4.current.classList.remove('ticked');
-    }
-    const carousel_three = () => {
-        carousel_1.current.classList.remove('ticked');
-        carousel_2.current.classList.remove('ticked');
-        carousel_3.current.classList.add('ticked');
-        carousel_4.current.classList.remove('ticked');
-    }
-    const carousel_four = () => {
-        carousel_1.current.classList.remove('ticked');
-        carousel_2.current.classList.remove('ticked');
-        carousel_3.current.classList.remove('ticked');
-        carousel_4.current.classList.add('ticked');
-    }
+    // const carousel_one = (e) => {
+    //     // e.preventDefault();
+    //     // window.scrollBy(0,500);
+    //     carousel_1.current.classList.add('ticked');
+    //     carousel_2.current.classList.remove('ticked');
+    //     carousel_3.current.classList.remove('ticked');
+    //     carousel_4.current.classList.remove('ticked');
+    // }
+    // const carousel_two = () => {
+    //     carousel_1.current.classList.remove('ticked');
+    //     carousel_2.current.classList.add('ticked');
+    //     carousel_3.current.classList.remove('ticked');
+    //     carousel_4.current.classList.remove('ticked');
+    // }
+    // const carousel_three = () => {
+    //     carousel_1.current.classList.remove('ticked');
+    //     carousel_2.current.classList.remove('ticked');
+    //     carousel_3.current.classList.add('ticked');
+    //     carousel_4.current.classList.remove('ticked');
+    // }
+    // const carousel_four = () => {
+    //     carousel_1.current.classList.remove('ticked');
+    //     carousel_2.current.classList.remove('ticked');
+    //     carousel_3.current.classList.remove('ticked');
+    //     carousel_4.current.classList.add('ticked');
+    // }
   return (
     <>
         <section id='popular' className='w-screen h-[75vh] pt-5 flex flex-col justify-center'>
@@ -109,13 +109,13 @@ export default function Popular() {
                 </div>
             </div>
 
-            <div className='flex justify-center p-5'>
+            {/* <div className='flex justify-center p-5'>
                 <a href='#one' onClick={carousel_one} ref={carousel_1} className='carousel rounded-full p-2 mx-[3px]'></a>
                 <a href='#two' onClick={carousel_two} ref={carousel_2} className='carousel rounded-full p-2 mx-[3px]'></a>
                 <a href='#three' onClick={carousel_three} ref={carousel_3} className='carousel rounded-full p-2 mx-[3px]'></a>
                 <a href='#four' onClick={carousel_four} ref={carousel_4} className='carousel rounded-full p-2 mx-[3px]'></a>
                 
-            </div>
+            </div> */}
         </section>
     </>
   )

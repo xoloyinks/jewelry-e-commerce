@@ -158,7 +158,7 @@ body{
 }
 
 .promotion{
-    background-image: url(images/pexels-rafael-barros-1716539.jpg);
+    background-image: url(images/pexels-rafael-barros-17165391.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     
@@ -177,8 +177,9 @@ input:focus{
     opacity: 0.5;
 }
 .carousel_button{
-    color:white;
-    opacity: 1;
+    color:rgb(216, 210, 210);
+    opacity: 0.4;
+    
 }
 
 /* https://jewelry-git-master-xoloyinks.vercel.app/ */

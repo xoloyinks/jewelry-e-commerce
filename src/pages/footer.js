@@ -26,14 +26,14 @@ export default function Footer() {
             <br />
             <div className='text-[14px] tracking-wide h-[25vh] flex justify-between'>
                 <div className='flex flex-col h-full w-[40%]'>
-                    <span className='py-3 font-bold'>NAVIGATION</span>
+                    <span className='py-3 font-bold opacity-50 text-yellow-600'>NAVIGATION</span>
                     <a href='#' className='py-3 w-[fit-content]'>ABOUT US</a>
                     <a href='#' className='py-3 w-[fit-content]'>MOST POPULAR</a>
                     <a href='#' className='py-3 w-[fit-content]'>SPECIAL</a>
                     <a href='#' className='py-3 w-[fit-content]'>NEW IN</a>
                 </div>
                 <div className='flex flex-col h-full w-[40%]'>
-                    <span className='py-3 font-bold'>INFO</span>
+                    <span className='py-3 font-bold opacity-50 text-yellow-600'>INFO</span>
                     <a href='#' className='py-3 w-[fit-content]'>CONTACTS</a>
                     <a href='#' className='py-3 w-[fit-content]'>SHIPPING AND PAYMENT</a>
                     <a href='#' className='py-3 w-[fit-content]'>FAQ</a>
