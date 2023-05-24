@@ -32,7 +32,7 @@ const banner = [
     img : image_3,
     face: 'three',
     id: 3,
-    subtitle: '',
+    subtitle: '...',
     title: 'les femmes',
     buttonCaption: 'new collection'
   },
@@ -57,6 +57,7 @@ const banner = [
 const Cover = () => {
   const [bannerIndex, setBannerIndex] = useState(0);
   const [classControl, setClassControl] = useState(2);
+  const [secControl, setSecControl] = useState(0);
   const [assureChange, setAssureChange] = useState(true);
   const [count , setCount] = useState(0);
   const changeBanner = useRef([]);
@@ -69,61 +70,67 @@ const Cover = () => {
     }
   }
   
-  const refClick = (index, e) => {
+  const refClick = (index) => {
+    setBannerIndex(index);
     setClassControl(bannerIndex);
     changeBanner.current[index].classList.add('active');
     // changeBanner.current[index].setAssureChange(!assureChange);
+    if(bannerIndex === 0 && index === 0){
+      setBannerIndex(1);
+      return;
+    }
     if(bannerIndex === index){
       setBannerIndex(0);
       return;
     }
+    
 
-    setBannerIndex(index);
     if(classControl !== index){
-      changeBanner.current[classControl].classList.remove('active');
+      // changeBanner.current[classControl].classList.remove('active');
     }
     console.log(bannerIndex);
     console.log(index);
+    console.log(changeBanner.current[index])
   }
 
-  useEffect(() => {
-    changeBanner.current[0].classList.add('active');
-  }, []);
+  // useEffect(() => {
+  //   changeBanner.current[0].classList.add('active');
+  // }, []);
 
-  useEffect(() => {
-      // setAssureChange(classControl)
-      if(classControl === bannerIndex) return;
-      changeBanner.current[classControl].classList.remove('active');
-  }, [classControl])
+  // useEffect(() => {
+  //     // setAssureChange(classControl)
+  //     if(classControl === bannerIndex) return;
+  //     changeBanner.current[classControl].classList.remove('active');
+  // }, [classControl])
 
   if(bannerIndex > 4){
     setBannerIndex(0);
     return;
   }
     
-  // setTimeout(() => {
-  //     // console.log(bannerIndex);
-  //     setBannerIndex(bannerIndex + 1);
+  setTimeout(() => {
+      // console.log(bannerIndex);
+      setSecControl(bannerIndex + 1);
       
-  // }, 2000)
+  }, 10000)
     return(
       banner.map((datum, index) => { return(
         <>
             <section key={index} className='banner w-screen h-full overflow-hidden'>
               <div className='exibit relative bg-black h-[92vh] w-full' style={{ backgroundImage: `url(${banner[bannerIndex].img})`, backgroundSize:'cover' }}>
                 <div className='__banner w-full h-full'></div>
-                <div id={banner[bannerIndex].face} className='caption absolute w-full bottom-[60px] text-white p-5'>
+                <div id={ banner[bannerIndex].face || banner[secControl].face} className='caption absolute w-full bottom-[80px] text-white p-5'>
                   <div className='text-md text-gray-200 tracking-widest font-thin'>
-                    {banner[bannerIndex].subtitle.toUpperCase()}
+                    {banner[bannerIndex].subtitle.toUpperCase() || banner[secControl].subtitle.toUpperCase()}
                   </div>
-                  <div className=' text-2xl tracking-widest font-thin my-3'>{banner[bannerIndex].title.toUpperCase()}</div>
-                  <button className='px-10 py-4 text-sm bg-gray-700 tracking-widest'>{banner[bannerIndex].buttonCaption.toUpperCase()}</button>
+                  <div className=' text-2xl tracking-widest font-thin my-3'>{banner[bannerIndex].title.toUpperCase() || banner[secControl].title.toUpperCase()}</div>
+                  <button className='px-10 py-4 text-sm bg-gray-700 tracking-widest'>{banner[bannerIndex].buttonCaption.toUpperCase() || banner[secControl].buttonCaption.toUpperCase()}</button>
                   
                 </div>
                 
               </div>
-              <ul className='absolute bottom-[50px] flex mt-5 text-3xl'>
-                    {banner.map((index) => <li key={index}><button ref={addMean} onClick={() => refClick(index)} className='text-white'>{assureChange ? <RxDot /> : <RxDotFilled/>}</button></li>)}
+              <ul className='absolute bottom-[70px] flex mt-5 text-3xl'>
+                    {banner.map((datum,index) => <li key={index}><button key={index} ref={addMean} onClick={() => refClick(index)} className='carousel_button'>{assureChange ? <RxDot /> : <RxDotFilled/>}</button></li>)}
                 </ul>
             </section>
         </>)

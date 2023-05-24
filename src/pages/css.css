@@ -174,7 +174,11 @@ input:focus{
 .active{
     color:rgb(0, 0, 0);
     transition: 0.5s;
+    opacity: 0.5;
 }
-
+.carousel_button{
+    color:white;
+    opacity: 1;
+}
 
 /* https://jewelry-git-master-xoloyinks.vercel.app/ */

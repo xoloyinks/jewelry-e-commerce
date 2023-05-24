@@ -615,6 +615,14 @@ video {
   bottom: 50px;
 }
 
+.bottom-\[80px\] {
+  bottom: 80px;
+}
+
+.bottom-\[70px\] {
+  bottom: 70px;
+}
+
 .mx-3 {
   margin-left: 0.75rem;
   margin-right: 0.75rem;
@@ -699,6 +707,14 @@ video {
 
 .h-full {
   height: 100%;
+}
+
+.h-\[27px\] {
+  height: 27px;
+}
+
+.h-screen {
+  height: 100vh;
 }
 
 .w-10\/12 {
@@ -874,6 +890,11 @@ video {
 .border-yellow-600 {
   --tw-border-opacity: 1;
   border-color: rgb(202 138 4 / var(--tw-border-opacity));
+}
+
+.border-white {
+  --tw-border-opacity: 1;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity));
 }
 
 .bg-black {
