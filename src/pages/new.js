@@ -1,8 +1,8 @@
 import React from 'react'
 import { FaRegHeart } from 'react-icons/fa'
-import glass from './images/pexels-el-gringo-photo-16567146.jpg'
-import necklace from './images/pexels-ashithosh-u-1413420.jpg'
-import pair from './images/pexels-luana-freitas-15378872.jpg'
+import glass from './images/pexels-el-gringo-photo-165671461.jpg'
+import necklace from './images/pexels-ashithosh-u-14134201.jpg'
+import pair from './images/pexels-luana-freitas-153788721.jpg'
 
 const data = [
     {

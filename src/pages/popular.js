@@ -1,9 +1,9 @@
 import React from 'react'
 import { useRef } from 'react'
-import ring from "./images/pexels-fernando-arcos-204427.jpg"
-import bracelet from "./images/pexels-gökhan-yetimova-15291703.jpg"
-import chain from "./images/pexels-monstera-6979015.jpg"
-import trad_anklets from './images/pexels-curtis-loy-5112013.jpg'
+import ring from "./images/pexels-fernando-arcos-2044271.jpg"
+import bracelet from "./images/pexels-gökhan-yetimova-152917031.jpg"
+import chain from "./images/pexels-monstera-69790151.jpg"
+import trad_anklets from './images/pexels-curtis-loy-51120131.jpg'
 import { FaHeart, FaRegHeart } from 'react-icons/fa'
 import {RxDot} from 'react-icons/rx'
 
@@ -11,25 +11,25 @@ import {RxDot} from 'react-icons/rx'
 const data = [
     {
         img: ring,
-        id: 'one',
+        id: 'pop_one',
         title: 'The tri Silver Golden Ring for men/women',
         price: '90,000'
     },
     {
         img: bracelet,
-        id: 'two',
+        id: 'pop_two',
         title: 'The magnificent couple engagement ring',
         price: '200,000'
     },
     {
         img: chain,
-        id: 'three',
+        id: 'pop_three',
         title: 'The Paris vail choker eye contact lens',
         price: '50,000'
     },
     {
         img: trad_anklets,
-        id: "four",
+        id: "pop_four",
         title: "Traditional ankle bracelets",
         price: "10,000"
     }

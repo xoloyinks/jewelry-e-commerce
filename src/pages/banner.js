@@ -2,8 +2,8 @@ import React, { useEffect } from 'react'
 import image_1 from './images/antiki_x800.jpg'
 import image_2 from './images/IMG_7425_kopiera_b62408be-98e0-496d-9f7e-c76e0683f0c7_x800.jpg'
 import image_3 from './images/header-1_x800.jpg'
-import image_4 from './images/pexels-polinach-11210274.jpg'
-import image_5 from './images/pexels-steven-arenas-620074.jpg'
+import image_4 from './images/pexels-the-glorious-studio-120260551.jpg'
+import image_5 from './images/pexels-steven-arenas-6200741.jpg'
 import { useState , useRef } from 'react'
 import { FaGreaterThan } from 'react-icons/fa'
 import vid from './images/exibit.mp4'
@@ -14,6 +14,7 @@ import { BsFillFileEarmarkRichtextFill } from 'react-icons/bs'
 const banner = [
   {
     img : image_1,
+    face: 'one',
     id: 1,
     subtitle: ' PRE-LOVED & 100% RECYCLED',
     title: 'antique diamonds',
@@ -21,6 +22,7 @@ const banner = [
   },
   {
     img : image_2,
+    face: 'two',
     id: 2,
     subtitle: ' unique & individual',
     title: 'just for you',
@@ -28,7 +30,7 @@ const banner = [
   },
   {
     img : image_3,
-
+    face: 'three',
     id: 3,
     subtitle: '',
     title: 'les femmes',
@@ -36,6 +38,7 @@ const banner = [
   },
   {
     img : image_4,
+    face: 'four',
     id: 4,
     subtitle: '18k gold bracelet',
     title: 'golden cleo',
@@ -43,6 +46,7 @@ const banner = [
   },
   {
     img : image_5,
+    face: 'five',
     id: 5,
     subtitle: 'created by hand',
     title: 'wedding & engagement choker',
@@ -53,7 +57,7 @@ const banner = [
 const Cover = () => {
   const [bannerIndex, setBannerIndex] = useState(0);
   const [classControl, setClassControl] = useState(2);
-  const [assureChange, setAssureChange] = useState(false);
+  const [assureChange, setAssureChange] = useState(true);
   const [count , setCount] = useState(0);
   const changeBanner = useRef([]);
   changeBanner.current = [];
@@ -82,9 +86,9 @@ const Cover = () => {
     console.log(index);
   }
 
-  // useEffect(() => {
-  //   changeBanner.current[0].classList.add('active');
-  // }, []);
+  useEffect(() => {
+    changeBanner.current[0].classList.add('active');
+  }, []);
 
   useEffect(() => {
       // setAssureChange(classControl)
@@ -97,32 +101,34 @@ const Cover = () => {
     return;
   }
     
-  setTimeout(() => {
-      console.log(bannerIndex);
-      setBannerIndex(bannerIndex + 1);
+  // setTimeout(() => {
+  //     // console.log(bannerIndex);
+  //     setBannerIndex(bannerIndex + 1);
       
-  }, 10000)
-
-  return (
-    <>
-      <section className='banner w-screen h-full overflow-hidden'>
-          <div className='exibit relative bg-black h-[92vh] w-full' style={{ backgroundImage: `url(${banner[bannerIndex].img})`, backgroundSize:'cover' }}>
-              <div className='__banner w-full h-full'></div>
-              <div className='absolute bottom-[60px] text-white p-5 '>
-                <div className='text-md text-gray-200 tracking-widest font-thin'>
-                  {banner[bannerIndex].subtitle.toUpperCase()}
+  // }, 2000)
+    return(
+      banner.map((datum, index) => { return(
+        <>
+            <section key={index} className='banner w-screen h-full overflow-hidden'>
+              <div className='exibit relative bg-black h-[92vh] w-full' style={{ backgroundImage: `url(${banner[bannerIndex].img})`, backgroundSize:'cover' }}>
+                <div className='__banner w-full h-full'></div>
+                <div id={banner[bannerIndex].face} className='caption absolute w-full bottom-[60px] text-white p-5'>
+                  <div className='text-md text-gray-200 tracking-widest font-thin'>
+                    {banner[bannerIndex].subtitle.toUpperCase()}
+                  </div>
+                  <div className=' text-2xl tracking-widest font-thin my-3'>{banner[bannerIndex].title.toUpperCase()}</div>
+                  <button className='px-10 py-4 text-sm bg-gray-700 tracking-widest'>{banner[bannerIndex].buttonCaption.toUpperCase()}</button>
+                  
                 </div>
-                <div className=' text-2xl tracking-widest font-thin my-3'>{banner[bannerIndex].title.toUpperCase()}</div>
-                <button className='px-10 py-4 text-sm bg-gray-700 tracking-widest'>{banner[bannerIndex].buttonCaption.toUpperCase()}</button>
-                <ul className='flex mt-5 text-3xl'>
-                  {banner.map((datum, index) =>  <li key={index}><button ref={addMean} onClick={() => refClick(index)} className='text-white'>{assureChange ? <RxDot /> : <RxDotFilled/>}</button></li>)}
-                </ul>
+                
               </div>
-             
-          </div>
-        </section>
-    </>
-  )
+              <ul className='absolute bottom-[50px] flex mt-5 text-3xl'>
+                    {banner.map((index) => <li key={index}><button ref={addMean} onClick={() => refClick(index)} className='text-white'>{assureChange ? <RxDot /> : <RxDotFilled/>}</button></li>)}
+                </ul>
+            </section>
+        </>)
+      })
+    )
 }
 
 export default function Banner() {
