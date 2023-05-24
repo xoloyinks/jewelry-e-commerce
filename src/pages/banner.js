@@ -52,7 +52,9 @@ const banner = [
 ];
 
 const Cover = () => {
-  const [bannerIndex, setBannerIndex] = useState(4);
+  const [bannerIndex, setBannerIndex] = useState(0);
+  const [classControl, setClassControl] = useState(2);
+  const [assureChange, setAssureChange] = useState(0);
   const changeBanner = useRef([]);
   changeBanner.current = [];
 
@@ -64,9 +66,29 @@ const Cover = () => {
   }
 
   const refClick = (index) => {
-    
+    setClassControl(bannerIndex);
+    setAssureChange(bannerIndex);
+
+    changeBanner.current[index].classList.add('active');
+    setBannerIndex(index);
+    if(classControl !== index){
+      changeBanner.current[classControl].classList.remove('active');
+    }
   }
-  
+
+  // useEffect(() => {
+  //   changeBanner.current[0].classList.add('active');
+  // }, []);
+
+  useEffect(() => {
+      // setAssureChange(classControl)
+      if(classControl === bannerIndex) return;
+      changeBanner.current[classControl].classList.remove('active');
+
+      
+  }, [classControl])
+
+
   return (
     <>
       <section className='banner w-screen h-full overflow-hidden'>
@@ -79,7 +101,7 @@ const Cover = () => {
                 <div className=' text-2xl tracking-widest font-thin my-3'>{banner[bannerIndex].title.toUpperCase()}</div>
                 <button className='px-10 py-4 text-sm bg-gray-700 tracking-widest'>{banner[bannerIndex].buttonCaption.toUpperCase()}</button>
                 <ul className='flex mt-5 text-2xl'>
-                  {banner.map((datum, index) =>  <li key={index}><button onClick={refClick(index)} ref={addMean} className='text-white'>{true ? <RxDot /> : <RxDotFilled/>}</button></li>)}
+                  {banner.map((datum, index) =>  <li key={index}><button ref={addMean} onClick={() => refClick(index)} className='text-white'>{true ? <RxDot /> : <RxDotFilled/>}</button></li>)}
                 </ul>
               </div>
              

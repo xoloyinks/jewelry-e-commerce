@@ -89,4 +89,9 @@ input:focus{
     outline: none;
 }
 
+.active{
+    color:black;
+}
+
+
 /* https://jewelry-git-master-xoloyinks.vercel.app/ */
