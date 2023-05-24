@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import image_1 from './images/antiki_x800.jpg'
+import image_1 from './images/pexels-wallace-chuck-20848101.jpg'
 import image_2 from './images/IMG_7425_kopiera_b62408be-98e0-496d-9f7e-c76e0683f0c7_x800.jpg'
 import image_3 from './images/header-1_x800.jpg'
 import image_4 from './images/pexels-the-glorious-studio-120260551.jpg'
@@ -117,7 +117,7 @@ const Cover = () => {
       banner.map((datum, index) => { return(
         <>
             <section key={index} className='banner w-screen h-full overflow-hidden'>
-              <div className='exibit relative bg-black h-[92vh] w-full' style={{ backgroundImage: `url(${banner[bannerIndex].img})`, backgroundSize:'cover' }}>
+              <div id={banner[bannerIndex].face + banner[bannerIndex].id} className='exibit relative bg-black h-[92vh] w-full' style={{ backgroundImage: `url(${banner[bannerIndex].img})`, backgroundSize:'cover' }}>
                 <div className='__banner w-full h-full'></div>
                 <div id={banner[bannerIndex].face} className='caption absolute w-full bottom-[80px] text-white p-5'>
                   <div className='text-md text-gray-200 tracking-widest font-thin'>
@@ -143,10 +143,10 @@ export default function Banner() {
     <>
         <section className='check w-screen relative h-[98vh] overflow-hidden'>
               <Cover />
-              <div className='absolute bottom-[20px] text-center  w-full text-white px-10 font-bold'>
-                <button className='px-3 py-3 bg-slate-100 shadow-sm shadow-slate-500 rounded-full mx-3'>
+              <div className='absolute flex justify-center bottom-[20px]  text-center  w-full text-white px-10 font-bold'>
+                <a href='#about' className='px-3 py-3 w-[fit-content] bg-slate-100 shadow-sm shadow-slate-500 rounded-full mx-3'>
                   <RxCaretDown className='text-slate-500  text-4xl' />
-                </button>
+                </a>
               </div>
               
           

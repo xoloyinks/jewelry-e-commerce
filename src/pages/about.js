@@ -5,15 +5,17 @@ import diamond from "./images/dia2_d0d0f2ca-e2ea-4344-b409-ab3f2c925a6e_700x.jpg
 export default function About() {
   return ( 
     <>
+        <br id='about'/><br/><br/><br/>
+        
         <div className='text-center'>
-            <h1 className='tracking-widest text-md'>
+            <h1 className='tracking-widest text-sm'>
                 FROM STOCKHOLM, SWEDEN
             </h1>
-            <h1 className='tracking-widest leading-[30px] text-2xl w-7/12 mx-auto'>
+            <h1 className='tracking-[.25rem] font-lighter leading-[40px] text-2xl w-7/12 mx-auto mt-6'>
                 HANDMADE IMPERFECTION
             </h1>
         </div>
-        <div>
+        <div >
             <img src={diamond} alt="" />
         </div>
         <section className='w-screen py-5 h-[65vh]'>

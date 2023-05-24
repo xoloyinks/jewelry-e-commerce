@@ -33,10 +33,10 @@ export default function Nav() {
   return (
     <>
         <section id='nav' className='nav fixed w-screen'>
-            <div className='info p-3 bg-slate-100 text-slate-400 text-sm tracking-widest text-center'>
+            <div className='info p-3 bg-slate-100 text-slate-400 text-[13px] tracking-widest text-center'>
               HANDMADE IN SWEDEN | WORLDWIDE SHIP
             </div>
-            <div className='flex items-center justify-between px-3 py-5 '>
+            <div className='flex items-center justify-between px-3 py-3 '>
                 <button className=' h-[fit-content] w-[47px] p-3'>
                     <div className='flex flex-col justify-between w-[27px] h-[24px]'>
                         <div id='bar-1' className='bar border-2 border-black bg-black w-full rounded-full'></div>

@@ -8,17 +8,37 @@ body{
     font-family: 'Varela Round', sans-serif;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 #logo{
     font-family: 'Great Vibes', cursive;
 }
 .exibit{
     /* background-image: url(images/pexels-steven-arenas-620074.jpg); */
     background-size: cover;
-    background-position: 70% 50%;
     transition: 0.5s;
     background-repeat: no-repeat;
 }
+#five5{
+    background-position: 30% 50%;
 
+}
+#two2{
+    background-position: 44% 50%;
+
+}
+
+#three3{
+    background-position: 70% 50%;
+
+}
+
+#four4{
+    background-position: 50% 50%;
+    
+}
 .banner{
     z-index: 1;
 }
