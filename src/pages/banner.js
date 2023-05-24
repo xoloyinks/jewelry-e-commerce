@@ -88,9 +88,9 @@ const Cover = () => {
     if(classControl !== index){
       // changeBanner.current[classControl].classList.remove('active');
     }
-    console.log(bannerIndex);
-    console.log(index);
-    console.log(changeBanner.current[index])
+    // console.log(bannerIndex);
+    // console.log(index);
+    // console.log(changeBanner.current[index])
   }
 
   // useEffect(() => {
@@ -110,7 +110,7 @@ const Cover = () => {
     
   setTimeout(() => {
       // console.log(bannerIndex);
-      setSecControl(bannerIndex + 1);
+      setBannerIndex(bannerIndex + 1);
       
   }, 10000)
     return(
@@ -119,7 +119,7 @@ const Cover = () => {
             <section key={index} className='banner w-screen h-full overflow-hidden'>
               <div className='exibit relative bg-black h-[92vh] w-full' style={{ backgroundImage: `url(${banner[bannerIndex].img})`, backgroundSize:'cover' }}>
                 <div className='__banner w-full h-full'></div>
-                <div id={ banner[bannerIndex].face || banner[secControl].face} className='caption absolute w-full bottom-[80px] text-white p-5'>
+                <div id={banner[bannerIndex].face} className='caption absolute w-full bottom-[80px] text-white p-5'>
                   <div className='text-md text-gray-200 tracking-widest font-thin'>
                     {banner[bannerIndex].subtitle.toUpperCase() || banner[secControl].subtitle.toUpperCase()}
                   </div>
