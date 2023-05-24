@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import image_1 from './images/antiki_x800.jpg'
 import image_2 from './images/IMG_7425_kopiera_b62408be-98e0-496d-9f7e-c76e0683f0c7_x800.jpg'
 import image_3 from './images/header-1_x800.jpg'
-import image_4 from './images/pexels-the-glorious-studio-12026055.jpg'
+import image_4 from './images/pexels-polinach-11210274.jpg'
 import image_5 from './images/pexels-steven-arenas-620074.jpg'
 import { useState , useRef } from 'react'
 import { FaGreaterThan } from 'react-icons/fa'
@@ -14,7 +14,6 @@ import { BsFillFileEarmarkRichtextFill } from 'react-icons/bs'
 const banner = [
   {
     img : image_1,
-
     id: 1,
     subtitle: ' PRE-LOVED & 100% RECYCLED',
     title: 'antique diamonds',
@@ -54,7 +53,8 @@ const banner = [
 const Cover = () => {
   const [bannerIndex, setBannerIndex] = useState(0);
   const [classControl, setClassControl] = useState(2);
-  const [assureChange, setAssureChange] = useState(0);
+  const [assureChange, setAssureChange] = useState(false);
+  const [count , setCount] = useState(0);
   const changeBanner = useRef([]);
   changeBanner.current = [];
 
@@ -64,16 +64,22 @@ const Cover = () => {
       changeBanner.current.push(el);
     }
   }
-
-  const refClick = (index) => {
+  
+  const refClick = (index, e) => {
     setClassControl(bannerIndex);
-    setAssureChange(bannerIndex);
-
     changeBanner.current[index].classList.add('active');
+    // changeBanner.current[index].setAssureChange(!assureChange);
+    if(bannerIndex === index){
+      setBannerIndex(0);
+      return;
+    }
+
     setBannerIndex(index);
     if(classControl !== index){
       changeBanner.current[classControl].classList.remove('active');
     }
+    console.log(bannerIndex);
+    console.log(index);
   }
 
   // useEffect(() => {
@@ -84,10 +90,18 @@ const Cover = () => {
       // setAssureChange(classControl)
       if(classControl === bannerIndex) return;
       changeBanner.current[classControl].classList.remove('active');
-
-      
   }, [classControl])
 
+  if(bannerIndex > 4){
+    setBannerIndex(0);
+    return;
+  }
+    
+  setTimeout(() => {
+      console.log(bannerIndex);
+      setBannerIndex(bannerIndex + 1);
+      
+  }, 10000)
 
   return (
     <>
@@ -100,8 +114,8 @@ const Cover = () => {
                 </div>
                 <div className=' text-2xl tracking-widest font-thin my-3'>{banner[bannerIndex].title.toUpperCase()}</div>
                 <button className='px-10 py-4 text-sm bg-gray-700 tracking-widest'>{banner[bannerIndex].buttonCaption.toUpperCase()}</button>
-                <ul className='flex mt-5 text-2xl'>
-                  {banner.map((datum, index) =>  <li key={index}><button ref={addMean} onClick={() => refClick(index)} className='text-white'>{true ? <RxDot /> : <RxDotFilled/>}</button></li>)}
+                <ul className='flex mt-5 text-3xl'>
+                  {banner.map((datum, index) =>  <li key={index}><button ref={addMean} onClick={() => refClick(index)} className='text-white'>{assureChange ? <RxDot /> : <RxDotFilled/>}</button></li>)}
                 </ul>
               </div>
              
@@ -114,7 +128,7 @@ const Cover = () => {
 export default function Banner() {
   return (
     <>
-        <section className='w-screen relative h-[98vh] overflow-hidden'>
+        <section className='check w-screen relative h-[98vh] overflow-hidden'>
               <Cover />
               <div className='absolute bottom-[20px] text-center  w-full text-white px-10 font-bold'>
                 <button className='px-3 py-3 bg-slate-100 shadow-sm shadow-slate-500 rounded-full mx-3'>

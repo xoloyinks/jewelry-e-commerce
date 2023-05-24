@@ -15,10 +15,15 @@ body{
     /* background-image: url(images/pexels-steven-arenas-620074.jpg); */
     background-size: cover;
     background-position: 70% 50%;
+    transition: 0.5s;
     background-repeat: no-repeat;
 }
+
 .banner{
     z-index: 1;
+}
+.check{
+    transition: 0.5s;
 }
 .nav{
     z-index: 111;
@@ -90,7 +95,8 @@ input:focus{
 }
 
 .active{
-    color:black;
+    color:rgb(0, 0, 0);
+    transition: 0.5s;
 }
 
 
