@@ -19,8 +19,8 @@ export default function Page() {
             
             <Nav />
             <Banner />
-            <Popular />
             <About />
+            <Popular />
             <New />
             <Promotion />
             <Footer />

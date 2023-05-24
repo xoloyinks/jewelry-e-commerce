@@ -1,9 +1,21 @@
 import React from 'react'
 import golden from "./images/pexels-fox-998521.jpg"
+import diamond from "./images/dia2_d0d0f2ca-e2ea-4344-b409-ab3f2c925a6e_700x.jpg"
 
 export default function About() {
   return ( 
     <>
+        <div className='text-center'>
+            <h1 className='tracking-widest text-md'>
+                FROM STOCKHOLM, SWEDEN
+            </h1>
+            <h1 className='tracking-widest leading-[30px] text-2xl w-7/12 mx-auto'>
+                HANDMADE IMPERFECTION
+            </h1>
+        </div>
+        <div>
+            <img src={diamond} alt="" />
+        </div>
         <section className='w-screen py-5 h-[65vh]'>
             <div className='flex justify-between w-full h-full'>
                 <div className='w-4/12 relative flex items-center'>

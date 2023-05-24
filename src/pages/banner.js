@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import image_1 from './images/antiki_x800.jpg'
 import image_2 from './images/IMG_7425_kopiera_b62408be-98e0-496d-9f7e-c76e0683f0c7_x800.jpg'
 import image_3 from './images/header-1_x800.jpg'
@@ -8,11 +8,13 @@ import { useState , useRef } from 'react'
 import { FaGreaterThan } from 'react-icons/fa'
 import vid from './images/exibit.mp4'
 import ban from './images/pexels-bestbe-models-2301285.jpg'
-import { RxCaretDown, RxDot } from 'react-icons/rx'
+import { RxCaretDown, RxDot, RxDotFilled } from 'react-icons/rx'
+import { BsFillFileEarmarkRichtextFill } from 'react-icons/bs'
 
 const banner = [
   {
     img : image_1,
+
     id: 1,
     subtitle: ' PRE-LOVED & 100% RECYCLED',
     title: 'antique diamonds',
@@ -27,6 +29,7 @@ const banner = [
   },
   {
     img : image_3,
+
     id: 3,
     subtitle: '',
     title: 'les femmes',
@@ -50,11 +53,20 @@ const banner = [
 
 const Cover = () => {
   const [bannerIndex, setBannerIndex] = useState(4);
-  const changeBanner = useRef();
-  const addMean = () => {
-    changeBanner.current.classList.add('activeda');
+  const changeBanner = useRef([]);
+  changeBanner.current = [];
+
+
+  const addMean = (el) => {
+    if(el && !changeBanner.current.includes(el)){
+      changeBanner.current.push(el);
+    }
   }
 
+  const refClick = (index) => {
+    
+  }
+  
   return (
     <>
       <section className='banner w-screen h-full overflow-hidden'>
@@ -67,7 +79,7 @@ const Cover = () => {
                 <div className=' text-2xl tracking-widest font-thin my-3'>{banner[bannerIndex].title.toUpperCase()}</div>
                 <button className='px-10 py-4 text-sm bg-gray-700 tracking-widest'>{banner[bannerIndex].buttonCaption.toUpperCase()}</button>
                 <ul className='flex mt-5 text-2xl'>
-                  {banner.map((datum) =>  <li key={datum.id}><button ref={changeBanner} onClick={addMean} className='text-white'><RxDot /></button></li>)}
+                  {banner.map((datum, index) =>  <li key={index}><button onClick={refClick(index)} ref={addMean} className='text-white'>{true ? <RxDot /> : <RxDotFilled/>}</button></li>)}
                 </ul>
               </div>
              

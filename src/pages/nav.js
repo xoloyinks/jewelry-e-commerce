@@ -12,7 +12,7 @@ const nav_change = () => {
         document.getElementById('bar-2').style.cssText = "border:solid 2px black; background-color:black;";
         document.getElementById('bar-3').style.cssText = "border:solid 2px black; background-color:black;";
         document.querySelector('.cart').style.cssText = "color:black;";
-        document.querySelector('.__marked').style.cssText = "color:black; background-color:white;";
+        // document.querySelector('.__marked').style.cssText = "color:black; background-color:white;";
     }else{
         document.getElementById('nav').style.cssText = 'background-color: transperent; transition:0.5s;';
         document.querySelector('.info').style.cssText = 'display:block';
@@ -21,7 +21,7 @@ const nav_change = () => {
         document.getElementById('bar-2').style.cssText = "border:solid 2px black; transition:0.5s; background-color:black;";
         document.getElementById('bar-3').style.cssText = "border:solid 2px black; transition:0.5s; background-color:black;";
         document.querySelector('.cart').style.cssText = "color:black; transition:0.5s;";
-        document.querySelector('.__marked').style.cssText = "color:white;";
+        // document.querySelector('.__marked').style.cssText = "color:white;";
         return;
     }
 
@@ -50,7 +50,7 @@ export default function Nav() {
                 <div className='w-[50px] flex justify-between text-xl'>
                     <button className='relative p-2'>
                         <BsBag className='cart font-bold text-black' />
-                        <span className='__marked flex items-center bg-black text-white absolute h-[20px] px-[5px] text-[11px] rounded-full top-0 right-0 font-[10px]'>0</span>
+                        {/* <span className='__marked flex items-center bg-black text-white absolute h-[20px] px-[5px] text-[11px] rounded-full top-0 right-0 font-[10px]'>0</span> */}
                     </button>
                 </div>
             </div>
