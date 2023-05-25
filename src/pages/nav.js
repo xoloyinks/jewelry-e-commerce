@@ -275,7 +275,7 @@ export default function Nav() {
                     </div>
                 </button>
                 <div id='logo' className='text-2xl  font-bold'> 
-                    Shynel
+                    XayGold
                 </div>
                 <div className='w-[50px] flex justify-between text-xl'>
                     <button className='relative p-2'>
