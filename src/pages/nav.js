@@ -102,7 +102,7 @@ const nav_change = () => {
 }
 
 const hideMenu = () => {
-    document.getElementById('navMenuContainer').style.cssText = 'transform:translateX(-500px); transition:1s; background-color:rgba(0,0,0,0.0); ';
+    document.getElementById('navMenuContainer').style.cssText = 'transform:translateX(-500px); transition:1s;';
     const body = document.body;
     const scrollY = body.style.top;
     body.style.position = '';
@@ -113,7 +113,7 @@ const hideMenu = () => {
 }
 
 const showMenu = () => {
-    document.getElementById('navMenuContainer').style.cssText = 'transform:translateX(0px); transition:1s; background-color:rgba(0,0,0,0.3)';
+    document.getElementById('navMenuContainer').style.cssText = 'transform:translateX(0px); transition:1s;';
     const scrollY = document.documentElement.style.getPropertyValue('--scroll-y');
     const body = document.body;
     body.style.height = '2200px';
@@ -252,10 +252,14 @@ export default function Nav() {
                         )
                     })
                 }
-                <div className='absolute w-[35%] flex justify-between self-center mx-auto bottom-0 py-3'>
-                    <span className='p-3'><a href="#"><FaFacebookF className='text-gray-300'/></a></span>
-                    <span className='p-3'><a href="#"><FiInstagram className='text-gray-300'/></a></span>
-                    <span className='p-3'><a href="#"><FaPinterest className='text-gray-300'/></a></span>
+                <div className='fixed w-[80%]  self-center mx-auto bottom-0 py-3 bg-neutral-500'>
+                    <div className='w-[50%] flex items-center justify-between'>
+                        <span className='p-3'><a href="#"><FaFacebookF className='text-gray-300'/></a></span>
+                        <span>|</span>
+                        <span className='p-3'><a href="#"><FiInstagram className='text-gray-300'/></a></span>
+                        <span>|</span>
+                        <span className='p-3'><a href="#"><FaPinterest className='text-gray-300'/></a></span>
+                    </div>
                 </div>
             </div>
         </section>
