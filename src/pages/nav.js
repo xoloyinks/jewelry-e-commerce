@@ -104,12 +104,8 @@ const nav_change = () => {
 const hideMenu = () => {
     document.getElementById('navMenuContainer').style.cssText = 'transform:translateX(-500px); transition:1s;';
     const body = document.body;
-    const scrollY = body.style.top;
     body.style.position = '';
-    body.style.top = '';
-    body.style.height = '';
     body.style.overflowY = '';
-    window.scrollTo(0, parseInt(scrollY || '0') * -1);
 }
 
 const showMenu = () => {
@@ -155,9 +151,9 @@ export default function Nav() {
         {/* MOBILE NAV SLIDE OUT */}
         <section id='navMenuContainer' className='-translate-x-[500px] nav_slide overflow-y-scroll fixed h-[fit-content] w-screen'>
             <div className='nav_slide_child relative bg-neutral-500 w-[85%] overflow-y-scroll h-screen text-gray-100 tracking-[.17rem] px-4'>
-                <button onClick={hideMenu} className='py-5 '>
+                <a onClick={hideMenu} className='py-5 px-3 '>
                     <FaTimes className='text-2xl text-neutral-400'/>
-                </button>
+                </a>
                 <div className='text-[13px]  py-5'>
                     <a href="#" className=' py-5 '>NEW COLLECTION - LES FEMMES</a>
                 </div>
