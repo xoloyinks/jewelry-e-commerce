@@ -153,8 +153,8 @@ export default function Nav() {
     return (
     <>
         {/* MOBILE NAV SLIDE OUT */}
-        <section id='navMenuContainer' className='-translate-x-[500px] nav_slide overflow-y-scroll absolute h-[fit-content] w-screen'>
-            <div className='relative bg-neutral-500 w-[85%] overflow-y-scroll h-screen text-gray-100 tracking-[.17rem] px-4'>
+        <section id='navMenuContainer' className='-translate-x-[500px] nav_slide overflow-y-scroll fixed h-[fit-content] w-screen'>
+            <div className='nav_slide_child relative bg-neutral-500 w-[85%] overflow-y-scroll h-screen text-gray-100 tracking-[.17rem] px-4'>
                 <button onClick={hideMenu} className='py-5 '>
                     <FaTimes className='text-2xl text-neutral-400'/>
                 </button>
