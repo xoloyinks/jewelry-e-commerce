@@ -124,7 +124,7 @@ const Cover = () => {
                     {banner[bannerIndex].subtitle.toUpperCase() || banner[secControl].subtitle.toUpperCase()}
                   </div>
                   <div className=' text-2xl tracking-widest font-thin my-3'>{banner[bannerIndex].title.toUpperCase() || banner[secControl].title.toUpperCase()}</div>
-                  <button className='px-10 py-4 text-sm bg-gray-700 tracking-widest'>{banner[bannerIndex].buttonCaption.toUpperCase() || banner[secControl].buttonCaption.toUpperCase()}</button>
+                  <button className=' px-10 py-4 text-sm bg-neutral-500 tracking-widest'>{banner[bannerIndex].buttonCaption.toUpperCase() || banner[secControl].buttonCaption.toUpperCase()}</button>
                   
                 </div>
                 

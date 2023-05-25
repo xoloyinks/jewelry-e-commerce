@@ -73,6 +73,7 @@ html{
 }
 #four{
     animation: cap4 1s;
+    text-align: left;
 }
 #five{
     animation: cap5 1s;
@@ -130,9 +131,6 @@ html{
 .exibit  #two{
     text-align: center;
 }
-#four{
-    text-align: right;
-}
 .__marked{
     font-weight: bolder;
 }
@@ -163,6 +161,7 @@ html{
 .item_container{
     transition: 0.5s;
 }
+
 
 .pop_item:nth-child(even){
     margin-left: 10px;
@@ -201,5 +200,47 @@ input:focus{
     opacity: 0.4;
     
 }
+.nav_slide{
+    z-index: 222;
+    /* background-color: rgba(0, 0, 0,); */
+    overflow-y: scroll;
+}
 
+
+
+/* NAV ACCORDION STYLE */
+
+.last_accordion{
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0,1,0,1);
+}
+
+.last_accordion.show{
+    height: auto;
+    max-height: 9999px;
+    transition:  all 0.5s cubic-bezier(1,0,1,0);
+}
+
+.sub_accordion{
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0,1,0,1);
+}
+.sub_accordion.show{
+    height: auto;
+    max-height: 9999px;
+    transition:  all 0.5s cubic-bezier(1,0,1,0);
+}
+
+.accessories{
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0,1,0,1);
+}
+.accessories.show{
+    height: auto;
+    max-height: 9999px;
+    transition:  all 0.5s cubic-bezier(1,0,1,0);
+}
 /* https://jewelry-git-master-xoloyinks.vercel.app/ */
