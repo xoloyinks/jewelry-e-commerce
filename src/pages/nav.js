@@ -45,7 +45,7 @@ const showMenu = () => {
 };
 
 const showCart = () => {
-    document.getElementById('cart_container').style.cssText = 'transform:translateX(0px);transition:0.5s;';
+    document.getElementById('cart_container').style.cssText = 'transform:translateX(0px);transition:0.1s;';
     const scrollY = document.documentElement.style.getPropertyValue('--scroll-y');
     const body = document.body;
     body.style.height = '2200px';

@@ -6,7 +6,7 @@ import {BsFillBagHeartFill} from 'react-icons/bs'
 
 
 const hideCart = () => {
-    document.getElementById('cart_container').style.cssText = 'transform:translateX(500px);transition:0.5s;';
+    document.getElementById('cart_container').style.cssText = 'transform:translateX(500px);transition:0.1s;';
     const body = document.body;
     body.style.position = '';
     body.style.overflowY = '';
