@@ -29,6 +29,7 @@ const Cart_item = ({image, title, price}) => {
                     </div>
                 </div>
             </section>
+            <hr className='border-[1px] border-gray-200 w-full'/>
         </>
     )
 }
@@ -37,7 +38,7 @@ export default function Cart() {
     
   return (
     <>
-        <section id='cart_container' className='w-[100%] translate-x-[500px] fixed overflow-y-scroll h-[100vh]  top-0 right-0'>
+        <section id='cart_container' className='w-[100%] translate-x-[500px] fixed overflow-x-hidden overflow-y-scroll h-[100vh]  top-0 right-0'>
            <div className='w-[80%]  px-5 py-5 h-screen overflow-y-scroll bg-white absolute right-0'>
                 <div className='fixed py-3 top-0 bg-white w-full'>
                     <div onClick={hideCart} className='py-5 ' >

@@ -254,6 +254,7 @@ input:focus{
 }
 #cart_container{
     z-index: 99991;
+    background-color: rgba(0, 0, 0, 0.2);
 }
 #item_num{
     border:solid 1px black;
