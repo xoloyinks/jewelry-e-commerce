@@ -24,7 +24,7 @@ const Cart_item = ({image, title, price}) => {
                     <div className='font-extrabold'>&#x20A6;{price}</div>
                     <div className='flex items-center justify-between  w-5/12 py-2'>
                         <button className='p-2 font-bold text-xl'>-</button>
-                        <input id='item_num' type="number" value='1' className=' w-[50%] text-center text-xl' />
+                        <input id='item_num' type="number" value='1' className=' w-[50%] text-center text-sm font-bold' />
                         <button className='p-2 font-bold text-xl'>+</button>
                     </div>
                 </div>
@@ -38,7 +38,7 @@ export default function Cart() {
   return (
     <>
         <section id='cart_container' className='w-[100%] translate-x-[500px] fixed overflow-y-scroll h-[100vh]  top-0 right-0'>
-           <div className='w-[85%]  px-5 py-5 h-screen overflow-y-scroll bg-white absolute right-0'>
+           <div className='w-[80%]  px-5 py-5 h-screen overflow-y-scroll bg-white absolute right-0'>
                 <div className='fixed py-3 top-0 bg-white w-full'>
                     <div onClick={hideCart} className='py-5 ' >
                         <FaTimes className='text-2xl text-neutral-400'/>
