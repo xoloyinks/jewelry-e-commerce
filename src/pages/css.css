@@ -249,4 +249,7 @@ input:focus{
 #cart{
     transition: 0.5s;
 }
+#message{
+    z-index: 9999;
+}
 /* https://jewelry-git-master-xoloyinks.vercel.app/ */

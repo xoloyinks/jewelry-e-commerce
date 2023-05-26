@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { BsBag } from 'react-icons/bs'
+import { BsBag, BsFillBagHeartFill } from 'react-icons/bs'
 import { FaFacebookF, FaPinterest, FaTimes } from 'react-icons/fa';
 import {FiInstagram} from 'react-icons/fi'
 import {VscMenu} from 'react-icons/vsc'
@@ -102,14 +102,14 @@ const nav_change = () => {
 }
 
 const hideMenu = () => {
-    document.getElementById('navMenuContainer').style.cssText = 'transform:translateX(-500px); transition:1s;';
+    document.getElementById('navMenuContainer').style.cssText = 'transform:translateX(-500px); transition:0.5s;';
     const body = document.body;
     body.style.position = '';
     body.style.overflowY = '';
 }
 
 const showMenu = () => {
-    document.getElementById('navMenuContainer').style.cssText = 'transform:translateX(0px); transition:1s;';
+    document.getElementById('navMenuContainer').style.cssText = 'transform:translateX(0px); transition:0.5s;';
     const scrollY = document.documentElement.style.getPropertyValue('--scroll-y');
     const body = document.body;
     body.style.height = '2200px';
@@ -262,7 +262,7 @@ export default function Nav() {
 
         {/* NAV BAR */}
         <section id='nav' className='nav fixed w-screen'>
-            <div className='info p-3 bg-slate-100 text-slate-400 text-[13px] tracking-widest text-center'>
+            <div className='info p-2 bg-slate-100 text-slate-400 text-[12px] tracking-widest text-center'>
               HANDMADE IN SWEDEN | WORLDWIDE SHIP
             </div>
             <div className='flex items-center justify-between px-3 py-3 '>
@@ -279,7 +279,7 @@ export default function Nav() {
                 </div>
                 <div className='w-[50px] flex justify-between text-xl'>
                     <button className='relative p-2'>
-                        <BsBag className='cart font-bold text-black' />
+                        <BsFillBagHeartFill className='cart font-bold text-black' />
                         {/* <span className='__marked flex items-center bg-black text-white absolute h-[20px] px-[5px] text-[11px] rounded-full top-0 right-0 font-[10px]'>0</span> */}
                     </button>
                 </div>

@@ -51,14 +51,14 @@ const Each_item = ({image ,caption,amount,id,data, check}) => {
             setCheck(!check)
             console.log('Item already exists');
             cart.pop(data);
-            console.log(cart)
+            // console.log(cart)
             // console.log(cart.length);
             return;
         }else{
             setCheck(true)
             console.log('added successfully');
             cart.push(data);
-            console.log(cart)
+            // console.log(cart)
         }
     }
     return(

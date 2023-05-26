@@ -10,6 +10,7 @@ import vid from './images/exibit.mp4'
 import ban from './images/pexels-bestbe-models-2301285.jpg'
 import { RxCaretDown, RxDot, RxDotFilled } from 'react-icons/rx'
 import { BsFillFileEarmarkRichtextFill } from 'react-icons/bs'
+import {GoPrimitiveDot} from 'react-icons/go'
 
 const banner = [
   {
@@ -32,7 +33,7 @@ const banner = [
     img : image_3,
     face: 'three',
     id: 3,
-    subtitle: '...',
+    subtitle: 'Desperado',
     title: 'les femmes',
     buttonCaption: 'new collection'
   },
@@ -40,7 +41,7 @@ const banner = [
     img : image_4,
     face: 'four',
     id: 4,
-    subtitle: '18k gold bracelet',
+    subtitle: '18k ice chain',
     title: 'golden cleo',
     buttonCaption: 'shop now'
   },
@@ -138,6 +139,10 @@ const Cover = () => {
     )
 }
 
+setTimeout(() => {
+  document.getElementById('message').style.cssText = 'display:block; transition:0.5s;';
+}, 10000)
+
 export default function Banner() {
   return (
     <>
@@ -148,9 +153,11 @@ export default function Banner() {
                   <RxCaretDown className='text-slate-500  text-4xl' />
                 </a>
               </div>
-              
-          
-            
+              <div id='message' className='fixed hidden text-sm bottom-[50px] right-[15px] bg-white rounded-xl p-2 tracking-wide shadow-sm shadow-slate-500'>
+                  <a href="#" className='px-2 py-2 flex items-center'>
+                   <GoPrimitiveDot className='mr-2 text-blue-500'/> Message us
+                  </a>
+              </div>
         </section>
     </>
   )
