@@ -274,8 +274,8 @@ export default function Nav() {
                         <VscMenu className='text-xl font-bold'/>
                     </div>
                 </button>
-                <div id='logo' className='text-2xl  font-bold'> 
-                    XayGold
+                <div id='logo' className='text-md  font-bold'> 
+                    XayGold 
                 </div>
                 <div className='w-[50px] flex justify-between text-xl'>
                     <button className='relative p-2'>
