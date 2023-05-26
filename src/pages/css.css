@@ -246,10 +246,16 @@ input:focus{
     max-height: 9999px;
     transition:  all 0.5s cubic-bezier(1,0,1,0);
 }
-#cart{
+#cart_button{
     transition: 0.5s;
 }
 #message{
     z-index: 9999;
+}
+#cart_container{
+    z-index: 99991;
+}
+#item_num{
+    border:solid 1px black;
 }
 /* https://jewelry-git-master-xoloyinks.vercel.app/ */

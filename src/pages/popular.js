@@ -1,5 +1,6 @@
 import React, { createContext, useContext, useState } from 'react'
 import { useRef } from 'react'
+import { UseContext } from './page'
 import ring from "./images/pexels-fernando-arcos-2044271.jpg"
 import bracelet from "./images/pexels-gökhan-yetimova-152917031.jpg"
 import chain from "./images/pexels-monstera-69790151.jpg"
@@ -9,7 +10,6 @@ import {AiFillHeart} from 'react-icons/ai'
 import {RxDot} from 'react-icons/rx'
 import { useEffect } from 'react'
 
-const UseContext = createContext();
 
 const data = [
     {
@@ -39,11 +39,10 @@ const data = [
 ]
 
 const Pop_item = () => {
-    const cart = useContext(UseContext);
-    return data.map((datum,check,cart, key) =>  <Each_item key={key} check={check} carted={cart} image={datum.img} caption={datum.title} amount={datum.price} id={datum.id} data={datum}  />)
+    return data.map((datum,cart, key) =>  <Each_item key={key} carted={cart} image={datum.img} caption={datum.title} amount={datum.price} id={datum.id} data={datum}  />)
 }
 
-const Each_item = ({image ,caption,amount,id,data, check}) => {
+const Each_item = ({image ,caption,amount,id,data}) => {
     var [check, setCheck] = useState(false);
     const cart = useContext(UseContext);
     const addItem = (data) => {
@@ -51,14 +50,14 @@ const Each_item = ({image ,caption,amount,id,data, check}) => {
             setCheck(!check)
             console.log('Item already exists');
             cart.pop(data);
-            // console.log(cart)
+            console.log(cart)
             // console.log(cart.length);
             return;
         }else{
             setCheck(true)
             console.log('added successfully');
             cart.push(data);
-            // console.log(cart)
+            console.log(cart.length)
         }
     }
     return(
@@ -68,7 +67,7 @@ const Each_item = ({image ,caption,amount,id,data, check}) => {
                     <img src={image} alt="Rings" className='h-[420px]' />
                     <div className='py-3 flex justify-between'>
                         <span className='w-10/12 text-sm'>{caption.toUpperCase()}</span>
-                        <button id='cart' onClick={() => addItem(data)} className=' px-4 text-[20px]'>{check ? <AiFillHeart /> :<FaRegHeart />}</button>
+                        <button id='cart_button' onClick={() => addItem(data)} className=' px-4 text-[20px]'>{check ? <AiFillHeart /> :<FaRegHeart />}</button>
                     </div>
                     <div className='py text-yellow-600'>
                         &#x20A6;{amount}
@@ -83,7 +82,6 @@ const Each_item = ({image ,caption,amount,id,data, check}) => {
 
 
 export default function Popular() {
-    const [cart, setCart] = useState([]);
   return (
     <>
         <section id='popular' className='w-screen h-[75vh] pt-5 flex flex-col justify-center'>
@@ -93,12 +91,11 @@ export default function Popular() {
             </div>   
             <div id='carousel_control' className='scroll-smooth w-[full] px-2 overflow-x-scroll snap-x snap-mandatory py-5'>
                 <div className='flex flex-nowrap w-[1150px] justify-between '>
-                    <UseContext.Provider value={cart}>
                         <Pop_item  />
-                    </UseContext.Provider>
                 </div>
             </div>
         </section>
     </>
   )
 }
+

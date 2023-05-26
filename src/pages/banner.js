@@ -141,7 +141,7 @@ const Cover = () => {
 
 setTimeout(() => {
   document.getElementById('message').style.cssText = 'display:block; transition:0.5s;';
-}, 10000)
+}, 30000)
 
 export default function Banner() {
   return (
@@ -153,7 +153,7 @@ export default function Banner() {
                   <RxCaretDown className='text-slate-500  text-4xl' />
                 </a>
               </div>
-              <div id='message' className='fixed hidden text-sm bottom-[50px] right-[15px] bg-white rounded-xl p-2 tracking-wide shadow-sm shadow-slate-500'>
+              <div id='message' className='fixed hidden text-sm bottom-[20px] right-[15px] bg-white rounded-xl p-2 tracking-wide shadow-sm shadow-slate-500'>
                   <a href="#" className='px-2 py-2 flex items-center'>
                    <GoPrimitiveDot className='mr-2 text-blue-500'/> Message us
                   </a>
