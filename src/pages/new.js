@@ -1,7 +1,7 @@
 import React from 'react'
 import {createContext, useContext, useState } from 'react'
 import {AiFillHeart} from 'react-icons/ai'
-import { UseContext } from './page'
+import { UseContext, Check } from './page'
 import { FaRegHeart } from 'react-icons/fa'
 import glass from './images/pexels-el-gringo-photo-165671461.jpg'
 import necklace from './images/pexels-ashithosh-u-14134201.jpg'
@@ -31,25 +31,21 @@ const data = [
 
 const New_items = () => {
     const [cart, setCart] = React.useContext(UseContext);
+    const [check, setCheck] = useContext(Check);
     return data.map((datum, key) => <Each_item key={key} image={datum.img} title={datum.title} price={datum.price} data={datum} /> )
 }
 
 const Each_item = ({image, title, price, data}) => {
-    var [check, setCheck] = useState(false);
+    const [check, setCheck] = useState(false);
     const [cart, setCart]= useContext(UseContext);
     const addItem = (data) => {
         if(cart.includes(data)){
+            setCart(cart.filter((item) => item.id !== data.id));
             setCheck(!check)
-            // console.log('Item already exists');
-           
-            console.log(cart)
-            // console.log(cart.length);
             return;
         }else{
-            setCheck(true)
-            // console.log('added successfully');
             setCart([...cart,data]);
-            // console.log(cart)
+            setCheck(true)
         }
     }
     return(

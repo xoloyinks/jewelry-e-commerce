@@ -56,7 +56,7 @@ const showCart = () => {
 window.addEventListener('scroll', nav_change, true);
 
 export default function Nav() {    
-    var cart = useContext(UseContext);
+    const [cart, setCart] = useContext(UseContext);
     const [cartLength, setCartLength] = useState(0);
     const cartChange = () => {
         setCartLength(cart.length);

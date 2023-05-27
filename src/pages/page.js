@@ -13,12 +13,15 @@ import Footer from './footer'
 export default function Page() {
     const scrollRef = useRef(null);
     const [cart, setCart] = useState([]);
+    const [check, setCheck] = useState(false);
+
 
     // useScrollSnap({ref:scrollRef, duration:20, delay:20});
   return (
     <>
         <section ref={scrollRef}>
         <UseContext.Provider value={[cart, setCart]}>
+        <Check.Provider value={[check, setCheck]}>
               <Nav />
               <Banner />
               <About />
@@ -26,6 +29,7 @@ export default function Page() {
               <New />
               <Promotion />
               <Footer />
+        </Check.Provider>
         </UseContext.Provider>
           
         </section>
@@ -34,3 +38,4 @@ export default function Page() {
 }
 
 export const UseContext = React.createContext(null)
+export const Check = React.createContext(null)

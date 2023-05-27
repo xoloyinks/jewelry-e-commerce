@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useState } from 'react'
 import { useRef } from 'react'
-import { UseContext } from './page'
+import { UseContext, Check } from './page'
 import ring from "./images/pexels-fernando-arcos-2044271.jpg"
 import bracelet from "./images/pexels-gökhan-yetimova-152917031.jpg"
 import chain from "./images/pexels-monstera-69790151.jpg"
@@ -43,20 +43,21 @@ const Pop_item = () => {
 }
 
 const Each_item = ({image ,caption,amount,id,data}) => {
-    var [check, setCheck] = useState(false);
+    const [check, setCheck] = useState(false);
     const [cart, setCart] = useContext(UseContext);
     const addItem = (data) => {
-        if(cart.includes(data)){
+        if(cart.length === 0){
+            setCart([...cart,data]);
+            setCheck(true);
+            
+        }
+        else if(cart.includes(data)){
+            setCart(cart.filter((item) => item.id !== data.id));
             setCheck(!check)
-            // console.log('Item already exists');
-            console.log(cart)
-            // console.log(cart.length);
             return;
         }else{
-            setCheck(true)
-            // console.log('added successfully');
             setCart([...cart,data]);
-            console.log(cart.length)
+            setCheck(true)
         }
     }
     return(
