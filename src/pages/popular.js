@@ -44,19 +44,18 @@ const Pop_item = () => {
 
 const Each_item = ({image ,caption,amount,id,data}) => {
     var [check, setCheck] = useState(false);
-    const cart = useContext(UseContext);
+    const [cart, setCart] = useContext(UseContext);
     const addItem = (data) => {
         if(cart.includes(data)){
             setCheck(!check)
-            console.log('Item already exists');
-            cart.pop(data);
+            // console.log('Item already exists');
             console.log(cart)
             // console.log(cart.length);
             return;
         }else{
             setCheck(true)
-            console.log('added successfully');
-            cart.push(data);
+            // console.log('added successfully');
+            setCart([...cart,data]);
             console.log(cart.length)
         }
     }

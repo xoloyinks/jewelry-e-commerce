@@ -18,7 +18,7 @@ export default function Page() {
   return (
     <>
         <section ref={scrollRef}>
-        <UseContext.Provider value={cart}>
+        <UseContext.Provider value={[cart, setCart]}>
               <Nav />
               <Banner />
               <About />

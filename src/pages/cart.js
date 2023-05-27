@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { createContext, useEffect, useState } from 'react'
 import { UseContext } from './page';
 import { FaTimes } from 'react-icons/fa';
 import { useContext } from 'react';
@@ -12,7 +12,9 @@ const hideCart = () => {
     body.style.overflowY = '';
 }
 
-const Cart_item = ({image, title, price}) => {
+const Cart_item = ({image, title, price,id,datum, removeItem}) => {
+    const cart = useContext(UseContext);
+    
     return(
         <>
             <section className='w-full py-2 flex h-[fit-content]'>
@@ -22,10 +24,13 @@ const Cart_item = ({image, title, price}) => {
                 <div className='w-[70%] py-2 px-2 flex flex-col justify-between '>
                     <div className='py-2 text-sm'>{title}</div>
                     <div className='font-extrabold'>&#x20A6;{price}</div>
-                    <div className='flex items-center justify-between  w-5/12 py-2'>
-                        <button className='p-2 font-bold text-xl'>-</button>
-                        <input id='item_num' type="number" value='1' className=' w-[50%] text-center text-sm font-bold' />
-                        <button className='p-2 font-bold text-xl'>+</button>
+                    <div className='flex items-center justify-between w-full'>
+                        <div className='flex items-center justify-between  w-5/12 py-2'>
+                            <button className='p-2 font-bold text-xl'>-</button>
+                            <input id='item_num' type="number" value='1' className=' w-[50%] text-center text-sm font-bold' />
+                            <button className='p-2 font-bold text-xl'>+</button>
+                        </div>
+                        <button onClick={() => removeItem(id)} className='text-gray-300'>Remove</button>
                     </div>
                 </div>
             </section>
@@ -34,12 +39,19 @@ const Cart_item = ({image, title, price}) => {
     )
 }
 export default function Cart() {
-    const cart = useContext(UseContext);
+    var [cart, setCart] = useContext(UseContext);
+    console.log(cart);
+    // const [y, sy] = useState(cart);
+    const removeItem = (id) => {
+        setCart(cart.filter((item) => item.id !== id));
+    }
+    // cart =  carted;
+    
     
   return (
     <>
         <section id='cart_container' className='w-[100%] translate-x-[500px] fixed overflow-x-hidden overflow-y-scroll h-[100vh]  top-0 right-0'>
-           <div className='w-[80%]  px-5 py-5 h-screen overflow-y-scroll bg-white absolute right-0'>
+           <div className='w-[80%]  px-5 pt-5 pb-10 h-screen overflow-y-scroll bg-white absolute right-0'>
                 <div className='fixed py-3 top-0 bg-white w-full'>
                     <div onClick={hideCart} className='py-5 ' >
                         <FaTimes className='text-2xl text-neutral-400'/>
@@ -48,13 +60,17 @@ export default function Cart() {
                         CART <BsFillBagHeartFill className='ml-2 cart font-bold text-black' />
                     </div>
                 </div>
+                
                 <div className='mt-24'>
                     {
-                        cart.map((data, i) => <Cart_item key={i} image={data.img} title={data.title} price={data.price} />)
+                        cart.map((data, i) => <Cart_item key={i} id={data.id} image={data.img} title={data.title} price={data.price} datum={data} removeItem={removeItem} />)
                     }
                 </div>
+                
+                
            </div>
         </section>
     </>
   )
 }
+
