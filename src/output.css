@@ -762,6 +762,14 @@ video {
   height: 100vh;
 }
 
+.h-\[75\%\] {
+  height: 75%;
+}
+
+.h-\[fit-ocntent\] {
+  height: fit-ocntent;
+}
+
 .w-10\/12 {
   width: 83.333333%;
 }
@@ -874,6 +882,18 @@ video {
 
 .w-\[75\%\] {
   width: 75%;
+}
+
+.w-\[1200px\] {
+  width: 1200px;
+}
+
+.w-\[90vw\] {
+  width: 90vw;
+}
+
+.w-\[1400px\] {
+  width: 1400px;
 }
 
 .-translate-x-\[500px\] {
