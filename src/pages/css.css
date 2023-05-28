@@ -261,4 +261,21 @@ input:focus{
 #item_num{
     border:solid 1px black;
 }
+
+
+#cat_one{
+    text-align: right;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+}
+#cat_two{
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#cat_three{
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 /* https://jewelry-git-master-xoloyinks.vercel.app/ */

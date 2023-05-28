@@ -8,6 +8,7 @@ import About from './about'
 import New from './new'
 import Promotion from './promotion'
 import Footer from './footer'
+import Categories from './categories'
 
 
 export default function Page() {
@@ -27,6 +28,7 @@ export default function Page() {
               <About />
               <Popular />
               <New />
+              <Categories />
               <Promotion />
               <Footer />
         </Check.Provider>

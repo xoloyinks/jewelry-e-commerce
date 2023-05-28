@@ -25,12 +25,12 @@ const Cart_item = ({image, title, price,id,datum, removeItem}) => {
                     <div className='py-2 text-sm'>{title}</div>
                     <div className='font-extrabold'>&#x20A6;{price}</div>
                     <div className='flex items-center justify-between w-full'>
-                        <div className='flex items-center justify-between  w-5/12 py-2'>
-                            <button onClick={() => quantity <= 1 ? quantity :setQuantity(parseInt(quantity) - 1)} className='p-2 font-bold text-xl'>-</button>
-                            <input id='item_num' type="number" value={quantity} onChange={(e) => setQuantity(e.target.value)} className=' w-[70%] text-center text-sm font-bold' />
-                            <button onClick={() => setQuantity(parseInt(quantity) + 1)} className='p-2 font-bold text-xl'>+</button>
+                        <div className='flex items-center justify-between  w-7/12 py-2'>
+                            <button onClick={() => quantity <= 1 ? quantity :setQuantity(parseInt(quantity) - 1)} className='py-0 px-2 rounded-full font-bold text-xl border-2 border-gray-100 text-gray-500 h-[fit-content]'>-</button>
+                            <input id='item_num' type="number" value={quantity} onChange={(e) => setQuantity(e.target.value)} className=' w-[30%] text-center text-sm font-bold' />
+                            <button onClick={() => setQuantity(parseInt(quantity) + 1)} className='px-2 py-0 font-bold text-xl rounded-full border-2 border-gray-100 text-gray-500'>+</button>
                         </div>
-                        <button onClick={() => removeItem(id)} className='text-gray-300'>Remove</button>
+                        <button onClick={() => removeItem(id)} className='text-gray-400 text-sm'>Remove</button>
                     </div>
                 </div>
             </section>
