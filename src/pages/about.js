@@ -11,14 +11,23 @@ export default function About() {
             <h1 className='tracking-widest text-sm'>
                 FROM STOCKHOLM, SWEDEN
             </h1>
-            <h1 className='tracking-[.25rem] font-lighter leading-[40px] text-2xl w-7/12 mx-auto mt-6'>
+            <h1 className='tracking-[.25rem] font-[5px] leading-[40px] text-2xl w-7/12 mx-auto mt-6'>
                 HANDMADE IMPERFECTION
             </h1>
+            <h5 className='px-6 py-5 text-sm leading-[28px] tracking-xl'>
+            Handmade to us is more than just being made by a real person. When we craft things by hand we invest our heart and soul into them!
+            <br /><br />
+            Our hands not only interpret the qualities and potential of the materials, but translate our imaginations into beautiful jewelry that
+             has something to say. Chipped nail polish, smudges and cuts: 
+            our hands have a story to tell. That’s why we’re proud to flaunt them and dress them in beautiful creations. We take our craft seriously, 
+            but our jewelry isn’t boringly serious. As artisans we combine our hard-won technical knowledge with our playfulness to bring you something
+             that will stand the test of time and never go out of style.
+            </h5>
         </div>
         <div >
             <img src={diamond} alt="" />
         </div>
-        <section className='w-screen py-5 h-[65vh]'>
+        {/* <section className='w-screen py-5 h-[65vh]'>
             <div className='flex justify-between w-full h-full'>
                 <div className='w-4/12 relative flex items-center'>
                     <div className=' absolute w-[230%] pl-5'>
@@ -45,7 +54,7 @@ export default function About() {
                 </div>
             </div>
             
-        </section>
+        </section> */}
     </>
   )
 }

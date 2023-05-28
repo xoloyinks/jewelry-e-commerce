@@ -88,7 +88,7 @@ export default function Nav() {
                 <div className='w-[50px] flex justify-between text-xl'>
                     <button className='relative p-2' onClick={showCart}>
                         <BsFillBagHeartFill className='cart font-bold text-black' />
-                        <span className='__marked flex items-center text-white absolute h-[20px] px-[5px] text-[11px] rounded-full -top-[5px] -right-[5px] font-[10px]'>{cartLength > 0 ? <GoPrimitiveDot className='text-black text-lg'/> : ""}</span>
+                        <span className='__marked flex items-center text-white absolute h-[20px] px-[5px] text-[11px] rounded-full -top-[2px] -right-[0px] font-[10px]'>{cartLength > 0 ? <GoPrimitiveDot className='cart_indicatior text-red-700 text-[13px]'/> : ""}</span>
                     </button>
                 </div>
             </div>

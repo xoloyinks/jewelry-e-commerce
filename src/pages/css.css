@@ -134,7 +134,9 @@ html{
 .__marked{
     font-weight: bolder;
 }
-
+.cart_indicator{
+    transition: 0.5s;
+}
 .upgrade{
     background-color: red;
     background-image: linear-gradient(45deg,gold,rgb(252, 159, 159),  #ca8a04);

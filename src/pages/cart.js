@@ -14,7 +14,7 @@ const hideCart = () => {
 
 const Cart_item = ({image, title, price,id,datum, removeItem}) => {
     const cart = useContext(UseContext);
-    
+    const [quantity, setQuantity] = useState(1)
     return(
         <>
             <section className='w-full py-2 flex h-[fit-content]'>
@@ -26,9 +26,9 @@ const Cart_item = ({image, title, price,id,datum, removeItem}) => {
                     <div className='font-extrabold'>&#x20A6;{price}</div>
                     <div className='flex items-center justify-between w-full'>
                         <div className='flex items-center justify-between  w-5/12 py-2'>
-                            <button className='p-2 font-bold text-xl'>-</button>
-                            <input id='item_num' type="number" value='1' className=' w-[50%] text-center text-sm font-bold' />
-                            <button className='p-2 font-bold text-xl'>+</button>
+                            <button onClick={() => quantity <= 1 ? quantity :setQuantity(parseInt(quantity) - 1)} className='p-2 font-bold text-xl'>-</button>
+                            <input id='item_num' type="number" value={quantity} onChange={(e) => setQuantity(e.target.value)} className=' w-[70%] text-center text-sm font-bold' />
+                            <button onClick={() => setQuantity(parseInt(quantity) + 1)} className='p-2 font-bold text-xl'>+</button>
                         </div>
                         <button onClick={() => removeItem(id)} className='text-gray-300'>Remove</button>
                     </div>

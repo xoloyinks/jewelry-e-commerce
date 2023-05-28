@@ -69,7 +69,7 @@ const Each_item = ({image, title, price, data}) => {
 export default function New() {
   return (
     <>
-        <section className='w-screen h-[72vh] py-3'>
+        <section className='w-screen h-[78vh] py-3'>
             <div className='p-2 flex items-center '>
                 <span className='text-[14px] tracking-wide pr-2 font-bold w-[20%]' >NEW IN</span>
                 <span className='text-[9px] text-right w-[78%] border-b-[1px] border-black'><button>See more</button></span>
