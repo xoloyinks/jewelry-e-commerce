@@ -21,9 +21,9 @@ export default function Explore() {
         <section>
             <div className='tracking-[.25rem] text-center mt-5'>
                 <div className='text-sm opacity-80'>GET INSPIRED</div>
-                <div className='my-5 text-2xl'>SHOP THE LOOK</div>
+                <div className='my-5 text-2xl text-gray-500'>SHOP THE LOOK</div>
             </div>
-            <div className='flex overflow-x-scroll snap-x snap-mandatory px-8 mb-8'>
+            <div className='flex overflow-x-scroll py-8 snap-x snap-mandatory px-8 mb-5'>
                 <Item />
             </div>
             <div className=' flex justify-center px-8'>
