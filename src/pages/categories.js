@@ -33,11 +33,11 @@ const Category_item = () => {
 const Item = ({Image, title, subtitle, button_caption, id}) => {
     return(
         <>
-            <section id={id}  className='mx-auto h-[55vh] w-[90%] py-5 my-5 relative'  style={{ backgroundImage: `url(${Image})`}}>
-                <div id={id} className='absolute px-3 tracking-widest bottom-0 py-5'>
-                    <div className='text-sm text-black font-bold py-2'>{subtitle.toUpperCase()}</div>
+            <section id={id}  className='mx-auto h-[58vh] w-[91%] py-5 my-8 relative rounded-md'  style={{ backgroundImage: `url(${Image})`}}>
+                <div id={id} className=' w-full absolute px-3 tracking-widest bottom-0 py-5 '>
+                    <div className='text-sm  font-bold py-2'>{subtitle.toUpperCase()}</div>
                     <div className='py-2 text-2xl tracking-widest'>{title.toUpperCase()}</div>
-                    <button className='px-5 py-3 bg-red-300 mt-2 tracking-widest text-sm text-white'>{button_caption.toUpperCase()}</button>
+                    <button className='px-8 py-5 bg-red-300 mt-2 tracking-widest text-sm text-white'>{button_caption.toUpperCase()}</button>
                 </div>
             </section>
         </>
