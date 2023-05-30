@@ -9,6 +9,7 @@ import New from './new'
 import Promotion from './promotion'
 import Footer from './footer'
 import Categories from './categories'
+import Explore from './explore'
 
 
 export default function Page() {
@@ -28,8 +29,9 @@ export default function Page() {
               <About />
               <Popular />
               <New />
-              <Categories />
               <Promotion />
+              <Categories />
+              <Explore />
               <Footer />
         </Check.Provider>
         </UseContext.Provider>

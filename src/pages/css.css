@@ -282,4 +282,8 @@ input:focus{
     text-align: center;
     color: white;
 }
+
+.explore_image:last-child{
+    margin-right: 0;
+}
 /* https://jewelry-git-master-xoloyinks.vercel.app/ */
