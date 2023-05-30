@@ -278,7 +278,7 @@ input:focus{
 
 #cat_three{
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 170% 100%;
     text-align: center;
     color: white;
 }
