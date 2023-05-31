@@ -12,15 +12,15 @@ const data = [
 ]
 
 const Item = () => {
-    return data.map((datum, i) => <img key={i} src={datum} alt="Images" className='explore_image mr-3 snap-always snap-center' /> )
+    return data.map((datum, i) => <img key={i} src={datum} alt="Images" className='explore_image mr-3 snap-always snap-center ' /> )
 }
 
 export default function Explore() {
   return (
     <>
-        <section>
-            <div className='tracking-[.25rem] text-center mt-5'>
-                <div className='text-sm opacity-80'>GET INSPIRED</div>
+        <section className='mt-10 py-10'>
+            <div className='tracking-[.25rem] text-center '>
+                <div className='text-sm opacity-80 '>GET INSPIRED</div>
                 <div className='my-5 text-2xl text-gray-500'>SHOP THE LOOK</div>
             </div>
             <div className='flex overflow-x-scroll py-8 snap-x snap-mandatory px-8 mb-5'>

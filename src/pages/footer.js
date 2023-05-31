@@ -7,22 +7,15 @@ import {SlSocialFacebook} from 'react-icons/sl'
 export default function Footer() {
   return (
     <>
-        <section className='py-10 p-5'>
-            <div>
-                <h1 className='w-9/12'>
-                    SUBSCRIBE TO OUR NEWSLETTER 
-                    AND GET 10% DISCOUNT
-                </h1>
-                <br />
-                <div className=''>
-                    <form action="" method="get" className='flex justify-between'>
-                        <input type="email" name="email" id="email" placeholder='Enter your email' className='bg-transperent w border-b-[1px] border-gray-600 w-8/12 tracking-wide' />
-                        <button className='px-5 py-3 text-[11px] text-yellow-600 rounded-full border-yellow-600 border-2'>
-                            SUBSCRIBE
-                        </button>
+                <div className='subscribe flex justify-center items-center h-[45vh] mt-8 text-white px-5'>
+                    <form method='post' action='#' className='h-[fit-content] text-center tracking-[.25rem]'>
+                        <div className='text-white'>STAY TUNED</div>
+                        <div className='text-2xl leading-[35px] my-3'>SIGN UP FOR OUR NEWSLETTER</div>
+                        <input type="email" placeholder='Enter your email' className='subscribe_input p-3 w-full transparent border-[1px] border-red-300' />
+                        <button className='w-full text-md bg-gray-700 my-5 p-5'>SUBSCRIBE</button>
                     </form>
                 </div>
-            </div>
+        <section className='py-10 p-5'>
             <br />
             <div className='text-[14px] tracking-wide h-[25vh] flex justify-between'>
                 <div className='flex flex-col h-full w-[40%]'>
