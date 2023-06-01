@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import image_1 from './images/pexels-wallace-chuck-20848101.jpg'
+import image_1 from './images/pexels-cottonbro-studio-97484841.jpg'
 import image_2 from './images/IMG_7425_kopiera_b62408be-98e0-496d-9f7e-c76e0683f0c7_x800.jpg'
 import image_3 from './images/header-1_x800.jpg'
 import image_4 from './images/pexels-the-glorious-studio-120260551.jpg'

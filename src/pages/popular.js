@@ -5,7 +5,7 @@ import ring from "./images/pexels-fernando-arcos-2044271.jpg"
 import bracelet from "./images/pexels-gökhan-yetimova-152917031.jpg"
 import chain from "./images/pexels-monstera-69790151.jpg"
 import trad_anklets from './images/pexels-curtis-loy-51120131.jpg'
-import earring from './images/pexels-godisable-jacob-1229179.jpg'
+import earring from './images/pexels-godisable-jacob-12291791.jpg'
 import { FaHeart, FaRegHeart } from 'react-icons/fa'
 import {AiFillHeart} from 'react-icons/ai'
 import {RxDot} from 'react-icons/rx'

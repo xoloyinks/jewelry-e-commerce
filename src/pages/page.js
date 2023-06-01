@@ -29,8 +29,8 @@ export default function Page() {
               <About />
               <Popular />
               <New />
-              <Promotion />
               <Categories />
+              <Promotion />
               <Explore />
               <Footer />
         </Check.Provider>
