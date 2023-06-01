@@ -9,10 +9,10 @@ export default function Footer() {
     <>
                 <div className='subscribe flex justify-center items-center h-[45vh] mt-8 text-white px-5'>
                     <form method='post' action='#' className='h-[fit-content] text-center tracking-[.25rem]'>
-                        <div className='text-white'>STAY TUNED</div>
-                        <div className='text-2xl leading-[35px] my-3'>SIGN UP FOR OUR NEWSLETTER</div>
-                        <input type="email" placeholder='Enter your email' className='subscribe_input p-3 w-full transparent border-[1px] border-red-300' />
-                        <button className='w-full text-md bg-gray-700 my-5 p-5'>SUBSCRIBE</button>
+                        <div className='text-white text-sm opacity-70'>STAY TUNED</div>
+                        <div className='text-xl leading-[35px] my-3'>SIGN UP FOR OUR NEWSLETTER</div>
+                        <input type="email" placeholder='Enter your email' className='subscribe_input p-3 w-full transparent border-[2px] border-white rounded-md tracking-wider' />
+                        <button className='w-full text-sm bg-slate-800 my-5 p-5 rounded-md'>SUBSCRIBE</button>
                     </form>
                 </div>
         <section className='py-10 p-5'>

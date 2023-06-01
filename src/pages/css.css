@@ -288,12 +288,31 @@ input:focus{
 }
 
 .subscribe{
-    background-image: url(images/pexels-git-stephen-gitau-1670723.jpg);
+    background-image: url(images/pexels-megapixelstock-17834.jpg);
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .subscribe_input{
     background-color: transparent;
+}
+
+input::placeholder{
+    color:white;
+    /* opacity: 1; */
+    /* font-weight:; */
+}
+
+input:focus{
+    background-color: white;
+    color: black;
+    font-weight: bold;
+}
+
+:-ms-input-placeholder{
+    color: white;
+}
+::-ms-input-placeholder{
+    color: white;
 }
 /* https://jewelry-git-master-xoloyinks.vercel.app/ */
