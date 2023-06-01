@@ -23,7 +23,7 @@ const nav_change = () => {
     }else{
         document.getElementById('nav').style.cssText = 'background-color: transperent; transition:0.5s;';
         document.querySelector('.info').style.cssText = 'display:block';
-        document.getElementById('logo').style.cssText = 'color:red; transition:0.5s;';
+        document.getElementById('logo').style.cssText = 'color:black; transition:0.5s;';
         // document.getElementById('bar-1').style.cssText = "border:solid 2px black; transition:0.5s; background-color:black;";
         // document.getElementById('bar-2').style.cssText = "border:solid 2px black; transition:0.5s; background-color:black;";
         // document.getElementById('bar-3').style.cssText = "border:solid 2px black; transition:0.5s; background-color:black;";
@@ -82,7 +82,7 @@ export default function Nav() {
                         <VscMenu className='text-xl font-bold'/>
                     </div>
                 </button>
-                <div id='logo' className='text-md text-red-900 font-extrabold'> 
+                <div id='logo' className='text-2xl text-black font-extrabold'> 
                     Gold 
                 </div>
                 <div className='w-[50px] flex justify-between text-xl'>

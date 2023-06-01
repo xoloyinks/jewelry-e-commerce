@@ -74,7 +74,7 @@ export default function Cart() {
                     {
                         cart.length > 0 
                         ?
-                            <div className='fixed bottom-0 pb-10 pt-3 bg-white'>
+                            <div className='fixed bottom-0 pb-20 pt-3 bg-white'>
                                 <button className='px-3 py-2 bg-red-300 text-white rounded-lg'>Confirm order</button>
                                 <button onClick={emptyArray} className='px-3 py-2 bg-red-600 text-white rounded-lg ml-3'>Empty Cart</button>
                             </div>
