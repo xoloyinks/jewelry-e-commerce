@@ -82,7 +82,7 @@ export default function Nav() {
                         <VscMenu className='text-xl font-bold'/>
                     </div>
                 </button>
-                <div id='logo' className='text-md text-white font-extrabold'> 
+                <div id='logo' className='text-md text-red-900 font-extrabold'> 
                     Gold 
                 </div>
                 <div className='w-[50px] flex justify-between text-xl'>

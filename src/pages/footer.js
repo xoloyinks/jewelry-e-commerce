@@ -17,7 +17,7 @@ export default function Footer() {
                 </div>
         <section className='py-10 p-5 h-[fit-content]'>
             <br />
-            <div className='text-[14px] tracking-wide h-[25vh] flex justify-between'>
+            <div className='text-[14px] tracking-wide h-[fit-content] flex justify-between'>
                 <div className='flex flex-col h-full w-[40%]'>
                     <span className='py-3 font-bold opacity-50 text-yellow-600'>NAVIGATION</span>
                     <a href='#' className='py-3 w-[fit-content]'>ABOUT US</a>
