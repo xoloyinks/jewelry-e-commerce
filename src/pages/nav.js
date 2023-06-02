@@ -14,7 +14,7 @@ const nav_change = () => {
     if(document.documentElement.scrollTop > 50){
         document.getElementById('nav').style.cssText = 'background-color:white; transition:0.5s; top:0;';
         document.querySelector('.info').style.cssText = 'display:none';
-        document.getElementById('logo').style.cssText = 'color:red; font-weight:bold;';
+        document.getElementById('logo').style.cssText = 'color:black; font-weight:bold;';
         // document.getElementById('bar-1').style.cssText = "border:solid 2px black; background-color:black;";
         // document.getElementById('bar-2').style.cssText = "border:solid 2px black; background-color:black;";
         // document.getElementById('bar-3').style.cssText = "border:solid 2px black; background-color:black;";
@@ -82,8 +82,8 @@ export default function Nav() {
                         <VscMenu className='text-xl font-bold'/>
                     </div>
                 </button>
-                <div id='logo' className='text-2xl text-black font-extrabold'> 
-                    Gold 
+                <div id='logo' className='text-md text-black font-extrabold'> 
+                    Gold
                 </div>
                 <div className='w-[50px] flex justify-between text-xl'>
                     <button className='relative p-2' onClick={showCart}>

@@ -2,6 +2,10 @@ import React from 'react'
 import {TfiTwitter} from 'react-icons/tfi'
 import {IoLogoInstagram} from 'react-icons/io'
 import {SlSocialFacebook} from 'react-icons/sl'
+import {GrAmex} from 'react-icons/gr'
+import {RiVisaLine} from 'react-icons/ri'
+import {SiMastercard} from 'react-icons/si'
+import { FaApplePay,FaPaypal, FaGooglePay } from 'react-icons/fa'
 
 
 export default function Footer() {
@@ -41,6 +45,16 @@ export default function Footer() {
             <div className='flex justify-between items-center px-2 py-2'>
                 <span className='text-[13px]'>&copy; 2023 XOLO. All rights reserved</span>
                 <span className='text-[10px]'>Privacy Statement</span>
+            </div>
+            <br />
+            <hr />
+            <div className='flex text-4xl justify-center justify-around pb-10 pt-5 items-center opacity-80'>
+                <GrAmex/>
+                <FaApplePay />
+                <FaGooglePay />
+                <FaPaypal className='text-2xl' />
+                <RiVisaLine />
+                <SiMastercard className='text-2xl' />
             </div>
         </section>
     </>
