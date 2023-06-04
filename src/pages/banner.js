@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react'
-import image_1 from './images/pexels-cottonbro-studio-97484841.jpg'
-import image_2 from './images/IMG_7425_kopiera_b62408be-98e0-496d-9f7e-c76e0683f0c7_x800.jpg'
-import image_3 from './images/header-1_x800.jpg'
-import image_4 from './images/pexels-the-glorious-studio-120260551.jpg'
-import image_5 from './images/pexels-steven-arenas-6200741.jpg'
+import image_1 from './images/pexels-wallace-chuck-2084810.jpg'
+import image_2 from './images/IMG_7425_kopiera_cda8ab70-508c-45c7-80d4-b0da906269d3_1600x.jpeg'
+import image_3 from './images/Studiosession-563_cbe73ea4-2486-4587-8b6f-86a04e31ea79_1600x.jpeg'
+import image_4 from './images/pexels-the-glorious-studio-1202605w5.jpg'
+import image_5 from './images/cleo-lilac_kopiera_160d0x.jpeg'
 import { useState , useRef } from 'react'
 import { FaGreaterThan } from 'react-icons/fa'
 import vid from './images/exibit.mp4'
@@ -41,16 +41,16 @@ const banner = [
     img : image_4,
     face: 'four',
     id: 4,
-    subtitle: '18k ice chain',
-    title: 'golden cleo',
+    subtitle: 'Freezy freeze ice chain',
+    title: 'Lasty Fragments',
     buttonCaption: 'shop now'
   },
   {
     img : image_5,
     face: 'five',
     id: 5,
-    subtitle: 'created by hand',
-    title: 'wedding & engagement choker',
+    subtitle: '18k gold bracelet',
+    title: 'golden cleo ',
     buttonCaption: 'shop now'
   }
 ];
@@ -87,38 +87,38 @@ const Cover = () => {
     
 
     if(classControl !== index){
-      // changeBanner.current[classControl].classList.remove('active');
+      changeBanner.current[classControl].classList.remove('active');
     }
-    // console.log(bannerIndex);
-    // console.log(index);
-    // console.log(changeBanner.current[index])
+    console.log(bannerIndex);
+    console.log(index);
+    console.log(changeBanner.current[index])
   }
 
-  // useEffect(() => {
-  //   changeBanner.current[0].classList.add('active');
-  // }, []);
+  useEffect(() => {
+    changeBanner.current[0].classList.add('active');
+  }, []);
 
-  // useEffect(() => {
-  //     // setAssureChange(classControl)
-  //     if(classControl === bannerIndex) return;
-  //     changeBanner.current[classControl].classList.remove('active');
-  // }, [classControl])
+  useEffect(() => {
+      setAssureChange(classControl)
+      if(classControl === bannerIndex) return;
+      changeBanner.current[classControl].classList.remove('active');
+  }, [classControl])
 
   if(bannerIndex > 4){
     setBannerIndex(0);
     return;
   }
     
-  setTimeout(() => {
-      // console.log(bannerIndex);
-      setBannerIndex(bannerIndex + 1);
+  // setTimeout(() => {
+  //     // console.log(bannerIndex);
+  //     setBannerIndex(bannerIndex + 1);
       
-  }, 10000)
+  // }, 10000);
     return(
       banner.map((datum, index) => { return(
         <>
             <section key={index} className='banner w-screen h-full overflow-hidden'>
-              <div id={banner[bannerIndex].face + banner[bannerIndex].id} className='exibit relative bg-black h-[92vh] w-full' style={{ backgroundImage: `url(${banner[bannerIndex].img})`, backgroundSize:'cover' }}>
+              <div id={banner[bannerIndex].face + banner[bannerIndex].id} className='exibit relative bg-black h-[95vh] w-full lg:h-full' style={{ backgroundImage: `url(${banner[bannerIndex].img})`, backgroundSize:'cover' }}>
                 <div className='__banner w-full h-full'></div>
                 <div id={banner[bannerIndex].face} className='caption absolute w-full bottom-[80px] text-white p-5'>
                   <div className='text-md text-gray-200 tracking-widest font-thin'>
@@ -130,8 +130,8 @@ const Cover = () => {
                 </div>
                 
               </div>
-              <ul className='absolute bottom-[70px] flex mt-5 text-3xl'>
-                    {banner.map((datum,index) => <li key={index}><button disabled key={index} ref={addMean} onClick={() => refClick(index)} className='carousel_button'>{assureChange ? <RxDot /> : <RxDotFilled/>}</button></li>)}
+              <ul className='absolute bottom-[50px] px-3 flex mt-5 text-3xl lg:bottom-[40px]'>
+                    {banner.map((datum,index) => <li key={index}><button  key={index} ref={addMean} onClick={() => refClick(index)} className='carousel_button'>{assureChange ? <RxDot /> : <RxDotFilled/>}</button></li>)}
                 </ul>
             </section>
         </>)
@@ -146,9 +146,9 @@ setTimeout(() => {
 export default function Banner() {
   return (
     <>
-        <section className='check w-screen relative h-[98vh] overflow-hidden'>
+        <section className='check w-screen relative h-[96vh] overflow-hidden'>
               <Cover />
-              <div className='absolute flex justify-center bottom-[20px]  text-center  w-full text-white px-10 font-bold'>
+              <div className='absolute flex justify-center -bottom-[10px]  text-center  w-full text-white px-10 font-bold lg:-bottom-[20px] z-50'>
                 <a href='#about' className='px-3 py-3 w-[fit-content] bg-slate-100 shadow-sm shadow-slate-500 rounded-full mx-3'>
                   <RxCaretDown className='text-slate-500  text-4xl' />
                 </a>

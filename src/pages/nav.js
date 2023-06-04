@@ -14,7 +14,7 @@ const nav_change = () => {
     if(document.documentElement.scrollTop > 50){
         document.getElementById('nav').style.cssText = 'background-color:white; transition:0.5s; top:0;';
         document.querySelector('.info').style.cssText = 'display:none';
-        document.getElementById('logo').style.cssText = 'color:black; font-weight:bold;';
+        document.getElementById('logo').style.cssText = 'color:black; font-weight:bold; font-size:large;';
         // document.getElementById('bar-1').style.cssText = "border:solid 2px black; background-color:black;";
         // document.getElementById('bar-2').style.cssText = "border:solid 2px black; background-color:black;";
         // document.getElementById('bar-3').style.cssText = "border:solid 2px black; background-color:black;";
@@ -23,7 +23,7 @@ const nav_change = () => {
     }else{
         document.getElementById('nav').style.cssText = 'background-color: transperent; transition:0.5s;';
         document.querySelector('.info').style.cssText = 'display:block';
-        document.getElementById('logo').style.cssText = 'color:black; transition:0.5s;';
+        document.getElementById('logo').style.cssText = 'color:black; transition:0.5s; ';
         // document.getElementById('bar-1').style.cssText = "border:solid 2px black; transition:0.5s; background-color:black;";
         // document.getElementById('bar-2').style.cssText = "border:solid 2px black; transition:0.5s; background-color:black;";
         // document.getElementById('bar-3').style.cssText = "border:solid 2px black; transition:0.5s; background-color:black;";
@@ -76,13 +76,10 @@ export default function Nav() {
             <div className='flex items-center justify-between px-3 py-3 '>
                 <button onClick={showMenu} className=' h-[fit-content] w-[47px] p-3'>
                     <div className='flex flex-col justify-between w-[27px] h-[24px]'>
-                        {/* <div id='bar-1' className='bar border-2 border-black bg-black w-full rounded-full'></div>
-                        <div id='bar-2' className='bar border-2 border-black bg-black w-7/12 rounded-full'></div>
-                        <div id='bar-3' className='bar border-2 border-black bg-black w-full rounded-full'></div> */}
-                        <VscMenu className='text-xl font-bold'/>
+                        <VscMenu className='text-xl font-bold lg:text-2xl'/>
                     </div>
                 </button>
-                <div id='logo' className='text-md text-black font-extrabold'> 
+                <div id='logo' className='text-md text-black font-extrabold lg:text-2xl'> 
                     Gold
                 </div>
                 <div className='w-[50px] flex justify-between text-xl'>

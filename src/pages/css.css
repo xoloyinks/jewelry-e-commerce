@@ -29,8 +29,11 @@ html{
     background-repeat: no-repeat;
 }
 #five5{
-    background-position: 30% 50%;
+    background-position: 50% 50%;
 
+}
+#one1{
+    background-position: 30% 100%;
 }
 #two2{
     background-position: 44% 50%;
@@ -45,6 +48,24 @@ html{
 #four4{
     background-position: 50% 50%;
     
+}
+
+@media screen and (min-width:1024px){
+    #one1{
+        background-position: 50% 40%;
+    }
+    #two2{
+        background-position: 0% 45%;
+    }
+    #three3{
+        background-position: 0% 80%;
+    }
+    #four4{
+        background-position: 0% 10%;
+    }
+    #five5{
+        background-position: 0% 70%;
+    }
 }
 .banner{
     z-index: 1;
