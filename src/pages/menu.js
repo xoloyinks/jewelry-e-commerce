@@ -73,7 +73,7 @@ const singles = [
 ]
 
 const hideMenu = () => {
-    document.getElementById('navMenuContainer').style.cssText = 'transform:translateX(-500px); transition:0.5s;';
+    document.getElementById('navMenuContainer').style.cssText = 'transform:translateX(-1300px); transition:0.5s;';
     const body = document.body;
     body.style.position = '';
     body.style.overflowY = '';
@@ -107,12 +107,15 @@ export default function Menu() {
   return (
     <>
         {/* MOBILE NAV SLIDE OUT */}
-        <section id='navMenuContainer' className='-translate-x-[500px] nav_slide overflow-y-scroll fixed h-[fit-content] w-screen'>
-            <div className='nav_slide_child relative bg-neutral-500 w-[85%] overflow-y-scroll h-screen text-gray-100 tracking-[.17rem] px-4'>
-                <a onClick={hideMenu} className='py-5 px-3 '>
-                    <FaTimes className='text-2xl text-neutral-400'/>
-                </a>
-                <div className='text-[13px]  py-5'>
+        <section id='navMenuContainer' className='nav_slide -translate-x-[500px] flex flex-col justify-between bg-neutral-500 overflow-y-scroll fixed h-[100vh] w-[fit-content] lg:-translate-x-[1300px] lg:w-[30%] '>
+                
+                    <a onClick={hideMenu} className='py-5 px-3 '>
+                        <FaTimes className='text-2xl text-neutral-400'/>
+                    </a>
+                
+            <div className='nav_slide_child relative h-[80%] px-4 w-full overflow-y-scroll h-screen text-gray-100 tracking-[.17rem]
+             lg: lg:w-full'> 
+                <div className='text-[13px]  py-5 lg:text-[10px] lg:py-5'>
                     <a href="#" className=' py-5 '>NEW COLLECTION - LES FEMMES</a>
                 </div>
                 <hr className='w-full border-[1px] border-neutral-400 opacity-50'/>
@@ -120,12 +123,12 @@ export default function Menu() {
                     ring.map((data, a) => {
                         return(
                             // NAV MENU CONTAINER FOR RINGS
-                            <div className='accordion text-[13px] py-2'>
-                                <a key={a} onClick={() => showRing(a)} href="#" className='flex justify-between py-2 w-full '>
+                            <div className='accordion text-[13px] py-2 lg:text-[10px]'>
+                                <a key={a} onClick={() => showRing(a)} href="#" className='flex justify-between py-2 w-full lg:items-center lg:py-2'>
                                     <span>
                                         {data.title.toUpperCase()}
                                     </span>
-                                    <span className='text-xl'>
+                                    <span className='text-xl lg:text-sm'>
                                         {selectedRing === a ? '-' : '+'}
                                     </span>
                                 </a>
@@ -135,11 +138,11 @@ export default function Menu() {
                                         {data.content_1.map((datum,i) => {
                                             return(
                                                 <>
-                                                    <a href="#" key={i}  onClick={() => showSub(i)}  className='flex justify-between py-3 w-full text-gray-300 opacity-80'>
+                                                    <a href="#" key={i}  onClick={() => showSub(i)}  className='flex justify-between py-3 w-full text-gray-300 opacity-80 lg:items-center lg:py-2'>
                                                         <span>
                                                             {datum.title.toUpperCase()}
                                                         </span>
-                                                        <span className='text-xl'>
+                                                        <span className='text-xl lg:text-sm'>
                                                             {selected === i ? (datum.content.length > 1 ? '-' : ' ') : (datum.content.length > 1 ? '+' : '')}
                                                         </span>
                                                     </a>
@@ -166,10 +169,10 @@ export default function Menu() {
                     wedding_earrings.map((data, i) => {
                         return(
                             <>
-                                <div className='py-2 text-[13px] '>
-                                    <a href="#" onClick={() => showAccessories(i)} className='py-2 flex justify-between'>
+                                <div className='py-2 text-[13px] lg:text-[10px] lg:py-2'>
+                                    <a href="#" onClick={() => showAccessories(i)} className='py-2 flex justify-between lg:items-center lg:py-2'>
                                         <span>{data.title.toUpperCase()}</span>
-                                        <span className='text-xl'>{selectedAccessories === i ? '-' : '+'}</span>
+                                        <span className='text-xl lg:text-sm'>{selectedAccessories === i ? '-' : '+'}</span>
                                     </a>
                                     <div className={`${selectedAccessories === i ? 'accessories show' : 'accessories'} px-5`}>
                                         {data.content.map((datum, x) => {
@@ -196,8 +199,8 @@ export default function Menu() {
                     singles.map((data, s) => {
                         return(
                             <>
-                                <div className='py-4'>
-                                    <a href="#" key={s} className='text-[13px]'>
+                                <div className='py-4  lg:py-3'>
+                                    <a href="#" key={s} className='text-[13px] lg:text-[10px]'>
                                         {data.toUpperCase()}
                                     </a>
                                 </div>
@@ -206,15 +209,16 @@ export default function Menu() {
                         )
                     })
                 }
-                <div className='fixed w-[80%]  self-center mx-auto bottom-0 py-3 bg-neutral-500'>
-                    <div className='w-[50%] flex items-center justify-between'>
+                
+            </div>
+            <div className='w-[80%] flex items-center mx-auto bottom-0 py-3 bg-neutral-500'>
+                    <div className='w-[50%] flex h-[fit-content] items-center justify-between'>
                         <span className='p-3'><a href="#"><FaFacebookF className='text-gray-300'/></a></span>
-                        <span>|</span>
+                        {/* <span>|</span> */}
                         <span className='p-3'><a href="#"><FiInstagram className='text-gray-300'/></a></span>
-                        <span>|</span>
+                        {/* <span>|</span> */}
                         <span className='p-3'><a href="#"><FaPinterest className='text-gray-300'/></a></span>
                     </div>
-                </div>
             </div>
         </section>
     </>

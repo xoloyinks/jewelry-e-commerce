@@ -49,10 +49,24 @@ const Pop_item = () => {
     return data.map((datum,cart, key) =>  <Each_item key={key} carted={cart} image={datum.img} caption={datum.title} amount={datum.price} id={datum.id} data={datum}  />)
 }
 
+
+
 const Each_item = ({image ,caption,amount,id,data}) => {
     const [check, setCheck] = useState(false);
     const [cart, setCart] = useContext(UseContext);
+    const feed_back = () => {
+        return (
+            <>
+                <section id='feed_back' className='absolute z-50 w-screen h-screen'>
+                    adfad
+                </section>
+            </>
+        )
+    }
+
     const addItem = (data) => {
+        feed_back();
+
         if(cart.length === 0){
             setCart([...cart,data]);
             setCheck(true);
@@ -63,7 +77,7 @@ const Each_item = ({image ,caption,amount,id,data}) => {
             return;
         }else{
             setCart([...cart,data]);
-            setCheck(true)
+            setCheck(true);
         }
     }
     return(

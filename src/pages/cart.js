@@ -6,7 +6,7 @@ import {BsFillBagHeartFill} from 'react-icons/bs'
 
 
 const hideCart = () => {
-    document.getElementById('cart_container').style.cssText = 'transform:translateX(500px);transition:0.1s;';
+    document.getElementById('cart_container').style.cssText = 'transform:translateX(1300px);transition:0.1s;';
     const body = document.body;
     body.style.position = '';
     body.style.overflowY = '';
@@ -54,8 +54,8 @@ export default function Cart() {
     
   return (
     <>
-        <section id='cart_container' className=' w-[100%] translate-x-[500px] fixed overflow-x-hidden overflow-y-scroll h-[100vh]  top-0 right-0'>
-           <div className='w-[80%] px-5 pt-5 pb-16 h-screen overflow-y-scroll bg-white absolute right-0'>
+        <section id='cart_container' className=' w-[100%] translate-x-[500px] fixed overflow-x-hidden overflow-y-scroll h-[100vh]  top-0 right-0 lg:translate-x-[1300px]'>
+           <div className='w-[80%] px-5 pt-5 pb-16 h-screen overflow-y-scroll bg-white absolute right-0 lg:w-[30%]'>
                 <div className='fixed py-3 top-0 bg-white w-full'>
                     <div onClick={hideCart} className='py-5 ' >
                         <FaTimes className='text-2xl text-neutral-400'/>
@@ -74,7 +74,7 @@ export default function Cart() {
                     {
                         cart.length > 0 
                         ?
-                            <div className='fixed bottom-0 pb-20 pt-3 bg-white'>
+                            <div className='fixed bottom-0 pb-20 pt-3 bg-white lg:pb-5'>
                                 <button className='px-3 py-2 bg-red-300 text-white rounded-lg'>Confirm order</button>
                                 <button onClick={emptyArray} className='px-3 py-2 bg-red-600 text-white rounded-lg ml-3'>Empty Cart</button>
                             </div>
