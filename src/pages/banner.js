@@ -14,11 +14,11 @@ import {GoPrimitiveDot} from 'react-icons/go'
 
 const banner = [
   {
-    img : image_1,
-    face: 'one',
-    id: 1,
-    subtitle: ' PRE-LOVED & 100% RECYCLED',
-    title: 'antique diamonds',
+    img : image_5,
+    face: 'five',
+    id: 5,
+    subtitle: '18k gold bracelet',
+    title: 'golden cleo ',
     buttonCaption: 'shop now'
   },
   {
@@ -46,13 +46,14 @@ const banner = [
     buttonCaption: 'shop now'
   },
   {
-    img : image_5,
-    face: 'five',
-    id: 5,
-    subtitle: '18k gold bracelet',
-    title: 'golden cleo ',
+    img : image_1,
+    face: 'one',
+    id: 1,
+    subtitle: ' PRE-LOVED & 100% RECYCLED',
+    title: 'antique diamonds',
     buttonCaption: 'shop now'
   }
+  
 ];
 
 const Cover = () => {
@@ -120,17 +121,17 @@ const Cover = () => {
             <section key={index} className='banner w-screen h-full overflow-hidden'>
               <div id={banner[bannerIndex].face + banner[bannerIndex].id} className='exibit relative bg-black h-[95vh] w-full lg:h-full' style={{ backgroundImage: `url(${banner[bannerIndex].img})`, backgroundSize:'cover' }}>
                 <div className='__banner w-full h-full'></div>
-                <div id={banner[bannerIndex].face} className='caption absolute w-full bottom-[80px] text-white p-5'>
-                  <div className='text-md text-gray-200 tracking-widest font-thin'>
+                <div id={banner[bannerIndex].face} className='caption absolute w-full bottom-[80px] text-white p-5 lg:px-20'>
+                  <div className='text-md text-gray-200 tracking-widest font-thin lg:text-sm'>
                     {banner[bannerIndex].subtitle.toUpperCase() || banner[secControl].subtitle.toUpperCase()}
                   </div>
-                  <div className=' text-2xl tracking-widest font-thin my-3'>{banner[bannerIndex].title.toUpperCase() || banner[secControl].title.toUpperCase()}</div>
-                  <button className=' px-10 py-4 text-sm bg-red-300 tracking-widest'>{banner[bannerIndex].buttonCaption.toUpperCase() || banner[secControl].buttonCaption.toUpperCase()}</button>
+                  <div className=' text-2xl tracking-widest font-thin my-3 lg:my-6 md:text-xl'>{banner[bannerIndex].title.toUpperCase() || banner[secControl].title.toUpperCase()}</div>
+                  <button className=' px-10 py-4 text-sm bg-red-300 tracking-widest lg:text-xs'>{banner[bannerIndex].buttonCaption.toUpperCase() || banner[secControl].buttonCaption.toUpperCase()}</button>
                   
                 </div>
                 
               </div>
-              <ul className='absolute bottom-[50px] px-3 flex mt-5 text-3xl lg:bottom-[40px]'>
+              <ul className='absolute bottom-[50px] px-3 flex mt-5 text-3xl lg:bottom-[40px] lg:px-[70px] '>
                     {banner.map((datum,index) => <li key={index}><button  key={index} ref={addMean} onClick={() => refClick(index)} className='carousel_button'>{assureChange ? <RxDot /> : <RxDotFilled/>}</button></li>)}
                 </ul>
             </section>
@@ -148,17 +149,18 @@ export default function Banner() {
     <>
         <section className='check w-screen relative h-[96vh] overflow-hidden'>
               <Cover />
-              <div className='absolute flex justify-center -bottom-[10px]  text-center  w-full text-white px-10 font-bold lg:-bottom-[20px] z-50'>
-                <a href='#about' className='px-3 py-3 w-[fit-content] bg-slate-100 shadow-sm shadow-slate-500 rounded-full mx-3'>
-                  <RxCaretDown className='text-slate-500  text-4xl' />
-                </a>
-              </div>
+              
               <div id='message' className='fixed hidden text-[13px] bottom-[20px] right-[15px] bg-white rounded-xl tracking-wide shadow-sm shadow-slate-500'>
                   <a href="#" className='px-2 py-2 flex items-center'>
                    <GoPrimitiveDot className='mr-2 text-blue-500'/> Message us
                   </a>
               </div>
         </section>
+        <div className='direction absolute flex justify-center bottom-[10px]  text-center  w-full text-white px-10 font-bold lg:bottom-[15px]'>
+            <a href='#about' className='direction px-3 py-3 w-[fit-content] bg-slate-100 shadow-sm shadow-slate-500 rounded-full mx-3'>
+                <RxCaretDown className='text-slate-500  text-4xl lg:text-2xl' />
+            </a>
+        </div>
     </>
   )
 }

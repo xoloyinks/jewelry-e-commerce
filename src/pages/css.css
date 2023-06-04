@@ -73,6 +73,9 @@ html{
 .check{
     transition: 0.5s;
 }
+.d{
+    z-index: 0000;
+}
 .nav{
     z-index: 111;
 }
@@ -226,8 +229,8 @@ input:focus{
     opacity: 0.5;
 }
 .carousel_button{
-    color:rgb(216, 210, 210);
-    opacity: 0.4;
+    color:rgb(255, 255, 255);
+    /* opacity: 0.4; */
     
 }
 .nav_slide{
@@ -356,6 +359,10 @@ input::-ms-input-placeholder{
 
 #feed_back{
     background-color: rgba(0, 0, 0, 0.4);
+}
+
+.direction{
+    /* z-index: 99999; */
 }
 
 /* https://jewelry-git-master-xoloyinks.vercel.app/ */

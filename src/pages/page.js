@@ -26,7 +26,7 @@ export default function Page() {
         <Check.Provider value={[check, setCheck]}>
               <Nav />
               <Banner />
-              <About />
+              <About className="d"/>
               <Popular />
               <New />
               <Categories />
