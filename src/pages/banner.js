@@ -110,11 +110,11 @@ const Cover = () => {
     return;
   }
     
-  // setTimeout(() => {
-  //     // console.log(bannerIndex);
-  //     setBannerIndex(bannerIndex + 1);
+  setTimeout(() => {
+      // console.log(bannerIndex);
+      setBannerIndex(bannerIndex + 1);
       
-  // }, 10000);
+  }, 10000);
     return(
       banner.map((datum, index) => { return(
         <>

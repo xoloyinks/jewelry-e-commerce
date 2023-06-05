@@ -35,7 +35,7 @@ const Category_item = () => {
 const Item = ({Image, title, subtitle, button_caption, id}) => {
     return(
         <>
-            <section id={id}  className='mx-auto h-[55vh] w-[91%] py-5 my-8 relative  lg:w-[32%] lg:h-[85vh]'  style={{ backgroundImage: `url(${Image})`}}>
+            <section id={id}  className='mx-auto h-[55vh] w-[91%] py-5 my-8 relative  lg:w-[30%] lg:h-[85vh]'  style={{ backgroundImage: `url(${Image})`}}>
                 <div id={id} className=' w-full absolute px-3 tracking-[.25rem] bottom-0 py-5 '>
                     <div className='text-sm  font-bold py-2 lg:font-light lg:text-xs'>{subtitle.toUpperCase()}</div>
                     <div className='py-2 text-3xl lg:text-2xl'>{title.toUpperCase()}</div>
