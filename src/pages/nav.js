@@ -12,7 +12,7 @@ import Menu from './menu';
 
 const nav_change = () => {
     if(document.documentElement.scrollTop > 50){
-        document.getElementById('nav').style.cssText = 'background-color:white; transition:0.5s; top:0;';
+        document.getElementById('nav').style.cssText = 'background-color:white; transition:0.5s; top:0; border-bottom:solid #d1d5db 1px;';
         document.querySelector('.info').style.cssText = 'display:none';
         document.getElementById('logo').style.cssText = 'color:black; font-weight:bold; font-size:large;';
         // document.getElementById('bar-1').style.cssText = "border:solid 2px black; background-color:black;";
@@ -21,7 +21,7 @@ const nav_change = () => {
         document.querySelector('.cart').style.cssText = "color:black;";
         // document.querySelector('.__marked').style.cssText = "color:black; background-color:white;";
     }else{
-        document.getElementById('nav').style.cssText = 'background-color: transperent; transition:0.5s;';
+        document.getElementById('nav').style.cssText = 'background-color: transperent; transition:0.5s; border:none;';
         document.querySelector('.info').style.cssText = 'display:block';
         document.getElementById('logo').style.cssText = 'color:black; transition:0.5s; ';
         // document.getElementById('bar-1').style.cssText = "border:solid 2px black; transition:0.5s; background-color:black;";

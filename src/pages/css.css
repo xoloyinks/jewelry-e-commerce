@@ -203,6 +203,13 @@ html{
 .pop_item:last-child{
     margin-right: 0;
 }
+
+@media screen and (min-width:1024px) {
+    .pop_item:nth-child(even){
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+}
 .golden{
     background-image: url(images/pexels-dids-13023071.jpg);
     background-size: cover;
@@ -309,15 +316,39 @@ input:focus{
 }
 #cat_two{
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100% 100%;
     color: white;
 }
 
 #cat_three{
     background-repeat: no-repeat;
-    background-size: 170% 100%;
-    text-align: center;
-    color: white;
+    background-size: 100% 100%;
+    /* text-align: center; */
+    color: black;
+    transition: 50s;
+}
+#cat_three:hover{
+    transition: 50s;
+    animation: beauty 90s ;
+}
+#cat_one:hover{
+    transition: 50s;
+    animation: beauty 90s ;
+}
+#cat_two:hover{
+    transition: 50s;
+    animation: beauty 90s ;
+}
+@keyframes beauty {
+    0%{
+        background-size: 100% 100%;
+    }
+    50%{
+        background-size: 200% 200%;
+    }
+    100%{
+        background-size: 100% 100%;
+    }
 }
 
 .explore_image:last-child{
@@ -361,8 +392,13 @@ input::-ms-input-placeholder{
     background-color: rgba(0, 0, 0, 0.4);
 }
 
-.direction{
-    /* z-index: 99999; */
+#carousel_control::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+#carousel_control::-webkit-scrollbar-thumb {
+    background: linear-gradient(to right, white, #fcc8c8, white); 
+    border-radius: 10px;
 }
 
 /* https://jewelry-git-master-xoloyinks.vercel.app/ */

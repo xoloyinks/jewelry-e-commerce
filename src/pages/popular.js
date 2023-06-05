@@ -8,7 +8,7 @@ import trad_anklets from './images/pexels-curtis-loy-51120131.jpg'
 import earring from './images/pexels-godisable-jacob-12291791.jpg'
 import { FaHeart, FaRegHeart } from 'react-icons/fa'
 import {AiFillHeart} from 'react-icons/ai'
-import {RxDot} from 'react-icons/rx'
+import {RxCaretLeft, RxCaretRight, RxDot} from 'react-icons/rx'
 import { useEffect } from 'react'
 
 
@@ -82,9 +82,9 @@ const Each_item = ({image ,caption,amount,id,data}) => {
     }
     return(
         <>
-            <div id={id} className='flex w-[90vw]  pop_item snap-always snap-center '>
+            <div id={id} className='flex w-[90vw]  pop_item snap-always snap-center lg:w-[500px]'>
                 <div className='h-full '>
-                    <img src={image} alt="Rings" className='w-[100%] h-[75%]' />
+                    <img src={image} alt="Rings" className='w-[100%] h-[75%] ' />
                     <div className='py-3 flex justify-between'>
                         <span className='w-10/12 text-sm'>{caption.toUpperCase()}</span>
                         <button id='cart_button' onClick={() => addItem(data)} className=' px-4 text-[20px]'>{check ? <AiFillHeart /> :<FaRegHeart />}</button>
@@ -104,13 +104,19 @@ const Each_item = ({image ,caption,amount,id,data}) => {
 export default function Popular() {
   return (
     <>
-        <section id='popular' className='w-screen h-[fit-ocntent] pt-5 flex flex-col justify-center'>
-            <div className='p-2 flex items-center w-full'>
-                <h1 className=' border-r-2 border-black font-bold pr-2 text-[14px] tracking-wide'>MOST POPULAR</h1>
-                <h1 className='w-[fit-content] px-3 text-[9px]'>DISCOVER OUR MOST LOVED ACCESSORIES!</h1>
+        <section id='popular' className='w-screen h-[fit-ocntent] pt-5 flex flex-col justify-center lg:px-10'>
+            <div className='p-2 flex items-center w-full lg:justify-between '>
+                <div className='flex items-center'>
+                    <h1 className=' border-r-2 border-black font-bold pr-2 text-[14px] tracking-wide lg:text-xl'>MOST POPULAR</h1>
+                    <h1 className='w-[fit-content] px-3 text-[9px]'>DISCOVER OUR MOST LOVED ACCESSORIES!</h1>
+                </div>
+                <div className='hidden w-1/12 lg:flex  lg:justify-between'>
+                    <button className='text-4xl border-2 border-gray-300 rounded-full text-gray-500'><RxCaretLeft /></button>
+                    <button className='text-4xl border-2 border-gray-300 rounded-full text-gray-500'><RxCaretRight /></button>
+                </div>
             </div>   
             <div id='carousel_control' className='scroll-smooth w-[full] px-2 overflow-x-scroll snap-x snap-mandatory py-2'>
-                <div className='flex flex-nowrap  w-[1400px] justify-between '>
+                <div className='flex flex-nowrap  w-[1400px] justify-between'>
                         <Pop_item  />
                 </div>
             </div>
