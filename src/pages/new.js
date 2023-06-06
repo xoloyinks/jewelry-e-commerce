@@ -55,7 +55,7 @@ const Each_item = ({image, title, price, data}) => {
                     <img src={image} id={data.id} alt="Rings" className='h-[400px] lg:h-[fit-content]' />
                     <div className='py-3 flex justify-between'>
                         <span className='w-10/12 text-sm'>{title.toUpperCase()}</span>
-                        <button className=' px-4 text-[20px]' onClick={() => addItem(data)}>{check ? <AiFillHeart /> :<FaRegHeart />}</button>
+                        <button className=' px-4 text-[20px]' onClick={() => addItem(data)}>{check ? <AiFillHeart color='gold' /> :<FaRegHeart />}</button>
                     </div>
                     <div className='py text-yellow-600'>
                         &#x20A6;{price}

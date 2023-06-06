@@ -1,11 +1,11 @@
 import React, { createContext, useContext, useState } from 'react'
 import { useRef } from 'react'
 import { UseContext, Check } from './page'
-import ring from "./images/pexels-fernando-arcos-2044271.jpg"
-import bracelet from "./images/pexels-gökhan-yetimova-152917031.jpg"
-import chain from "./images/pexels-monstera-69790151.jpg"
-import trad_anklets from './images/pexels-curtis-loy-51120131.jpg'
-import earring from './images/pexels-godisable-jacob-12291791.jpg'
+import ring from "./images/IMG_7162_1400x.jpg"
+import bracelet from "./images/fleur-semi-old-cut-0.25_800x.jpg"
+import chain from "./images/fleur-semi-old-cut-0.25_800x.jpg"
+import trad_anklets from './images/fleur-semi-old-cut-0.25_800x.jpg'
+import earring from './images/fleur-semi-old-cut-0.25_800x.jpg'
 import { FaHeart, FaRegHeart } from 'react-icons/fa'
 import {AiFillHeart} from 'react-icons/ai'
 import {RxCaretLeft, RxCaretRight, RxDot} from 'react-icons/rx'
@@ -26,10 +26,59 @@ const data = [
         price: '90,000'
     },
     {
+        img: earring,
+        id: 'pop_five',
+        title: 'Twirl pearl Earrings(Italian)',
+        price: '20,000'
+    },
+    {
+        img: 
+        earring,
+        id: 'pop_five',
+        title: 'Twirl pearl Earrings(Italian)',
+        price: '20,000'
+    },
+    {
+        img: ring,
+        id: 'pop_one',
+        title: 'The tri Silver Golden Ring for men/women',
+        price: '90,000'
+    },
+    {
+        img: earring,
+        id: 'pop_five',
+        title: 'Twirl pearl Earrings(Italian)',
+        price: '20,000'
+    },
+    {
+        img: earring,
+        id: 'pop_five',
+        title: 'Twirl pearl Earrings(Italian)',
+        price: '20,000'
+    },
+    {
+        img: earring,
+        id: 'pop_five',
+        title: 'Twirl pearl Earrings(Italian)',
+        price: '20,000'
+    },
+    {
+        img: ring,
+        id: 'pop_one',
+        title: 'The tri Silver Golden Ring for men/women',
+        price: '90,000'
+    },
+    {
         img: bracelet,
         id: 'pop_two',
         title: 'The magnificent couple engagement ring',
         price: '200,000'
+    },
+    {
+        img: ring,
+        id: 'pop_one',
+        title: 'The tri Silver Golden Ring for men/women',
+        price: '90,000'
     },
     {
         img: chain,
@@ -82,12 +131,12 @@ const Each_item = ({image ,caption,amount,id,data}) => {
     }
     return(
         <>
-            <div id={id} className='flex w-[90vw]  pop_item snap-always snap-center lg:w-[500px]'>
+            <div id={id} className='pop_item flex w-[90vw] h-[fit-content] snap-always snap-center lg:w-[700px]'>
                 <div className='h-full '>
-                    <img src={image} alt="Rings" className='w-[100%] h-[75%] ' />
-                    <div className='py-3 flex justify-between'>
-                        <span className='w-10/12 text-sm'>{caption.toUpperCase()}</span>
-                        <button id='cart_button' onClick={() => addItem(data)} className=' px-4 text-[20px]'>{check ? <AiFillHeart /> :<FaRegHeart />}</button>
+                    <img src={image} alt="Rings" className='w-[100%] h-[75%]' />
+                    <div className='py-3 flex w-[70vw] justify-between lg:w-[300px]'>
+                        <span className='w-10/12 text-[10px] lg:w-[200px]'>{caption.toUpperCase()}</span>
+                        <button id='cart_button' onClick={() => addItem(data)} className=' px-4 text-[20px]'>{check ? <AiFillHeart color='gold' /> :<FaRegHeart />}</button>
                     </div>
                     <div className='py text-yellow-600'>
                         &#x20A6;{amount}
@@ -110,13 +159,15 @@ export default function Popular() {
                     <h1 className=' border-r-2 border-black font-bold pr-2 text-[14px] tracking-wide lg:text-xl'>MOST POPULAR</h1>
                     <h1 className='w-[fit-content] px-3 text-[9px]'>DISCOVER OUR MOST LOVED ACCESSORIES!</h1>
                 </div>
+                
                 <div className='hidden w-1/12 lg:flex  lg:justify-between'>
                     <button className='text-4xl border-2 border-gray-300 rounded-full text-gray-500'><RxCaretLeft /></button>
                     <button className='text-4xl border-2 border-gray-300 rounded-full text-gray-500'><RxCaretRight /></button>
                 </div>
             </div>   
-            <div id='carousel_control' className='scroll-smooth w-[full] px-2 overflow-x-scroll snap-x snap-mandatory py-2'>
-                <div className='flex flex-nowrap  w-[1400px] justify-between'>
+            
+            <div className='scroll-smooth w-[full] px-2  py-2 lg:flex lg:justify-center'>
+                <div id='carousel_control' className='flex flex-nowrap  max-[1020px]:w-[] lg:h-[fit-content] justify-between lg:w-[75vw] overflow-x-scroll snap-x snap-mandatory '>
                         <Pop_item  />
                 </div>
             </div>

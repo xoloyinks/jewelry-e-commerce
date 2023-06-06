@@ -30,7 +30,7 @@ export default function Promotion() {
                     </div>
                 </div>
             </div>
-            <div className='px-5 py-8 lg:hidden'>
+            <div className='px-5 py-8  text-sm lg:hidden'>
                 From elegant necklaces and statement earrings to delicate
                 bracelets and stunning rings, our jewelry pieces are 
                 designed to make you shine.

@@ -12,7 +12,7 @@ const data = [
 ]
 
 const Item = () => {
-    return data.map((datum, i) => <img key={i} src={datum} alt="Images" className='explore_image mr-3 snap-always snap-center ' /> )
+    return data.map((datum, i) => <img key={i} src={datum} alt="Images" className='explore_image mr-3 snap-always snap-center lg:w-[32%]' /> )
 }
 
 export default function Explore() {

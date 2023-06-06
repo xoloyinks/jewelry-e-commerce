@@ -5,15 +5,16 @@
 body{
     width: 100vw;
     overflow-x: hidden;
+    /* background-color: black; */
     font-family: 'Varela Round', sans-serif;
 }
-body::-webkit-scrollbar {
+/* body::-webkit-scrollbar {
     width: 10px;
 }
 body::-webkit-scrollbar-thumb {
     background: linear-gradient(to bottom, white, #fca5a5, white); 
     border-radius: 10px;
-  }
+  } */
 
 html{
     scroll-behavior: smooth;
@@ -206,8 +207,8 @@ html{
 
 @media screen and (min-width:1024px) {
     .pop_item:nth-child(even){
-        margin-left: 5px;
-        margin-right: 5px;
+        margin-left: 20px;
+        margin-right: 20px;
     }
 }
 .golden{
@@ -223,7 +224,7 @@ html{
     
 }
 .promotion_caption{
-    background-color: rgba(255, 0, 0, 0.6);
+    background-color: rgba(0, 123, 255, 0.6);
 }
 
 input:focus{
@@ -356,9 +357,10 @@ input:focus{
 }
 
 .subscribe{
-    background-image: url(images/pexels-megapixelstock-178341.jpg);
+    background-image: url(images/pexels-git-stephen-gitau-1670723.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    background-size: 100% 140%;
 }
 
 .subscribe_input{

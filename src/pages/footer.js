@@ -11,10 +11,10 @@ import { FaApplePay,FaPaypal, FaGooglePay } from 'react-icons/fa'
 export default function Footer() {
   return (
     <>
-                <div className='subscribe flex justify-center items-center h-[fit-content] py-10 mt-8 text-white px-5'>
+                <div className='subscribe flex justify-center items-center h-[fit-content] py-10 mt-8 text-white px-5 lg:py-24'>
                     <form method='post' action='#' className='h-[fit-content] text-center tracking-[.25rem]'>
                         <div className='text-white text-sm opacity-70'>STAY TUNED</div>
-                        <div className='text-xl leading-[35px] my-3'>SIGN UP FOR OUR NEWSLETTER</div>
+                        <div className='text-xl leading-[35px] my-3 text-white opacity-80'>SIGN UP FOR OUR NEWSLETTER</div>
                         <input type="email" placeholder='Enter your email' className='subscribe_input p-3 w-full transparent border-[2px] border-white rounded-md tracking-wider' />
                         <button className='w-full text-sm bg-slate-800 my-5 p-5 rounded-md'>SUBSCRIBE</button>
                     </form>
