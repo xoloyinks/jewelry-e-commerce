@@ -15,80 +15,80 @@ import { useEffect } from 'react'
 const data = [
     {
         img: earring,
-        id: 'pop_five',
+        id: 'pop_one',
         title: 'Twirl pearl Earrings(Italian)',
         price: '20,000'
     },
     {
         img: ring,
-        id: 'pop_one',
+        id: 'pop_two',
         title: 'The tri Silver Golden Ring for men/women',
         price: '90,000'
     },
     {
         img: earring,
-        id: 'pop_five',
+        id: 'pop_three',
         title: 'Twirl pearl Earrings(Italian)',
         price: '20,000'
     },
     {
         img: 
         earring,
-        id: 'pop_five',
+        id: 'pop_four',
         title: 'Twirl pearl Earrings(Italian)',
         price: '20,000'
     },
     {
         img: ring,
-        id: 'pop_one',
+        id: 'pop_five',
         title: 'The tri Silver Golden Ring for men/women',
         price: '90,000'
     },
     {
         img: earring,
-        id: 'pop_five',
+        id: 'pop_six',
         title: 'Twirl pearl Earrings(Italian)',
         price: '20,000'
     },
     {
         img: earring,
-        id: 'pop_five',
+        id: 'pop_seven',
         title: 'Twirl pearl Earrings(Italian)',
         price: '20,000'
     },
     {
         img: earring,
-        id: 'pop_five',
+        id: 'pop_eight',
         title: 'Twirl pearl Earrings(Italian)',
         price: '20,000'
     },
     {
         img: ring,
-        id: 'pop_one',
+        id: 'pop_nine',
         title: 'The tri Silver Golden Ring for men/women',
         price: '90,000'
     },
     {
         img: bracelet,
-        id: 'pop_two',
+        id: 'pop_ten',
         title: 'The magnificent couple engagement ring',
         price: '200,000'
     },
     {
         img: ring,
-        id: 'pop_one',
+        id: 'pop_eleven',
         title: 'The tri Silver Golden Ring for men/women',
         price: '90,000'
     },
     {
         img: chain,
-        id: 'pop_three',
+        id: 'pop_twelve',
         title: 'The Paris vail choker eye contact lens',
         price: '50,000'
     },
     {
         img: trad_anklets,
-        id: "pop_four",
+        id: "pop_thirteen",
         title: "Traditional ankle bracelets",
         price: "10,000"
     }
