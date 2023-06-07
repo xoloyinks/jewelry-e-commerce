@@ -69,10 +69,15 @@ html{
     }
 }
 .banner{
-    z-index: 1;
+    z-index: 5;
+    background-color: white;
 }
 .check{
     transition: 0.5s;
+    z-index: 1;
+}
+.direction{
+    z-index: 3;
 }
 .d{
     z-index: 0000;
@@ -306,7 +311,6 @@ input:focus{
 #item_num{
     border:solid 1px black;
 }
-
 
 #cat_one{
     text-align: right;

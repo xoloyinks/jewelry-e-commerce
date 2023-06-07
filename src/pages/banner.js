@@ -118,8 +118,8 @@ const Cover = () => {
     return(
       banner.map((datum, index) => { return(
         <>
-            <section key={index} className='banner w-screen h-full overflow-hidden'>
-              <div id={banner[bannerIndex].face + banner[bannerIndex].id} className='exibit relative bg-black h-[95vh] w-full lg:h-full' style={{ backgroundImage: `url(${banner[bannerIndex].img})`, backgroundSize:'cover' }}>
+            <section key={index} className='banner w-screen h-full overflow-hidden lg:h-[96vh] lg:overflow-hidden'>
+              <div id={banner[bannerIndex].face + banner[bannerIndex].id} className='exibit relative bg-black h-[95vh] w-full lg:h-full' style={{ backgroundImage: `url(${banner[bannerIndex].img})`, backgroundSize:'cover', backgroundRepeat:'no-repeat' }}>
                 <div className='__banner w-full h-full'></div>
                 <div id={banner[bannerIndex].face} className='caption absolute w-full bottom-[80px] text-white p-5 lg:px-20'>
                   <div className='text-md text-gray-200 tracking-widest font-thin lg:text-sm'>
@@ -147,7 +147,7 @@ setTimeout(() => {
 export default function Banner() {
   return (
     <>
-        <section className='check w-screen relative h-[96vh] overflow-hidden'>
+        <section className='check w-screen relative h-[100vh] overflow-hidden '>
               <Cover />
               
               <div id='message' className='fixed hidden text-[13px] bottom-[20px] right-[15px] bg-white rounded-xl tracking-wide shadow-sm shadow-slate-500'>
@@ -155,12 +155,16 @@ export default function Banner() {
                    <GoPrimitiveDot className='mr-2 text-blue-500'/> Message us
                   </a>
               </div>
+              <div className='direction absolute flex justify-center bottom-[0px] h-[5vh] bg-white  text-center  w-full text-white px-10 font-bold lg:bottom-[0px]'>
+                <a href='#about' className='px-3 py-3 w-[fit-content] absolute bottom-[12px] bg-slate-100 shadow-sm shadow-slate-500 rounded-full mx-3 h-[fit-content] lg:bottom-[20px]'>
+                    <RxCaretDown className='text-slate-500  text-4xl lg:text-2xl' />
+                </a>
+              </div>
+              <div>
+
+              </div>
         </section>
-        <div className='direction absolute flex justify-center bottom-[10px]  text-center  w-full text-white px-10 font-bold lg:bottom-[15px]'>
-            <a href='#about' className='direction px-3 py-3 w-[fit-content] bg-slate-100 shadow-sm shadow-slate-500 rounded-full mx-3'>
-                <RxCaretDown className='text-slate-500  text-4xl lg:text-2xl' />
-            </a>
-        </div>
+        
     </>
   )
 }

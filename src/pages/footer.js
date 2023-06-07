@@ -54,8 +54,8 @@ export default function Footer() {
             </div>
             {/* <br /> */}
             <hr />
-            <div className='flex justify-between items-center px-2 py-2'>
-                <span className='text-[13px] lg:text-[10px]'>&copy; 2023 XOLO. All rights reserved</span>
+            <div className='flex justify-between items-center px-2 py-2 lg:px-0'>
+                <span className='text-[13px] lg:text-[10px] '> &copy; 2023 XOLO. All rights reserved</span>
                 <span className='text-[10px]'>Privacy Statement</span>
             </div>
         </section>
