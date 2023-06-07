@@ -74,10 +74,13 @@ html{
 }
 .check{
     transition: 0.5s;
-    z-index: 1;
+    z-index: ;
 }
 .direction{
     z-index: 3;
+}
+#message{
+    z-index: 111111;
 }
 .d{
     z-index: 0000;

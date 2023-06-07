@@ -155,15 +155,16 @@ export default function Banner() {
                    <GoPrimitiveDot className='mr-2 text-blue-500'/> Message us
                   </a>
               </div>
-              <div className='direction absolute flex justify-center bottom-[0px] h-[5vh] bg-white  text-center  w-full text-white px-10 font-bold lg:bottom-[0px]'>
-                <a href='#about' className='px-3 py-3 w-[fit-content] absolute bottom-[12px] bg-slate-100 shadow-sm shadow-slate-500 rounded-full mx-3 h-[fit-content] lg:bottom-[20px]'>
-                    <RxCaretDown className='text-slate-500  text-4xl lg:text-2xl' />
-                </a>
-              </div>
+              
               <div>
 
               </div>
         </section>
+        <div className='direction absolute flex justify-center bottom-[0px] h-[5vh] bg-white  text-center  w-full text-white px-10 font-bold lg:bottom-[0px]'>
+                <a href='#about' className='px-3 py-3 w-[fit-content] absolute bottom-[12px] bg-slate-100 shadow-sm shadow-slate-500 rounded-full mx-3 h-[fit-content] lg:bottom-[20px]'>
+                    <RxCaretDown className='text-slate-500  text-4xl lg:text-2xl' />
+                </a>
+              </div>
         
     </>
   )
