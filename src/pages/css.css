@@ -309,8 +309,9 @@ input:focus{
 }
 #cart_container{
     z-index: 99991;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 50, 0.4);
 }
+
 #item_num{
     border:solid 1px black;
 }
@@ -366,8 +367,8 @@ input:focus{
 .subscribe{
     background-image: url(images/pexels-git-stephen-gitau-1670723.jpg);
     background-repeat: no-repeat;
-    background-size: cover;
-    background-size: 100% 140%;
+    /* background-size: cover; */
+    background-size: 100% 150%;
 }
 
 .subscribe_input{

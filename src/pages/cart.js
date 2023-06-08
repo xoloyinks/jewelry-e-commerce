@@ -55,12 +55,12 @@ export default function Cart() {
   return (
     <>
         <section id='cart_container' className=' w-[100%] translate-x-[500px] fixed overflow-x-hidden overflow-y-scroll h-[100vh]  top-0 right-0 lg:translate-x-[1300px]'>
-           <div className='w-[80%] px-5 pt-5 pb-16 h-screen overflow-y-scroll bg-white absolute right-0 lg:w-[30%]'>
+           <div className='cart-box w-[80%] px-5 pt-5 pb-16 h-screen overflow-y-scroll bg-white absolute right-0 lg:w-[30%]'>
                 <div className='fixed py-3 top-0 bg-white w-full'>
                     <div onClick={hideCart} className='py-5 ' >
                         <FaTimes className='text-2xl text-neutral-400'/>
                     </div>
-                    <div className='text-lg w-[70%] text-gray-400 tracking-wider flex justify-between items-center'>
+                    <div className='text-lg w-[70%] text-gray-400 tracking-wider flex justify-between items-center lg:text-sm'>
                         <span>MY CART ({cart.length} items)</span> <BsFillBagHeartFill className='ml-2 cart font-bold' />
                     </div>
                 </div>
@@ -75,13 +75,13 @@ export default function Cart() {
                         cart.length > 0 
                         ?
                             <div className='fixed bottom-0 pb-20 pt-3 bg-white lg:pb-5 lg:w-[100%]'>
-                                <button className='px-3 py-2 bg-red-300 text-white rounded-lg'>Confirm order</button>
-                                <button onClick={emptyArray} className='px-3 py-2 bg-red-600 text-white rounded-lg ml-3'>Empty Cart</button>
+                                <button className='px-3 py-2 bg-red-300 text-white rounded-lg lg:text-sm'>Confirm order</button>
+                                <button onClick={emptyArray} className='px-3 py-2 bg-red-600 text-white rounded-lg ml-3 lg:text-sm'>Empty Cart</button>
                             </div>
 
                         : 
                             <div className=''>
-                                <button onClick={hideCart} className='px-5 py-2 bg-red-300 text-white rounded-lg' >Explore Now</button>
+                                <button onClick={hideCart} className='px-5 py-2 bg-red-300 text-white rounded-lg lg:text-sm' >Explore Now</button>
                             </div>
                      }
                 </div>
