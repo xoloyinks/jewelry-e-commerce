@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import image_1 from './images/pexels-wallace-chuck-2084810.jpg'
+import image_1 from './images/IMG_3505-desk_1600x.jpg'
 import image_2 from './images/IMG_7425_kopiera_cda8ab70-508c-45c7-80d4-b0da906269d3_1600x.jpeg'
 import image_3 from './images/Studiosession-563_cbe73ea4-2486-4587-8b6f-86a04e31ea79_1600x.jpeg'
 import image_4 from './images/pexels-the-glorious-studio-1202605w5.jpg'
@@ -118,7 +118,7 @@ const Cover = () => {
     return(
       banner.map((datum, index) => { return(
         <>
-            <section key={index} className='banner w-screen h-full overflow-hidden lg:h-[95vh] lg:overflow-hidden'>
+            <section key={index} className='banner  w-screen h-full overflow-hidden lg:h-[95vh] lg:overflow-hidden'>
               <div id={banner[bannerIndex].face + banner[bannerIndex].id} className='exibit relative bg-black h-[95vh] w-full lg:h-full' style={{ backgroundImage: `url(${banner[bannerIndex].img})`, backgroundSize:'cover', backgroundRepeat:'no-repeat' }}>
                 <div className='__banner w-full h-full'></div>
                 <div id={banner[bannerIndex].face} className='caption absolute w-full bottom-[120px] text-white p-5 lg:px-20 lg:bottom-[80px]'>
@@ -132,8 +132,8 @@ const Cover = () => {
                 
               </div>
               <ul className='absolute bottom-[70px] px-3 flex mt-5 text-3xl lg:bottom-[40px] lg:px-[70px] '>
-                    {banner.map((datum,index) => <li key={index}><button  key={index} ref={addMean} onClick={() => refClick(index)} className='carousel_button'>{assureChange ? <RxDot /> : <RxDotFilled/>}</button></li>)}
-                </ul>
+                {banner.map((datum,index) => <li key={index}><button  key={index} ref={addMean} onClick={() => refClick(index)} className='carousel_button'>{assureChange ? <RxDot /> : <RxDotFilled/>}</button></li>)}
+              </ul>
             </section>
         </>)
       })
@@ -147,7 +147,7 @@ setTimeout(() => {
 export default function Banner() {
   return (
     <>
-        <section className='check w-screen relative h-[100vh] overflow-hidden '>
+        <section className='check   w-screen relative h-[100vh] overflow-hidden '>
               <Cover />
               
               <div id='message' className='fixed hidden text-[13px] bottom-[20px] right-[15px] bg-white rounded-xl tracking-wide shadow-sm shadow-slate-500'>

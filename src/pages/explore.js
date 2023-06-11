@@ -23,8 +23,11 @@ export default function Explore() {
                 <div className='text-sm opacity-80 '>GET INSPIRED</div>
                 <div className='my-5 text-2xl text-gray-500'>SHOP THE LOOK</div>
             </div>
-            <div className='flex overflow-x-scroll py-8 snap-x snap-mandatory px-8 mb-5'>
+            <div className='flex overflow-x-scroll py-8 snap-x snap-mandatory px-8 mb-5 lg:hidden'>
                 <Item />
+            </div>
+            <div>
+                
             </div>
             <div className=' flex justify-center px-8'>
                 <button className='bg-red-300 px-8 py-5 text-white tracking-[.25rem] text-sm w-full'>VIEW PRODUCTS</button>
