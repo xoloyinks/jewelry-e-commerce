@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bruno+Ace&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Moirai+One&display=swap');
 body{
     width: 100vw;
     overflow-x: hidden;
@@ -21,7 +21,7 @@ html{
 }
 
 #logo{
-    /* font-family: 'Great Vibes', cursive; */
+    font-family: 'Moirai One', cursive;
 }
 .exibit{
     /* background-image: url(images/pexels-steven-arenas-620074.jpg); */
@@ -257,12 +257,12 @@ html{
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     -moz-background-clip: text;
-    -moz-text-fill-color: transparent;
-
+    
 }
 
 .carousel{
     background-color: #d1d5db;
+    -moz-text-fill-color: transparent;
 }
 .ticked{
     background-color: #ca8a04;
