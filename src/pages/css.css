@@ -94,6 +94,57 @@ html{
     transition: 0.5s;
     z-index: ;
 }
+#exp_1{
+    animation: exp_1 1s;
+}
+#exp_2{
+    animation: exp_2 1s;
+
+}
+#exp_3{
+    animation: exp_3 1s;
+
+}
+#exp_4{
+    animation: exp_4 1s;
+
+}
+@keyframes exp_1 {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+    
+}
+@keyframes exp_2 {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+    
+}
+@keyframes exp_3 {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+    
+}
+@keyframes exp_4 {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+    
+}
 .direction{
     z-index: 3;
 }

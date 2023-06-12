@@ -62,17 +62,14 @@ const Item = () => {
     return data.map((datum, i) => <img key={i} src={datum} alt="Images" className='explore_image mr-3 snap-always snap-center lg:w-[32%]' /> )
 }
 
-const Itemed = createContext([]);
 
-const Large_item = () => {
-    const [item, setItem] = useState(3);
+const Large_item = ({prevButton,nextButton, item}) => {
     return(
                 
                     <>
-                        <Itemed.Provider value={[item, setItem]}>
-                        <section className='flex w-screen items-center justify-center my-10'>
-                            <div className='w-[43%] mr-8'>
-                                <img src={large_data[item].image} alt=""  />
+                        <section id={large_data[item].id} className='flex w-screen items-center justify-center my-10'>
+                            <div  className='w-[43%] mr-8'>
+                                <img  src={large_data[item].image} alt=""  />
                             </div>
                             <div id='exp' className={`${large_data[item].id} w-[30%] text-center relative`}>
                                 <img  id='tr_1' src={large_data[item].thumb} alt="" className=' w-[46%] mx-auto' />
@@ -88,14 +85,27 @@ const Large_item = () => {
                             </div>
                             
                         </section>
-                        </Itemed.Provider>
                     </>
                 )
     }
 
 export default function Explore() {
     
-    const [item, setItem] = useContext(Itemed);
+    const [item, setItem] = useState(0);
+    const prevButton = () => {
+        if(item === 0){
+            setItem(3);
+            return;
+        }
+        setItem(item - 1);
+    }
+    const nextButton = () => {
+        if(item === 3){
+            setItem(0);
+            return;
+        }
+        setItem(item + 1);
+    }
   return (
     <>
         <section className='mt-10 py-10'>
@@ -108,9 +118,9 @@ export default function Explore() {
                 <Item />
             </div>
             <div className='hidden lg:block relative'>
-                <button onClick={() => setItem(item + 1)} className='absolute left-[50px] top-[50%] bg-white p-2 rounded-full shadow-lg shadow-slate-300 text-4xl text-slate-300'><RxCaretLeft /></button>
-                <button className='absolute top-[50%] right-[50px] bg-white p-2 rounded-full shadow-lg shadow-slate-300 text-4xl text-slate-300'><RxCaretRight /></button>
-                <Large_item />
+                <button onClick={prevButton} className='absolute left-[50px] top-[50%] bg-white p-2 rounded-full shadow-lg shadow-slate-300 text-4xl text-slate-300'><RxCaretLeft /></button>
+                <button onClick={nextButton} className='absolute top-[50%] right-[50px] bg-white p-2 rounded-full shadow-lg shadow-slate-300 text-4xl text-slate-300'><RxCaretRight /></button>
+                <Large_item prevButton={prevButton} item={item} />
             </div>
             <div className=' flex justify-center px-8 lg:hidden'>
                 <button className='bg-red-300 px-8 py-5 text-white tracking-[.25rem] text-sm w-full'>VIEW PRODUCTS</button>
