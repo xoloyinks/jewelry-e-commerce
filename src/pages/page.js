@@ -10,6 +10,7 @@ import Promotion from './promotion'
 import Footer from './footer'
 import Categories from './categories'
 import Explore from './explore'
+import Review from './review'
 
 
 export default function Page() {
@@ -32,6 +33,7 @@ export default function Page() {
               <Promotion />
               <Categories />
               <Explore />
+              <Review />
               <Footer />
         </Check.Provider>
         </UseContext.Provider>
