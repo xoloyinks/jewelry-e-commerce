@@ -118,7 +118,7 @@ const Cover = () => {
     return(
       banner.map((datum, index) => { return(
         <>
-            <section key={index} className='banner  w-screen h-full overflow-hidden lg:h-[95vh] lg:overflow-hidden'>
+            <section key={index} className='banner w-screen h-full overflow-hidden lg:h-[95vh] lg:overflow-hidden'>
               <div id={banner[bannerIndex].face + banner[bannerIndex].id} className='exibit relative bg-black h-[95vh] w-full lg:h-full' style={{ backgroundImage: `url(${banner[bannerIndex].img})`, backgroundSize:'cover', backgroundRepeat:'no-repeat' }}>
                 <div className='__banner w-full h-full'></div>
                 <div id={banner[bannerIndex].face} className='caption absolute w-full bottom-[120px] text-white p-5 lg:px-20 lg:bottom-[80px]'>
@@ -147,7 +147,7 @@ setTimeout(() => {
 export default function Banner() {
   return (
     <>
-        <section className='check   w-screen relative h-[100vh] overflow-hidden '>
+        <section className='check w-screen relative h-[100vh] overflow-hidden '>
               <Cover />
               
               <div id='message' className='fixed hidden text-[13px] bottom-[20px] right-[15px] bg-white rounded-xl tracking-wide shadow-sm shadow-slate-500'>

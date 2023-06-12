@@ -45,6 +45,24 @@ html{
     background-position: 70% 50%;
 
 }
+#thumb{
+    transition: 0.5s;
+}
+
+#tr_2{
+    display: none;
+}
+#exp img:hover{
+    transition: 0.5s;
+}
+#tr_1:hover + #tr_2{
+    display: block;
+    transition: 0.5s;
+}
+
+.exp_2{
+    height: 175px;
+}
 
 #four4{
     background-position: 50% 50%;
