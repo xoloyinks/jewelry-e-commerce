@@ -11,13 +11,13 @@ import { FaApplePay,FaPaypal, FaGooglePay } from 'react-icons/fa'
 export default function Footer() {
   return (
     <>
-                <div className='subscribe flex justify-center items-center h-[fit-content] py-10 mt-8 text-white px-5 lg:py-24'> 
+                <div className='subscribe flex justify-center items-center h-[fit-content] py-10 mt-8 text-white px-5 lg:py-36'> 
                     <form method='post' action='#' className='h-[fit-content] relative text-center tracking-[.25rem] lg:w-[65%]'>
                         <div className='text-white text-sm opacity-70'>STAY TUNED</div>
-                        <div className='text-xl leading-[35px] my-3 text-white opacity-80'>SIGN UP FOR OUR NEWSLETTER</div>
+                        <div className='text-xl leading-[35px] my-3 text-white opacity-80 lg:text-2xl lg:my-6'>SIGN UP FOR OUR NEWSLETTER</div>
                         <div className='lg:flex lg:w-[80%] lg:justify-around lg:mx-auto lg:items-center'>
-                            <input type="email" placeholder='Enter your email' className='subscribe_input p-3 w-full transparent border-[2px] border-white rounded-md tracking-wider lg:w-[60%] lg:py-2 lg:px-3 lg:h-[fit-content]' />
-                            <button className='w-full text-sm bg-slate-800 my-5 p-5 rounded-md lg:w-[30%] lg:h-[fit-content] lg:py-4 lg:px-3'>SUBSCRIBE</button>
+                            <input type="email" placeholder='Enter your email' className='subscribe_input p-3 w-full transparent border-[2px] border-white tracking-wider lg:w-[70%] lg:py-2 lg:px-3 lg:h-[fit-content]' />
+                            <button className='w-full text-sm  bg-slate-800 my-5 p-5 lg:w-[20%] lg:h-[fit-content] lg:py-4 lg:px-2 lg:text-[11px] lg:tracking-wider'>SUBSCRIBE</button>
                         </div>
                     </form>
                 </div>

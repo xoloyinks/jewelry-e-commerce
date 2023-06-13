@@ -520,7 +520,7 @@ input:focus{
     background-image: url(images/pexels-git-stephen-gitau-1670723.jpg);
     background-repeat: no-repeat;
     /* background-size: cover; */
-    background-size: 100% 150%;
+    background-size: 100% 300%;
 }
 
 .subscribe_input{
@@ -529,7 +529,7 @@ input:focus{
 
 input::placeholder{
     color:white;
-    /* opacity: 1; */
+    opacity: 0.5;
     /* font-weight:; */
 }
 

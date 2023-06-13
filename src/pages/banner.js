@@ -14,6 +14,14 @@ import {GoPrimitiveDot} from 'react-icons/go'
 
 const banner = [
   {
+    img : image_1,
+    face: 'one',
+    id: 1,
+    subtitle: ' PRE-LOVED & 100% RECYCLED',
+    title: 'antique diamonds',
+    buttonCaption: 'shop now'
+  },
+  {
     img : image_5,
     face: 'five',
     id: 5,
@@ -44,15 +52,8 @@ const banner = [
     subtitle: 'Freezy freeze ice chain',
     title: 'Lasty Fragments',
     buttonCaption: 'shop now'
-  },
-  {
-    img : image_1,
-    face: 'one',
-    id: 1,
-    subtitle: ' PRE-LOVED & 100% RECYCLED',
-    title: 'antique diamonds',
-    buttonCaption: 'shop now'
   }
+  
   
 ];
 

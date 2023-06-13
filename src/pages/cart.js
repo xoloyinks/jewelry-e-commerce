@@ -6,7 +6,7 @@ import {BsFillBagHeartFill} from 'react-icons/bs'
 
 
 const hideCart = () => {
-    document.getElementById('cart_container').style.cssText = 'transform:translateX(1300px);transition:0.1s;';
+    document.getElementById('cart_container').style.cssText = 'transform:translateX(1500px);transition:0.1s;';
     const body = document.body;
     body.style.position = '';
     body.style.overflowY = '';
@@ -54,7 +54,7 @@ export default function Cart() {
     
   return (
     <>
-        <section id='cart_container' className=' w-[100%] translate-x-[500px] fixed overflow-x-hidden overflow-y-scroll h-[100vh]  top-0 right-0 lg:translate-x-[1300px]'>
+        <section id='cart_container' className=' w-[100%] translate-x-[500px] fixed overflow-x-hidden overflow-y-scroll h-[100vh]  top-0 right-0 lg:translate-x-[1500px]'>
            <div className='cart-box w-[80%] px-5 pt-5 pb-16 h-screen overflow-y-scroll bg-white absolute right-0 lg:w-[30%]'>
                 <div className='fixed py-3 top-0 bg-white w-full'>
                     <div onClick={hideCart} className='py-5 ' >

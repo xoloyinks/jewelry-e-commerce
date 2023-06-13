@@ -1,6 +1,6 @@
 import React from 'react'
 import cat_1 from './images/pexels-cottonbro-studio-94312876.jpg'
-import cat_2 from './images/pexels-jr-tavares-169524141.jpg'
+import cat_2 from './images/pexels-julia-kuzenkov-11318560.jpg'
 import cat_3 from './images/pexels-uzziiii-33853715.jpg'
 const data = [
     {

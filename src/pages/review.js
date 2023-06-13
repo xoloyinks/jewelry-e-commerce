@@ -33,7 +33,7 @@ function reveal(){
     var kay_2 = kay.getBoundingClientRect().top;
     if(kay_2 < 750){
         const kay_3 = document.getElementById('banner_x');
-        kay_3.style.cssText = 'opacity:1; transform:translateX(0px); transition:1s;';
+        kay_3.style.cssText = 'opacity:1; transform:translateX(0px); transition:2s;';
     }
 }
 
