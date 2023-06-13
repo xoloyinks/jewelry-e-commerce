@@ -117,17 +117,16 @@ const Cover = () => {
       
   }, 10000);
     return(
-      banner.map((datum, index) => { return(
         <>
-            <section key={index} className='banner w-screen h-full overflow-hidden lg:h-[95vh] lg:overflow-hidden'>
+            <section  className='banner w-screen h-full overflow-hidden lg:h-[95vh] lg:overflow-hidden'>
               <div id={banner[bannerIndex].face + banner[bannerIndex].id} className='exibit relative bg-black h-[95vh] w-full lg:h-full' style={{ backgroundImage: `url(${banner[bannerIndex].img})`, backgroundSize:'cover', backgroundRepeat:'no-repeat' }}>
-                <div className='__banner w-full h-full'></div>
+                <div className='w-full h-full __banner'></div>
                 <div id={banner[bannerIndex].face} className='caption absolute w-full bottom-[120px] text-white p-5 lg:px-20 lg:bottom-[80px]'>
-                  <div className='text-md text-gray-200 tracking-widest font-thin lg:text-sm'>
+                  <div className='font-thin tracking-widest text-gray-200 text-md lg:text-sm'>
                     {banner[bannerIndex].subtitle.toUpperCase() || banner[secControl].subtitle.toUpperCase()}
                   </div>
                   <div className=' text-2xl tracking-widest font-thin my-3 lg:my-6 md:text-xl lg:tracking-[.25rem]'>{banner[bannerIndex].title.toUpperCase() || banner[secControl].title.toUpperCase()}</div>
-                  <button className=' px-10 py-4 text-sm bg-red-300 tracking-widest lg:text-xs'>{banner[bannerIndex].buttonCaption.toUpperCase() || banner[secControl].buttonCaption.toUpperCase()}</button>
+                  <button className='px-10 py-4 text-sm tracking-widest bg-red-300 lg:text-xs'>{banner[bannerIndex].buttonCaption.toUpperCase() || banner[secControl].buttonCaption.toUpperCase()}</button>
                   
                 </div>
                 
@@ -137,10 +136,7 @@ const Cover = () => {
               </ul>
             </section>
         </>)
-      })
-    )
 }
-
 setTimeout(() => {
   document.getElementById('message').style.cssText = 'display:block; transition:0.5s;';
 }, 30000)
@@ -152,7 +148,7 @@ export default function Banner() {
               <Cover />
               
               <div id='message' className='fixed hidden text-[13px] bottom-[20px] right-[15px] bg-white rounded-xl tracking-wide shadow-sm shadow-slate-500'>
-                  <a href="#" className='px-2 py-2 flex items-center'>
+                  <a href="#" className='flex items-center px-2 py-2'>
                    <GoPrimitiveDot className='mr-2 text-blue-500'/> Message us
                   </a>
               </div>
@@ -163,7 +159,7 @@ export default function Banner() {
         </section>
         <div className='direction absolute flex justify-center bottom-[0px] h-[5vh] bg-white  text-center  w-full text-white px-10 font-bold lg:bottom-[0px]'>
                 <a href='#about' className='px-3 py-3 w-[fit-content] absolute bottom-[12px] bg-slate-100 shadow-sm shadow-slate-500 rounded-full mx-3 h-[fit-content] lg:bottom-[20px]'>
-                    <RxCaretDown className='text-slate-500  text-4xl lg:text-2xl' />
+                    <RxCaretDown className='text-4xl text-slate-500 lg:text-2xl' />
                 </a>
               </div>
         

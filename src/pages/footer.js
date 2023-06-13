@@ -48,8 +48,8 @@ export default function Footer() {
                 <div className='flex text-4xl justify-center justify-around pb-10 pt-5 items-center opacity-80 lg:w-[50%] lg:py-5 '>
                     <GrAmex/>
                     <FaApplePay />
-                    <FaGooglePay />
                     <FaPaypal className='text-2xl' />
+                    <FaGooglePay />
                     <RiVisaLine />
                     <SiMastercard className='text-2xl' />
                 </div>
