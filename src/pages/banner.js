@@ -119,7 +119,7 @@ const Cover = () => {
     return(
         <>
             <section  className='banner w-screen h-full overflow-hidden lg:h-[95vh] lg:overflow-hidden'>
-              <div id={banner[bannerIndex].face + banner[bannerIndex].id} className='exibit relative bg-black h-[95vh] w-full lg:h-full' style={{ backgroundImage: `url(${banner[bannerIndex].img})`, backgroundSize:'cover', backgroundRepeat:'no-repeat' }}>
+              <div id={banner[bannerIndex].face + banner[bannerIndex].id} className='exibit relative bg-black h-[90vh] w-full lg:h-full' style={{ backgroundImage: `url(${banner[bannerIndex].img})`, backgroundSize:'cover', backgroundRepeat:'no-repeat' }}>
                 <div className='w-full h-full __banner'></div>
                 <div id={banner[bannerIndex].face} className='caption absolute w-full bottom-[120px] text-white p-5 lg:px-20 lg:bottom-[80px]'>
                   <div className='font-thin tracking-widest text-gray-200 text-md lg:text-sm'>
@@ -131,7 +131,7 @@ const Cover = () => {
                 </div>
                 
               </div>
-              <ul className='absolute bottom-[70px] px-3 flex mt-5 text-3xl lg:bottom-[40px] lg:px-[70px] '>
+              <ul className='absolute bottom-[90px] px-3 flex mt-5 text-3xl lg:bottom-[40px] lg:px-[70px] '>
                 {banner.map((datum,index) => <li key={index}><button  key={index} ref={addMean} onClick={() => refClick(index)} className='carousel_button'>{assureChange ? <RxDot /> : <RxDotFilled/>}</button></li>)}
               </ul>
             </section>
