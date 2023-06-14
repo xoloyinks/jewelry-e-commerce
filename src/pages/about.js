@@ -7,7 +7,7 @@ function reveal(){
     const about = document.querySelector('.about_text');
     const about_img = document.querySelector('.about_img');
     const about_position = about.getBoundingClientRect().top;
-    if(about_position < 500){
+    if(about_position < 600){
         about.style.cssText = 'transform:translateX(0px); transition:1s;'
         about_img.style.cssText = 'transform:translateX(0px); transition:1.5s;'
     }

@@ -38,7 +38,7 @@ function reveal_new(){
 
     const new_container_position = new_container.getBoundingClientRect().top;
 
-    if(new_container_position < 300) {
+    if(new_container_position < 600) {
         new_one.style.cssText = 'transform: translateY(0px); transition:0.5s;';
         new_two.style.cssText = 'transform: translateY(0px); transition:1s;';
         new_three.style.cssText = 'transform: translateY(0px); transition:1.5s;';
