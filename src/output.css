@@ -615,8 +615,8 @@ video {
   bottom: 30px;
 }
 
-.bottom-\[70px\] {
-  bottom: 70px;
+.bottom-\[90px\] {
+  bottom: 90px;
 }
 
 .left-0 {
@@ -645,14 +645,6 @@ video {
 
 .top-\[50\%\] {
   top: 50%;
-}
-
-.right-10 {
-  right: 2.5rem;
-}
-
-.bottom-\[90px\] {
-  bottom: 90px;
 }
 
 .z-50 {
@@ -789,8 +781,8 @@ video {
   height: 80%;
 }
 
-.h-\[95vh\] {
-  height: 95vh;
+.h-\[90vh\] {
+  height: 90vh;
 }
 
 .h-\[fit-content\] {
@@ -809,10 +801,6 @@ video {
 
 .h-screen {
   height: 100vh;
-}
-
-.h-\[90vh\] {
-  height: 90vh;
 }
 
 .w-1\/12 {

@@ -131,7 +131,7 @@ const Cover = () => {
                 </div>
                 
               </div>
-              <ul className='absolute bottom-[90px] px-3 flex mt-5 text-3xl lg:bottom-[40px] lg:px-[70px] '>
+              <ul className='absolute bottom-[120px] right-0 px-3 flex mt-5 text-3xl lg:bottom-[40px] lg:px-[70px] '>
                 {banner.map((datum,index) => <li key={index}><button  key={index} ref={addMean} onClick={() => refClick(index)} className='carousel_button'>{assureChange ? <RxDot /> : <RxDotFilled/>}</button></li>)}
               </ul>
             </section>
