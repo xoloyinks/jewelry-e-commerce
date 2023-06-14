@@ -533,6 +533,10 @@ input::placeholder{
     /* font-weight:; */
 }
 
+#new_one, #new_two, #new_three{
+    transform: translateY(500px);
+}
+
 input:focus{
     background-color: white;
     color: black;

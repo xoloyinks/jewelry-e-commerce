@@ -165,7 +165,6 @@ export default function Banner() {
                     <RxCaretDown className='text-4xl text-slate-500 lg:text-2xl' />
                 </a>
               </div>
-        
     </>
   )
 }

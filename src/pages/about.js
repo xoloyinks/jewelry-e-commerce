@@ -2,14 +2,25 @@ import React from 'react'
 import golden from "./images/pexels-fox-998521.jpg"
 import diamond from "./images/dia2_d0d0f2ca-e2ea-4344-b409-ab3f2c925a6e_700x.jpg"
 
+window.addEventListener('scroll', reveal)
+function reveal(){
+    const about = document.querySelector('.about_text');
+    const about_img = document.querySelector('.about_img');
+    const about_position = about.getBoundingClientRect().top;
+    if(about_position < 500){
+        about.style.cssText = 'transform:translateX(0px); transition:1s;'
+        about_img.style.cssText = 'transform:translateX(0px); transition:1.5s;'
+    }
+}
+
+
 export default function About() {
   return ( 
     <>
         <br id='about'/><br/><br/><br/>
-        
-        <section className='lg:flex lg:justify-around'>
-            <div className='text-center lg:w-[40%] lg:text-left'>
-                <h1 className='tracking-widest text-sm lg:px-6'>
+        <section className='overflow-hidden lg:flex lg:justify-around'>
+            <div className='about_text -translate-x-[1500px] text-center lg:w-[40%] lg:text-left'>
+                <h1 className='text-sm tracking-widest lg:px-6'>
                     FROM STOCKHOLM, SWEDEN
                 </h1>
                 <h1 className='tracking-[.25rem] font-[5px] leading-[40px] text-2xl w-7/12 mx-auto mt-6 lg:mx-0 lg:px-6 lg:w-full lg:font-thin'>
@@ -25,7 +36,7 @@ export default function About() {
                 that will stand the test of time and never go out of style.
                 </h5>
             </div>
-            <div className='lg:w-[50%] lg:flex lg:items-center'>
+            <div className='about_img flex translate-x-[1500px] justify-center lg:w-[50%] lg:flex lg:items-center'>
                 <img src={diamond} alt="" />
             </div>
         </section>
