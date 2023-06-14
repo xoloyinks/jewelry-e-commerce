@@ -647,6 +647,10 @@ video {
   top: 50%;
 }
 
+.bottom-\[50px\] {
+  bottom: 50px;
+}
+
 .z-50 {
   z-index: 50;
 }
@@ -801,6 +805,14 @@ video {
 
 .h-screen {
   height: 100vh;
+}
+
+.h-\[896px\] {
+  height: 896px;
+}
+
+.h-\[740px\] {
+  height: 740px;
 }
 
 .w-1\/12 {
