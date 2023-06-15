@@ -60,7 +60,7 @@ const Category_item = () => {
 const Item = ({Image, title, subtitle, button_caption, id, key}) => {
     return(
         <>
-            <section id={id}  className= {`${id} mx-auto h-[55vh] w-[91%] py-5 my-8 relative  lg:w-[30%] lg:h-[85vh]`}  style={{ backgroundImage: `url(${Image})`}}>
+            <section id={id}  className= {`${id} mx-auto h-[55vh] w-[91%] py-5 my-8 relative lg:w-[30%] lg:h-[80vh]`}  style={{ backgroundImage: `url(${Image})`}}>
                 <div id={id} className=' w-full absolute px-3 tracking-[.25rem] bottom-0 py-5 '>
                     <div className='py-2 text-sm font-bold lg:font-light lg:text-xs'>{subtitle.toUpperCase()}</div>
                     <div className='py-2 text-3xl lg:text-2xl'>{title.toUpperCase()}</div>
@@ -76,6 +76,9 @@ const Item = ({Image, title, subtitle, button_caption, id, key}) => {
 export default function Categories() {
   return (
     <>
+        <h1 className='py-2 mt-10 text-[14px] tracking-widest lg:text-xl text-center  font-bold'>
+            CATEGORIES
+        </h1>
         <section className='overflow-hidden px-3 h-[fit-content] lg:flex'>
             <Category_item />
         </section>

@@ -10,6 +10,7 @@ import { FaHeart, FaRegHeart } from 'react-icons/fa'
 import {AiFillHeart} from 'react-icons/ai'
 import {RxCaretLeft, RxCaretRight, RxDot} from 'react-icons/rx'
 import { useEffect } from 'react'
+import { GiConsoleController } from 'react-icons/gi'
 
 
 const data = [
@@ -98,23 +99,22 @@ const Pop_item = () => {
     return data.map((datum,cart, key) =>  <Each_item key={key} carted={cart} image={datum.img} caption={datum.title} amount={datum.price} id={datum.id} data={datum}  />)
 }
 
+const Feed_back = () => {
+    return(
+        <>
+            <section id='feed_back' className='fixed w-screen h-screen bg-black'>
+
+            </section>
+        </>
+    )
+}
 
 
 const Each_item = ({image ,caption,amount,id,data}) => {
     const [check, setCheck] = useState(false);
     const [cart, setCart] = useContext(UseContext);
-    const feed_back = () => {
-        return (
-            <>
-                <section id='feed_back' className='absolute z-50 w-screen h-screen'>
-                    adfad
-                </section>
-            </>
-        )
-    }
 
     const addItem = (data) => {
-        feed_back();
 
         if(cart.length === 0){
             setCart([...cart,data]);
@@ -138,7 +138,7 @@ const Each_item = ({image ,caption,amount,id,data}) => {
                         <span className='w-10/12 text-[10px] lg:w-[200px]'>{caption.toUpperCase()}</span>
                         <button id='cart_button' onClick={() => addItem(data)} className=' px-4 text-[20px]'>{check ? <AiFillHeart color='gold' /> :<FaRegHeart />}</button>
                     </div>
-                    <div className='py text-yellow-600'>
+                    <div className='text-yellow-600 py'>
                         &#x20A6;{amount}
                     </div>
                 </div>
@@ -153,17 +153,14 @@ const Each_item = ({image ,caption,amount,id,data}) => {
 export default function Popular() {
   return (
     <>
-        <section id='popular' className='w-screen h-[fit-ocntent] pt-5 flex flex-col justify-center lg:px-10'>
-            <div className='p-2 flex items-center w-full lg:justify-between '>
+        <section id='popular' className='w-screen relative h-[fit-ocntent] pt-5 flex flex-col justify-center lg:px-10'>
+            <div className='flex items-center w-full p-2 lg:justify-between '>
                 <div className='flex items-center'>
                     <h1 className=' border-r-2 border-black font-bold pr-2 text-[14px] tracking-wide lg:text-xl'>MOST POPULAR</h1>
                     <h1 className='w-[fit-content] px-3 text-[9px]'>DISCOVER OUR MOST LOVED ACCESSORIES!</h1>
                 </div>
-                
-                <div className='hidden w-1/12 lg:flex  lg:justify-between'>
-                    <button className='text-4xl border-2 border-gray-300 rounded-full text-gray-500'><RxCaretLeft /></button>
-                    <button className='text-4xl border-2 border-gray-300 rounded-full text-gray-500'><RxCaretRight /></button>
-                </div>
+                <button  className='hidden lg:block absolute left-[50px] top-[50%] bg-white p-2 rounded-full shadow-lg shadow-slate-300 text-4xl text-slate-300'><RxCaretLeft /></button>
+                <button  className='absolute hidden lg:block  top-[50%] right-[50px] bg-white p-2 rounded-full shadow-lg shadow-slate-300 text-4xl text-slate-300'><RxCaretRight /></button>
             </div>   
             
             <div className='scroll-smooth w-[full] px-2  py-2 lg:flex lg:justify-center'>
@@ -172,6 +169,8 @@ export default function Popular() {
                 </div>
             </div>
         </section>
+        <Feed_back />
+
     </>
   )
 }

@@ -58,7 +58,6 @@ const banner = [
 ];
 
 const getHeight = window.innerHeight + 'px';
-console.log(getHeight);
 
 const Cover = () => {
   const [bannerIndex, setBannerIndex] = useState(0);
