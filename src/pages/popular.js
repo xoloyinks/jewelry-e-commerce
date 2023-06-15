@@ -6,8 +6,8 @@ import bracelet from "./images/fleur-semi-old-cut-0.25_800x.jpg"
 import chain from "./images/fleur-semi-old-cut-0.25_800x.jpg"
 import trad_anklets from './images/fleur-semi-old-cut-0.25_800x.jpg'
 import earring from './images/fleur-semi-old-cut-0.25_800x.jpg'
-import { FaHeart, FaRegHeart } from 'react-icons/fa'
-import {AiFillHeart} from 'react-icons/ai'
+import { FaHeart, FaRegHeart, FaRegTimesCircle } from 'react-icons/fa'
+import {AiFillHeart, AiOutlineCheck, AiOutlineCheckCircle} from 'react-icons/ai'
 import {RxCaretLeft, RxCaretRight, RxDot} from 'react-icons/rx'
 import { useEffect } from 'react'
 import { GiConsoleController } from 'react-icons/gi'
@@ -99,11 +99,21 @@ const Pop_item = () => {
     return data.map((datum,cart, key) =>  <Each_item key={key} carted={cart} image={datum.img} caption={datum.title} amount={datum.price} id={datum.id} data={datum}  />)
 }
 
-const Feed_back = () => {
+const Feed_back_success = () => {
     return(
         <>
-            <section id='feed_back' className='fixed w-screen h-screen bg-black'>
+            <section id='feed_back_success' className='fixed flex px-8 py-2 bg-white rounded-xl tracking-wide -translate-x-[500px] shadow-sm shadow-slate-500 text-[13px] items-center  left-5 bottom-[20px] h-fit-content w-fit-content'>
+                Added to Cart! <AiOutlineCheckCircle className='ml-2 text-2xl' />
+            </section>
+        </>
+    )
+}
 
+const Feed_back_remove = () => {
+    return(
+        <>
+            <section id='feed_back_remove' className='fixed flex px-8 py-2 bg-white rounded-xl tracking-wide -translate-x-[500px] shadow-sm shadow-slate-500 text-[13px] items-center  left-5 bottom-[20px] h-fit-content w-fit-content'>
+                Removed from Cart! <FaRegTimesCircle className='ml-2 text-2xl' />
             </section>
         </>
     )
@@ -114,19 +124,40 @@ const Each_item = ({image ,caption,amount,id,data}) => {
     const [check, setCheck] = useState(false);
     const [cart, setCart] = useContext(UseContext);
 
-    const addItem = (data) => {
-
+    // FUNCTION RUN FOR 'ADD TO CART' BUTTON
+    const addItem = (data) => {     
+        // ADDING TO CART
         if(cart.length === 0){
+            // FEED BACK FOR SUCCESS
+            const feed_back_success = document.getElementById('feed_back_success');
+            feed_back_success.style.transform = 'translateX(0px)';
+            setTimeout(()=> {
+                feed_back_success.style.transform = 'translateX(-500px)';
+            }, 3000);
             setCart([...cart,data]);
             setCheck(true);
+            return;
         }
+        // REMOVING FROM CART
         else if(cart.includes(data)){
+            const feed_back_remove = document.getElementById('feed_back_remove');
+            feed_back_remove.style.transform = 'translateX(0px)';
+
+            setTimeout(()=> {
+                feed_back_remove.style.transform = 'translateX(-500px)';
+            }, 3000);
             setCart(cart.filter((item) => item.id !== data.id));
-            setCheck(!check)
+            setCheck(!check);
             return;
         }else{
+            const feed_back_success = document.getElementById('feed_back_success');
+            feed_back_success.style.transform = 'translateX(0px)';
+            setTimeout(()=> {
+                feed_back_success.style.transform = 'translateX(-500px)';
+            }, 3000);
             setCart([...cart,data]);
             setCheck(true);
+            return;
         }
     }
     return(
@@ -169,7 +200,8 @@ export default function Popular() {
                 </div>
             </div>
         </section>
-        <Feed_back />
+        <Feed_back_success />
+        <Feed_back_remove />
 
     </>
   )

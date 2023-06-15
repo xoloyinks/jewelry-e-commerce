@@ -582,9 +582,15 @@ input::-ms-input-placeholder{
     display: none;
 }
 
-#feed_back{
-    background-color: rgba(0, 0, 0, 0.4);
+#feed_back_success{
+    /* background-color: rgba(0, 0, 0, 0.4); */
     z-index: 999999;
+    transition: 0.5s;
+}
+#feed_back_remove{
+    /* background-color: rgba(0, 0, 0, 0.4); */
+    z-index: 999999;
+    transition: 0.5s;
 }
 
 #carousel_control::-webkit-scrollbar {
