@@ -659,8 +659,20 @@ video {
   left: -100px;
 }
 
+.bottom-\[200px\] {
+  bottom: 200px;
+}
+
+.bottom-\[100px\] {
+  bottom: 100px;
+}
+
 .z-50 {
   z-index: 50;
+}
+
+.z-10 {
+  z-index: 10;
 }
 
 .mx-3 {
@@ -1667,6 +1679,10 @@ video {
 
   .lg\:bottom-\[80px\] {
     bottom: 80px;
+  }
+
+  .lg\:bottom-\[50px\] {
+    bottom: 50px;
   }
 
   .lg\:mx-0 {

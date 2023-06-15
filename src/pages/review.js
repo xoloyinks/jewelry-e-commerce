@@ -52,7 +52,7 @@ export default function Review() {
             <div id={data[content].id} className='w-[80%] text-sm text-white text-center tracking-widest leading-[30px] lg:w-[40%] lg:text-lg lg:leading-[40px]'>
                 {data[content].text}
             </div>
-            <div className='z-50 mt-16'>
+            <div className='z-50 mt-16 absolute bottom-[100px] lg:bottom-[50px]'>
                 {data.map((datum, i) => {return(
                     <button key={i} onClick={() => check(i)} className='text-2xl'>{i === content ? <RxDotFilled color='white'/> : <RxDot color='gray' className='opacity-40'/> } </button>
                 )}
