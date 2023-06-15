@@ -63,11 +63,11 @@ const Item = () => {
 }
 
 
-const Large_item = ({prevButton,nextButton, item}) => {
+const Large_item = ({item}) => {
     return(
                 
                     <>
-                        <section id={large_data[item].id} className='flex w-screen items-center justify-center my-10'>
+                        <section id={large_data[item].id} className='flex items-center justify-center w-screen my-10'>
                             <div  className='w-[43%] mr-8'>
                                 <img  src={large_data[item].image} alt=""  />
                             </div>
@@ -108,21 +108,20 @@ export default function Explore() {
     }
   return (
     <>
-        <section className='mt-10 py-10'>
+        <section className='py-10 mt-10'>
             <div className='tracking-[.25rem] text-center '>
                 <div className='text-sm opacity-80 '>GET INSPIRED</div>
                 <div className='my-5 text-2xl'>SHOP THE LOOK</div>
             </div>
-            <div className='flex overflow-x-scroll py-8 snap-x snap-mandatory px-8 mb-5 lg:hidden'>
-                
+            <div className='flex px-8 py-8 mb-5 overflow-x-scroll snap-x snap-mandatory lg:hidden'>
                 <Item />
             </div>
-            <div className='hidden lg:block relative'>
+            <div className='relative hidden lg:block'>
                 <button onClick={prevButton} className='absolute left-[50px] top-[50%] bg-white p-2 rounded-full shadow-lg shadow-slate-300 text-4xl text-slate-300'><RxCaretLeft /></button>
                 <button onClick={nextButton} className='absolute top-[50%] right-[50px] bg-white p-2 rounded-full shadow-lg shadow-slate-300 text-4xl text-slate-300'><RxCaretRight /></button>
                 <Large_item prevButton={prevButton} item={item} />
             </div>
-            <div className=' flex justify-center px-8 lg:hidden'>
+            <div className='flex justify-center px-8 lg:hidden'>
                 <button className='bg-red-300 px-8 py-5 text-white tracking-[.25rem] text-sm w-full'>VIEW PRODUCTS</button>
             </div>
         </section>
