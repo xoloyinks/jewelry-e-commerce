@@ -26,20 +26,45 @@ const data = [
     }
 ];
 
+window.addEventListener('scroll', reveal);
 
+function reveal(){
+    const cat_one = document.querySelector('.cat_one');
+    const cat_two = document.querySelector('.cat_two');
+    const cat_three = document.querySelector('.cat_three');
+
+    const cat_one_position = cat_one.getBoundingClientRect().top;
+    const cat_two_position = cat_two.getBoundingClientRect().top;
+    const cat_three_position = cat_three.getBoundingClientRect().top;
+
+    if(cat_one_position < 600){
+        cat_one.style.transform = "translateX(0px)";
+        cat_one.style.transition = `1.5s`;
+    }
+    if(cat_two_position < 600){
+        cat_two.style.transform = "translateX(0px)";
+        cat_two.style.transition = `1.5s`;
+    }
+    if(cat_three_position < 1200){
+        cat_three.style.transform = "translateY(0px)";
+        cat_three.style.transition = `1.5s`;
+    }
+
+
+}
 
 const Category_item = () => {
     return data.map((datum, i) => <Item key={i} Image={datum.Image} title={datum.title} id={datum.id} subtitle={datum.subtitle} button_caption={datum.button_caption} />)
 }
 
-const Item = ({Image, title, subtitle, button_caption, id}) => {
+const Item = ({Image, title, subtitle, button_caption, id, key}) => {
     return(
         <>
-            <section id={id}  className='mx-auto h-[55vh] w-[91%] py-5 my-8 relative  lg:w-[30%] lg:h-[85vh]'  style={{ backgroundImage: `url(${Image})`}}>
+            <section id={id}  className= {`${id} mx-auto h-[55vh] w-[91%] py-5 my-8 relative  lg:w-[30%] lg:h-[85vh]`}  style={{ backgroundImage: `url(${Image})`}}>
                 <div id={id} className=' w-full absolute px-3 tracking-[.25rem] bottom-0 py-5 '>
-                    <div className='text-sm  font-bold py-2 lg:font-light lg:text-xs'>{subtitle.toUpperCase()}</div>
+                    <div className='py-2 text-sm font-bold lg:font-light lg:text-xs'>{subtitle.toUpperCase()}</div>
                     <div className='py-2 text-3xl lg:text-2xl'>{title.toUpperCase()}</div>
-                    <button className='px-8 py-5 bg-red-300 mt-2 tracking-widest text-sm text-white lg:text-xs lg:px-5 lg:py-3'>{button_caption.toUpperCase()}</button>
+                    <button className='px-8 py-5 mt-2 text-sm tracking-widest text-white bg-red-300 lg:text-xs lg:px-5 lg:py-3'>{button_caption.toUpperCase()}</button>
                 </div>
             </section>
         </>
@@ -51,7 +76,7 @@ const Item = ({Image, title, subtitle, button_caption, id}) => {
 export default function Categories() {
   return (
     <>
-        <section className='px-3 h-[fit-content] lg:flex'>
+        <section className='overflow-hidden px-3 h-[fit-content] lg:flex'>
             <Category_item />
         </section>
     </>

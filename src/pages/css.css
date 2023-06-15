@@ -475,6 +475,18 @@ input:focus{
     color: white;
 
 }
+.cat_one{
+    background-size: 100% 100%;
+    transform: translateX(-500px);
+}
+.cat_two{
+    background-size: 100% 100%;
+    transform: translateX(500px);
+}
+.cat_three{
+    background-size: 100% 100%;
+    transform: translateY(500px);
+}
 #cat_two{
     background-repeat: no-repeat;
     background-size: 100% 100%;
