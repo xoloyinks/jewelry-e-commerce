@@ -52,14 +52,14 @@ export default function Review() {
             <div id={data[content].id} className='w-[80%] text-sm text-white text-center tracking-widest leading-[30px] lg:w-[40%] lg:text-lg lg:leading-[40px]'>
                 {data[content].text}
             </div>
-            <div className='mt-16'>
+            <div className='z-50 mt-16'>
                 {data.map((datum, i) => {return(
                     <button key={i} onClick={() => check(i)} className='text-2xl'>{i === content ? <RxDotFilled color='white'/> : <RxDot color='gray' className='opacity-40'/> } </button>
                 )}
                 )}
             </div>
-            <div className='absolute text-red-200 text-[300px]' style={{ bottom: '-50px',  left:'-100px' }}>
-                <GiBigDiamondRing className='rounded-full shadow-md shadow-red-200' />
+            <div className='absolute text-red-200 text-[300px] z-10' style={{ bottom: '-50px',  left:'-100px' }}>
+                <GiBigDiamondRing className='rotate-45 rounded-full shadow-md opacity-20 shadow-red-200' />
             </div>
     </section>
     <div className='py-10 tracking-widest text-center lg:flex lg:justify-between lg:items-center lg:text-left'>
