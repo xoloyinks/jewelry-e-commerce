@@ -60,11 +60,11 @@ const Category_item = () => {
 const Item = ({Image, title, subtitle, button_caption, id, key}) => {
     return(
         <>
-            <section id={id}  className= {`${id} mx-auto max-[420px]:h-[60vh] h-[55vh] w-[91%] py-5 my-8 relative lg:w-[30%] lg:h-[80vh]`}  style={{ backgroundImage: `url(${Image})`}}>
+            <section id={id}  className= {`${id} mx-auto max-[400px]:h-[60vh] h-[55vh] w-[91%] py-5 my-8 relative lg:w-[30%] lg:h-[80vh]`}  style={{ backgroundImage: `url(${Image})`}}>
                 <div id={id} className=' w-full absolute px-3 tracking-[.25rem] bottom-0 py-5 '>
-                    <div className='py-2 max-[420px]:text-[12px] text-sm font-bold lg:font-light lg:text-xs'>{subtitle.toUpperCase()}</div>
-                    <div className='py-2 max-[420px]:text-xl text-3xl lg:text-2xl'>{title.toUpperCase()}</div>
-                    <button className='px-8 py-5 max-[420px]:py-3 mt-2 max-[420px]:text-[12px] text-sm tracking-widest text-white bg-red-300 lg:text-xs lg:px-5 lg:py-3'>{button_caption.toUpperCase()}</button>
+                    <div className='py-2 max-[400px]:text-[12px] text-sm font-bold lg:font-light lg:text-xs'>{subtitle.toUpperCase()}</div>
+                    <div className='py-2 max-[400px]:text-xl text-3xl lg:text-2xl'>{title.toUpperCase()}</div>
+                    <button className='px-8 py-5 max-[400px]:py-3 mt-2 max-[400px]:text-[12px] text-sm tracking-widest text-white bg-red-300 lg:text-xs lg:px-5 lg:py-3'>{button_caption.toUpperCase()}</button>
                 </div>
             </section>
         </>

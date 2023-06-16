@@ -116,15 +116,15 @@ export default function Menu() {
                 
             <div className='nav_slide_child relative h-[80%] px-4 w-full overflow-y-scroll h-screen text-gray-100 tracking-[.17rem]
              lg: lg:w-full'> 
-                <div className='text-[13px] max-[420px]:text-[12px]  py-5 lg:text-[10px] lg:py-5'>
-                    <a href="#" className='py-5 '>NEW COLLECTION - LES FEMMES</a>
+                <div className='text-[13px] max-[400px]:text-[12px]  py-5 lg:text-[10px] lg:py-5'>
+                    <a href="d#" className='py-5 '>NEW COLLECTION - LES FEMMES</a>
                 </div>
                 <hr className='w-full border-[1px] border-neutral-400 opacity-50'/>
                 {
                     ring.map((data, a) => {
                         return(
                             // NAV MENU CONTAINER FOR RINGS
-                            <div key={uuid()} className='accordion text-[13px] max-[420px]:text-[12px] py-2 lg:text-[10px]'>
+                            <div key={uuid()} className='accordion text-[13px] max-[400px]:text-[12px] py-2 lg:text-[10px]'>
                                 <a  onClick={() => showRing(a)} href="#" className='flex items-center justify-between w-full py-2 lg:items-center lg:py-2'>
                                     <span>
                                         {data.title.toUpperCase()}
@@ -170,7 +170,7 @@ export default function Menu() {
                     wedding_earrings.map((data, i) => {
                         return(
                             <>
-                                <div key={uuid()} className='py-2 text-[13px] max-[420px]:text-[12px] lg:text-[10px] lg:py-2'>
+                                <div key={uuid()} className='py-2 text-[13px] max-[400px]:text-[12px] lg:text-[10px] lg:py-2'>
                                     <a href="#" onClick={() => showAccessories(i)} className='flex items-center justify-between py-2 lg:py-2'>
                                         <span>{data.title.toUpperCase()}</span>
                                         <span className='text-xl lg:text-sm'>{selectedAccessories === i ? '-' : '+'}</span>
@@ -201,7 +201,7 @@ export default function Menu() {
                         return(
                             <>
                                 <div key={uuid()} className='py-4 lg:py-3'>
-                                    <a href="#" className='text-[13px] max-[420px]:text-[12px] lg:text-[10px]'>
+                                    <a href="#" className='text-[13px] max-[400px]:text-[12px] lg:text-[10px]'>
                                         {data.toUpperCase()}
                                     </a>
                                 </div>

@@ -49,10 +49,10 @@ export default function Review() {
   return (
     <>
         <section className='relative bg-red-300 overflow-hidden w-screen h-[80vh] py-16 flex flex-col justify-center items-center lg:py-24 lg:h-[100vh]' >
-            <div id={data[content].id} className='w-[80%] max-[420px]:text-[12px] text-sm text-white text-center tracking-widest leading-[30px] lg:w-[40%] lg:text-lg lg:leading-[40px]'>
+            <div id={data[content].id} className='w-[80%] max-[400px]:text-[12px] text-sm text-white text-center tracking-widest leading-[30px] lg:w-[40%] lg:text-lg lg:leading-[40px]'>
                 {data[content].text}
             </div>
-            <div className='z-50 mt-16 absolute max-[420px]:bottom-[50px] bottom-[100px] lg:bottom-[50px]'>
+            <div className='z-50 mt-16 absolute max-[400px]:bottom-[50px] bottom-[100px] lg:bottom-[50px]'>
                 {data.map((datum, i) => {return(
                     <button key={i} onClick={() => check(i)} className='text-2xl'>{i === content ? <RxDotFilled color='white'/> : <RxDot color='gray' className='opacity-40'/> } </button>
                 )}
@@ -64,10 +64,10 @@ export default function Review() {
     </section>
     <div className='py-10 tracking-widest text-center lg:flex lg:justify-between lg:items-center lg:text-left'>
         <div className='lg:px-24 lg:w-[60%]'>
-            <h1 className='text-2xl max-[420px]:text-xl font-light '>
+            <h1 className='text-2xl max-[400px]:text-xl font-light '>
                 FLEXIBLE PAYMENT
             </h1>
-            <p className='mt-8 max-[420px]:mt-5 max-[420px]:text-[10px] text-[11px] tracking-widest leading-[20px]  px-2 lg:px-0  lg:text-md'>
+            <p className='mt-8 max-[400px]:mt-5 max-[400px]:text-[10px] text-[11px] tracking-widest leading-[20px]  px-2 lg:px-0  lg:text-md'>
             Fine jewelry made from solid gold, sliver and precious stones is an investment. 
             We partnered with Klarna to provide you with flexible payment options to suit your finances. 
             </p>

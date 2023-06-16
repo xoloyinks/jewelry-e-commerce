@@ -123,11 +123,11 @@ const Cover = () => {
             <section  className='banner w-screen h-full overflow-hidden lg:h-[95vh] lg:overflow-hidden'>
               <div id={banner[bannerIndex].face + banner[bannerIndex].id} className={`exibit relative bg-black w-full lg:h-full`} style={{ backgroundImage: `url(${banner[bannerIndex].img})`, backgroundSize:'cover', backgroundRepeat:'no-repeat', height:`${getHeight}` }}>
                 <div className='w-full h-full __banner'></div>
-                <div id={banner[bannerIndex].face} className='caption absolute w-full max-[420px]:bottom-[90px] bottom-[120px] text-white p-5 lg:px-20 lg:bottom-[80px]'>
-                  <div className='font-thin tracking-widest text-gray-200 max-[420px]:text-sm  text-md lg:text-sm'>
+                <div id={banner[bannerIndex].face} className='caption absolute w-full max-[400px]:bottom-[90px] bottom-[120px] text-white p-5 lg:px-20 lg:bottom-[80px]'>
+                  <div className='font-thin tracking-widest text-gray-200 max-[400px]:text-sm  text-md lg:text-sm'>
                     {banner[bannerIndex].subtitle.toUpperCase() || banner[secControl].subtitle.toUpperCase()}
                   </div>
-                  <div className=' text-2xl max-[420px]:text-xl tracking-widest font-thin my-3 lg:my-6 md:text-xl lg:tracking-[.25rem]'>{banner[bannerIndex].title.toUpperCase() || banner[secControl].title.toUpperCase()}</div>
+                  <div className=' text-2xl max-[400px]:text-xl tracking-widest font-thin my-3 lg:my-6 md:text-xl lg:tracking-[.25rem]'>{banner[bannerIndex].title.toUpperCase() || banner[secControl].title.toUpperCase()}</div>
                   <button className='px-10 py-4 text-sm max-[380px]:text-[12px] tracking-widest bg-red-300 lg:text-xs'>{banner[bannerIndex].buttonCaption.toUpperCase() || banner[secControl].buttonCaption.toUpperCase()}</button>
                   
                 </div>

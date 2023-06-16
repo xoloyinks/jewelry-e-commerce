@@ -100,7 +100,7 @@ const Each_item = ({image, title, price, data}) => {
         <>
             <div className='overflow-y-hidden flex w-[95%] pop_item snap-always snap-center '>
                 <div className='h-full'>
-                    <img src={image} id={data.id} alt="Rings" className='h-[400px] max-[420px]:h-[300px] lg:h-[fit-content]' />
+                    <img src={image} id={data.id} alt="Rings" className='h-[400px] max-[400px]:h-[300px] lg:h-[fit-content]' />
                     <div className='flex justify-between py-3'>
                         <span className='w-10/12 text-[10px]'>{title.toUpperCase()}</span>
                         <button className=' px-4 text-[20px]' onClick={() => addItem(data)}>{check ? <AiFillHeart color='gold' /> :<FaRegHeart />}</button>
@@ -123,7 +123,7 @@ export default function New() {
                 <span className='text-[9px] text-right w-[78%] border-b-[1px] border-black lg:w-[90%] '><button>See more</button></span>
             </div>
             <div id='carousel_control' className='scroll-smooth w-[full] px-2 overflow-x-scroll snap-x snap-mandatory py-5'>
-                <div className='flex flex-nowrap max-[420px]:w-[600px] w-[800px] justify-between lg:w-full'>
+                <div className='flex flex-nowrap max-[400px]:w-[600px] w-[800px] justify-between lg:w-full'>
                     <New_items />
                 </div>
             </div>

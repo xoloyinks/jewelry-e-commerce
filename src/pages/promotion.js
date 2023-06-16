@@ -12,7 +12,7 @@ export default function Promotion() {
                  lg:flex lg:flex-col lg:justify-center lg:items-left lg:px-20
                  '>
                     
-                    <h1 className='text-[14px] max-[420px]:text-[12px] text-white w-[80%] lg:w-[42%] lg:text-xl lg:tracking-widest lg:justify-left'>
+                    <h1 className='text-[14px] max-[400px]:text-[12px] text-white w-[80%] lg:w-[42%] lg:text-xl lg:tracking-widest lg:justify-left'>
                         EARRING IS NOT JUST AN ACCESSORY.
                         IT'S A REFLECTION OF A WOMAN'S 
                         PERSONALITY AND STYLE. 
@@ -22,7 +22,7 @@ export default function Promotion() {
                         bracelets and stunning rings, our jewelry pieces are 
                         designed to make you shine.
                     </h5>
-                    <div className='absolute bottom-[30px] max-[420px]:text-[12px] text-[14px] text-gray-200' >
+                    <div className='absolute bottom-[30px] max-[400px]:text-[12px] text-[14px] text-gray-200' >
                         CHECK OUT FOR OUR BEST EARRINGS 
                         <button className='px-3 py-3 mx-3 border-2 border-gray-200 rounded-full'>
                             <FaGreaterThan className='text-gray-200' />
@@ -30,7 +30,7 @@ export default function Promotion() {
                     </div>
                 </div>
             </div>
-            <div className='px-5 py-8 max-[420px]:py-5 text-sm max-[380px]:text-[12px] lg:hidden'>
+            <div className='px-5 py-8 max-[400px]:py-5 text-sm max-[4000px]:text-[12px] lg:hidden'>
                 From elegant necklaces and statement earrings to delicate
                 bracelets and stunning rings, our jewelry pieces are 
                 designed to make you shine.
