@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useState } from 'react'
+import uuid from 'react-uuid'
 import { useRef } from 'react'
 import { UseContext, Check } from './page'
 import ring from "./images/IMG_7162_1400x.jpg"
@@ -95,14 +96,15 @@ const data = [
     }
 ]
 
+console.log(uuid());
 const Pop_item = () => {
-    return data.map((datum,cart, key) =>  <Each_item key={key} carted={cart} image={datum.img} caption={datum.title} amount={datum.price} id={datum.id} data={datum}  />)
+    return data.map((datum,cart,key) =>  <Each_item key={key} carted={cart} image={datum.img} caption={datum.title} amount={datum.price} id={datum.id} data={datum} />)
 }
 
 const Feed_back_success = () => {
     return(
         <>
-            <section id='feed_back_success' className='fixed flex px-8 py-2 bg-white rounded-xl tracking-wide -translate-x-[500px] shadow-sm shadow-slate-500 text-[13px] items-center  left-5 bottom-[20px] h-fit-content w-fit-content'>
+            <section id='feed_back_success' className='fixed flex px-8 py-2 bg-white rounded-xl tracking-wide -translate-x-[500px] shadow-sm shadow-slate-500 text-[13px] items-center  left-5 max-[640px]:top-[50px] lg:bottom-[20px] h-fit-content w-fit-content'>
                 Added to Cart! <AiOutlineCheckCircle className='ml-2 text-2xl' />
             </section>
         </>
@@ -112,7 +114,7 @@ const Feed_back_success = () => {
 const Feed_back_remove = () => {
     return(
         <>
-            <section id='feed_back_remove' className='fixed flex px-8 py-2 bg-white rounded-xl tracking-wide -translate-x-[500px] shadow-sm shadow-slate-500 text-[13px] items-center  left-5 bottom-[20px] h-fit-content w-fit-content'>
+            <section id='feed_back_remove' className='fixed flex px-8 py-2 bg-white rounded-xl tracking-wide -translate-x-[500px] shadow-sm shadow-slate-500 text-[13px] items-center  left-5 max-[640px]:top-[50px] h-fit-content w-fit-content lg:bottom-[20px]'>
                 Removed from Cart! <FaRegTimesCircle className='ml-2 text-2xl' />
             </section>
         </>

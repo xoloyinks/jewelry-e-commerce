@@ -1,8 +1,9 @@
 import React from 'react'
+import uuid from 'react-uuid'
 import {createContext, useContext, useState } from 'react'
-import {AiFillHeart} from 'react-icons/ai'
+import {AiFillHeart, AiOutlineCheckCircle} from 'react-icons/ai'
 import { UseContext, Check } from './page'
-import { FaRegHeart } from 'react-icons/fa'
+import { FaRegHeart, FaRegTimesCircle  } from 'react-icons/fa'
 import glass from './images/pexels-luana-freitas-153788721.jpg'
 import necklace from './images/pexels-ashithoshw-u-14134220.jpg'
 import pair from './images/pexels-dima-valkov-3266700.jpg'
@@ -51,15 +52,46 @@ const New_items = () => {
     return data.map((datum, key) => <Each_item key={key} image={datum.img} title={datum.title} price={datum.price} data={datum} /> )
 }
 
+const Feed_back_success = () => {
+    return(
+        <>
+            <section id='feed_back_success' className='fixed flex px-8 py-2 bg-white rounded-xl tracking-wide -translate-x-[500px] shadow-sm shadow-slate-500 text-[13px] items-center  left-5 bottom-[20px] h-fit-content w-fit-content'>
+                Added to Cart! <AiOutlineCheckCircle className='ml-2 text-2xl' />
+            </section>
+        </>
+    )
+}
+
+const Feed_back_remove = () => {
+    return(
+        <>
+            <section id='feed_back_remove' className='fixed flex px-8 py-2 bg-white rounded-xl tracking-wide -translate-x-[500px] shadow-sm shadow-slate-500 text-[13px] items-center  left-5 bottom-[20px] h-fit-content w-fit-content'>
+                Removed from Cart! <FaRegTimesCircle className='ml-2 text-2xl' />
+            </section>
+        </>
+    )
+}
+
 const Each_item = ({image, title, price, data}) => {
     const [check, setCheck] = useState(false);
     const [cart, setCart]= useContext(UseContext);
     const addItem = (data) => {
         if(cart.includes(data)){
+            const feed_back_remove = document.getElementById('feed_back_remove');
+            feed_back_remove.style.transform = 'translateX(0px)';
+
+            setTimeout(()=> {
+                feed_back_remove.style.transform = 'translateX(-500px)';
+            }, 3000);
             setCart(cart.filter((item) => item.id !== data.id));
             setCheck(!check)
             return;
         }else{
+            const feed_back_success = document.getElementById('feed_back_success');
+            feed_back_success.style.transform = 'translateX(0px)';
+            setTimeout(()=> {
+                feed_back_success.style.transform = 'translateX(-500px)';
+            }, 3000);
             setCart([...cart,data]);
             setCheck(true)
         }
@@ -68,9 +100,9 @@ const Each_item = ({image, title, price, data}) => {
         <>
             <div className='overflow-y-hidden flex w-[95%] pop_item snap-always snap-center '>
                 <div className='h-full'>
-                    <img src={image} id={data.id} alt="Rings" className='h-[400px] lg:h-[fit-content]' />
+                    <img src={image} id={data.id} alt="Rings" className='h-[400px] max-[420px]:h-[300px] lg:h-[fit-content]' />
                     <div className='flex justify-between py-3'>
-                        <span className='w-10/12 text-sm'>{title.toUpperCase()}</span>
+                        <span className='w-10/12 text-[10px]'>{title.toUpperCase()}</span>
                         <button className=' px-4 text-[20px]' onClick={() => addItem(data)}>{check ? <AiFillHeart color='gold' /> :<FaRegHeart />}</button>
                     </div>
                     <div className='text-yellow-600 py'>
@@ -91,11 +123,13 @@ export default function New() {
                 <span className='text-[9px] text-right w-[78%] border-b-[1px] border-black lg:w-[90%] '><button>See more</button></span>
             </div>
             <div id='carousel_control' className='scroll-smooth w-[full] px-2 overflow-x-scroll snap-x snap-mandatory py-5'>
-                <div className='flex flex-nowrap w-[800px] justify-between lg:w-full'>
+                <div className='flex flex-nowrap max-[420px]:w-[600px] w-[800px] justify-between lg:w-full'>
                     <New_items />
                 </div>
             </div>
         </section>
+        <Feed_back_success />
+        <Feed_back_remove/>
     </>
   )
 }

@@ -461,7 +461,7 @@ input:focus{
 }
 #cart_container{
     z-index: 99991;
-    background-color: rgba(0, 0, 50, 0.4);
+    /* background-color: rgba(0, 0, 50, 0.4); */
 }
 
 #item_num{

@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import uuid from 'react-uuid';
 import { FaFacebookF, FaPinterest, FaTimes } from 'react-icons/fa';
 import {FiInstagram} from 'react-icons/fi'
 const ring = [
@@ -109,22 +110,22 @@ export default function Menu() {
         {/* MOBILE NAV SLIDE OUT */}
         <section id='navMenuContainer' className='nav_slide -translate-x-[500px] flex flex-col justify-between bg-neutral-500 overflow-y-scroll fixed h-[100vh] w-[fit-content] lg:-translate-x-[1300px] lg:w-[30%] '>
                 
-                    <a onClick={hideMenu} className='py-5 px-3 '>
+                    <a onClick={hideMenu} className='px-3 py-5 '>
                         <FaTimes className='text-2xl text-neutral-400'/>
                     </a>
                 
             <div className='nav_slide_child relative h-[80%] px-4 w-full overflow-y-scroll h-screen text-gray-100 tracking-[.17rem]
              lg: lg:w-full'> 
-                <div className='text-[13px]  py-5 lg:text-[10px] lg:py-5'>
-                    <a href="#" className=' py-5 '>NEW COLLECTION - LES FEMMES</a>
+                <div className='text-[13px] max-[420px]:text-[12px]  py-5 lg:text-[10px] lg:py-5'>
+                    <a href="#" className='py-5 '>NEW COLLECTION - LES FEMMES</a>
                 </div>
                 <hr className='w-full border-[1px] border-neutral-400 opacity-50'/>
                 {
                     ring.map((data, a) => {
                         return(
                             // NAV MENU CONTAINER FOR RINGS
-                            <div className='accordion text-[13px] py-2 lg:text-[10px]'>
-                                <a key={a} onClick={() => showRing(a)} href="#" className='flex justify-between py-2 w-full lg:items-center lg:py-2'>
+                            <div key={uuid()} className='accordion text-[13px] max-[420px]:text-[12px] py-2 lg:text-[10px]'>
+                                <a  onClick={() => showRing(a)} href="#" className='flex items-center justify-between w-full py-2 lg:items-center lg:py-2'>
                                     <span>
                                         {data.title.toUpperCase()}
                                     </span>
@@ -138,7 +139,7 @@ export default function Menu() {
                                         {data.content_1.map((datum,i) => {
                                             return(
                                                 <>
-                                                    <a href="#" key={i}  onClick={() => showSub(i)}  className='flex justify-between py-3 w-full text-gray-300 opacity-80 lg:items-center lg:py-2'>
+                                                    <a href="#" key={uuid()}  onClick={() => showSub(i)}  className='flex items-center justify-between w-full py-3 text-gray-300 opacity-80 lg:items-center lg:py-2'>
                                                         <span>
                                                             {datum.title.toUpperCase()}
                                                         </span>
@@ -150,7 +151,7 @@ export default function Menu() {
                                                     <div className={`${selected === i ? 'last_accordion show' : 'last_accordion'} px-5 border-l-2 border-gray-400 text-gray-300 tracking-[.02rem] opacity-80`}>
                                                         {datum.content.map((list,x) => {
                                                             return(
-                                                                <p className='py-2 ' key={x}><a key={x} href="#" className=''>{list}</a></p>
+                                                                <p className='py-2 ' key={uuid()}><a href="#" className=''>{list}</a></p>
                                                             )
                                                         })}
                                                     </div>
@@ -169,8 +170,8 @@ export default function Menu() {
                     wedding_earrings.map((data, i) => {
                         return(
                             <>
-                                <div className='py-2 text-[13px] lg:text-[10px] lg:py-2'>
-                                    <a href="#" onClick={() => showAccessories(i)} className='py-2 flex justify-between lg:items-center lg:py-2'>
+                                <div key={uuid()} className='py-2 text-[13px] max-[420px]:text-[12px] lg:text-[10px] lg:py-2'>
+                                    <a href="#" onClick={() => showAccessories(i)} className='flex items-center justify-between py-2 lg:py-2'>
                                         <span>{data.title.toUpperCase()}</span>
                                         <span className='text-xl lg:text-sm'>{selectedAccessories === i ? '-' : '+'}</span>
                                     </a>
@@ -178,8 +179,8 @@ export default function Menu() {
                                         {data.content.map((datum, x) => {
                                             return(
                                                 <>
-                                                    <p>
-                                                        <a href="#" className=' py-3 w-full text-gray-300 opacity-80 flex'>
+                                                    <p key={uuid()}>
+                                                        <a href="#" className='flex w-full py-3 text-gray-300 opacity-80'>
                                                             <span>{datum}</span>
                                                             <span> </span>
                                                         </a>
@@ -199,8 +200,8 @@ export default function Menu() {
                     singles.map((data, s) => {
                         return(
                             <>
-                                <div className='py-4  lg:py-3'>
-                                    <a href="#" key={s} className='text-[13px] lg:text-[10px]'>
+                                <div key={uuid()} className='py-4 lg:py-3'>
+                                    <a href="#" className='text-[13px] max-[420px]:text-[12px] lg:text-[10px]'>
                                         {data.toUpperCase()}
                                     </a>
                                 </div>

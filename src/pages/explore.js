@@ -122,7 +122,7 @@ export default function Explore() {
                 <Large_item prevButton={prevButton} item={item} />
             </div>
             <div className='flex justify-center px-8 lg:hidden'>
-                <button className='bg-red-300 px-8 py-5 text-white tracking-[.25rem] text-sm w-full'>VIEW PRODUCTS</button>
+                <button className='bg-red-300 px-8 py-5 text-white tracking-[.25rem] max-[380px]:text-[12px] max-[380px]:py-3 text-sm w-full'>VIEW PRODUCTS</button>
             </div>
         </section>
     </>

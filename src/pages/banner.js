@@ -123,12 +123,12 @@ const Cover = () => {
             <section  className='banner w-screen h-full overflow-hidden lg:h-[95vh] lg:overflow-hidden'>
               <div id={banner[bannerIndex].face + banner[bannerIndex].id} className={`exibit relative bg-black w-full lg:h-full`} style={{ backgroundImage: `url(${banner[bannerIndex].img})`, backgroundSize:'cover', backgroundRepeat:'no-repeat', height:`${getHeight}` }}>
                 <div className='w-full h-full __banner'></div>
-                <div id={banner[bannerIndex].face} className='caption absolute w-full bottom-[120px] text-white p-5 lg:px-20 lg:bottom-[80px]'>
-                  <div className='font-thin tracking-widest text-gray-200 text-md lg:text-sm'>
+                <div id={banner[bannerIndex].face} className='caption absolute w-full max-[420px]:bottom-[90px] bottom-[120px] text-white p-5 lg:px-20 lg:bottom-[80px]'>
+                  <div className='font-thin tracking-widest text-gray-200 max-[420px]:text-sm  text-md lg:text-sm'>
                     {banner[bannerIndex].subtitle.toUpperCase() || banner[secControl].subtitle.toUpperCase()}
                   </div>
-                  <div className=' text-2xl tracking-widest font-thin my-3 lg:my-6 md:text-xl lg:tracking-[.25rem]'>{banner[bannerIndex].title.toUpperCase() || banner[secControl].title.toUpperCase()}</div>
-                  <button className='px-10 py-4 text-sm tracking-widest bg-red-300 lg:text-xs'>{banner[bannerIndex].buttonCaption.toUpperCase() || banner[secControl].buttonCaption.toUpperCase()}</button>
+                  <div className=' text-2xl max-[420px]:text-xl tracking-widest font-thin my-3 lg:my-6 md:text-xl lg:tracking-[.25rem]'>{banner[bannerIndex].title.toUpperCase() || banner[secControl].title.toUpperCase()}</div>
+                  <button className='px-10 py-4 text-sm max-[380px]:text-[12px] tracking-widest bg-red-300 lg:text-xs'>{banner[bannerIndex].buttonCaption.toUpperCase() || banner[secControl].buttonCaption.toUpperCase()}</button>
                   
                 </div>
                 
@@ -161,7 +161,7 @@ export default function Banner() {
         </section>
         <div className='direction absolute flex justify-center bottom-[0px] h-[5vh] bg-white  text-center  w-full text-white px-10 font-bold lg:bottom-[0px]'>
                 <a href='#about' className='px-3 py-3 w-[fit-content] absolute bottom-[12px] bg-slate-100 shadow-sm shadow-slate-500 rounded-full mx-3 h-[fit-content] lg:bottom-[20px]'>
-                    <RxCaretDown className='text-4xl text-slate-500 lg:text-2xl' />
+                    <RxCaretDown className='text-4xl max-[380px]:text-2xl text-slate-500 lg:text-2xl' />
                 </a>
               </div>
     </>
