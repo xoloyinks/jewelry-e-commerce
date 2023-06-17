@@ -4,7 +4,7 @@ import { FaGreaterThan } from 'react-icons/fa'
 export default function Promotion() {
   return (
     <>
-        <section className=' h-[50vh] w-screen lg:h-screen'>
+        <section className=' h-[50vh] w-screen xl:h-screen'>
             <div className='promotion relative w-full h-[80%] lg:h-full'>
             <marquee behavior="" direction="left" scrolldelay="1s" className="absolute top-0 px-5 py-[5px] text-black bg-white mt-2 z-50 text-[9px] lg:text-[10px] tracking-widest lg:mt-5 lg:py-2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. A asperiores deleniti nulla. Saepe similique
              deleniti hic optio voluptate vitae deserunt quisquam a. Recusandae pariatur qui sit dicta consequuntur labore non?</marquee>
@@ -12,7 +12,7 @@ export default function Promotion() {
                  lg:flex lg:flex-col lg:justify-center lg:items-left lg:px-20
                  '>
                     
-                    <h1 className='text-[14px] max-[400px]:text-[12px] text-white w-[80%] lg:w-[42%] lg:text-xl lg:tracking-widest lg:justify-left'>
+                    <h1 className='text-[14px] max-[400px]:text-[12px] text-white w-[80%] lg:w-[50%] xl:w-[42%] lg:text-xl lg:tracking-widest lg:justify-left'>
                         EARRING IS NOT JUST AN ACCESSORY.
                         IT'S A REFLECTION OF A WOMAN'S 
                         PERSONALITY AND STYLE. 
@@ -30,7 +30,7 @@ export default function Promotion() {
                     </div>
                 </div>
             </div>
-            <div className='px-5 py-8 max-[400px]:py-5 text-sm max-[4000px]:text-[12px] lg:hidden'>
+            <div className='px-5 py-8 max-[400px]:py-5 text-sm max-[400px]:text-[12px] lg:hidden'>
                 From elegant necklaces and statement earrings to delicate
                 bracelets and stunning rings, our jewelry pieces are 
                 designed to make you shine.

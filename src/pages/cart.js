@@ -55,7 +55,7 @@ export default function Cart() {
   return (
     <>
         <section id='cart_container' className=' w-[100%] translate-x-[1500px] fixed overflow-x-hidden overflow-y-scroll h-[100vh]  top-0 right-0 lg:translate-x-[1500px]'>
-           <div className='cart-box w-[80%] px-5 pt-5 pb-16 h-screen overflow-y-scroll bg-white absolute right-0 lg:w-[30%]'>
+           <div className='cart-box w-[80%] px-5 pt-5 pb-16 h-screen overflow-y-scroll bg-white absolute right-0 lg:w-[40%] xl:w-[30%]'>
                 <div className='fixed top-0 w-full py-3 bg-white'>
                     <div onClick={hideCart} className='py-5 ' >
                         <FaTimes className='text-2xl text-neutral-400'/>

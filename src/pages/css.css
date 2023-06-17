@@ -488,18 +488,34 @@ input:focus{
     transform: translateY(400px);
 }
 
-@media screen and (min-width:1024px) {
+@media screen and (min-width:1284px) {
     .cat_one{
         background-size: 100% 100%;
         transform: translateX(-300px);
     }
     .cat_two{
         background-size: 100% 100%;
+        /* margin-top: 6px; */
         transform: translateX(300px);
     }
     .cat_three{
         background-size: 100% 100%;
         transform: translateY(300px);
+    }
+}
+@media screen and (min-width:1024px) {
+    .cat_one{
+        background-size: 100% 100%;
+        transform: translateX(-600px);
+    }
+    .cat_two{
+        background-size: 100% 100%;
+        /* margin-top: 3px; */
+        transform: translateX(1000px);
+    }
+    .cat_three{
+        background-size: 100% 100%;
+        transform: translateY(600px);
     }
 }
 

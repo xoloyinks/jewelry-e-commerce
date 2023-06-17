@@ -120,10 +120,10 @@ const Cover = () => {
   }, 10000);
     return(
         <>
-            <section  className='banner w-screen h-full overflow-hidden lg:h-[95vh] lg:overflow-hidden'>
+            <section  className='banner w-screen h-full overflow-hidden lg:h-[97vh] xl:h-[95vh] lg:overflow-hidden'>
               <div id={banner[bannerIndex].face + banner[bannerIndex].id} className={`exibit relative bg-black w-full lg:h-full`} style={{ backgroundImage: `url(${banner[bannerIndex].img})`, backgroundSize:'cover', backgroundRepeat:'no-repeat', height:`${getHeight}` }}>
                 <div className='w-full h-full __banner'></div>
-                <div id={banner[bannerIndex].face} className='caption absolute w-full max-[400px]:bottom-[90px] bottom-[120px] text-white p-5 lg:px-20 lg:bottom-[80px]'>
+                <div id={banner[bannerIndex].face} className='caption absolute w-full max-[400px]:bottom-[90px] bottom-[120px] text-white p-5 lg:px-20 lg:bottom-[100px] xl:bottom-[80px]'>
                   <div className='font-thin tracking-widest text-gray-200 max-[400px]:text-sm  text-md lg:text-sm'>
                     {banner[bannerIndex].subtitle.toUpperCase() || banner[secControl].subtitle.toUpperCase()}
                   </div>
@@ -133,7 +133,7 @@ const Cover = () => {
                 </div>
                 
               </div>
-              <ul className='absolute bottom-[50px] right-0 px-3 flex mt-5 text-xl lg:bottom-[40px] lg:px-[70px] '>
+              <ul className='absolute bottom-[50px] right-0 px-3 flex mt-5 text-xl lg:bottom-[60px] xl:bottom-[50px] lg:px-[70px] '>
                 {banner.map((datum,index) => <li key={index}><button  key={index} ref={addMean} onClick={() => refClick(index)} className='carousel_button'>{assureChange ? <RxDot /> : <RxDotFilled/>}</button></li>)}
               </ul>
             </section>
@@ -159,11 +159,11 @@ export default function Banner() {
 
               </div>
         </section>
-        <div className='direction absolute flex justify-center bottom-[0px] h-[5vh] bg-white  text-center  w-full text-white px-10 font-bold lg:bottom-[0px]'>
-                <a href='#about' className='px-3 py-3 w-[fit-content] absolute bottom-[12px] bg-slate-100 shadow-sm shadow-slate-500 rounded-full mx-3 h-[fit-content] lg:bottom-[20px]'>
-                    <RxCaretDown className='text-4xl max-[380px]:text-2xl text-slate-500 lg:text-2xl' />
-                </a>
-              </div>
+        <div className='direction absolute flex justify-center bottom-[0px] h-[5vh] bg-white  text-center  w-full text-white px-10 font-bold xl:h-[5vh] lg:h-[3vh] lg:bottom-[0px]'>
+            <a href='#about' className='px-3 py-3 w-[fit-content] absolute bottom-[12px] bg-slate-100 shadow-sm shadow-slate-500 rounded-full mx-3 h-[fit-content]  xl:bottom-[20px]'>
+                <RxCaretDown className='text-4xl max-[400px]:text-2xl text-slate-500 lg:text-2xl' />
+            </a>
+        </div>
     </>
   )
 }
