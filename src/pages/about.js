@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import golden from "./images/pexels-fox-998521.jpg"
 import diamond from "./images/dia2_d0d0f2ca-e2ea-4344-b409-ab3f2c925a6e_700x.jpg"
-// import vid from './videos/pexels-anastasia-shuraeva-4739599-4096x2160-24fps.mp4'
+import vid from './videos/Pexels-Anastasia-Shuraeva-47395199-4096X2160-24Fps_preview.mp4'
 
 
 
@@ -45,11 +45,11 @@ export default function About() {
             </div>
             
         </section>
-        {/* <div className='vid'>
+        <div className='vid'>
             <video autoPlay={true} loop muted >
                 <source src={vid} type='video/mp4' />
             </video>
-        </div> */}
+        </div>
     </>
   )
 }
