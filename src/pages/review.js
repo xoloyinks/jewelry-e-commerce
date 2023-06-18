@@ -63,7 +63,7 @@ export default function Review() {
             </div>
     </section>
     <div className='py-10 tracking-widest text-center lg:flex lg:justify-between lg:items-center lg:text-left'>
-        <div className='xl:px-24 lg:px-12 lg:w-[60%]'>
+        <div className='min-[750px]:w-[50%] min-[750px]:text-xl min-[750px]:mx-auto xl:px-24 lg:px-12 lg:w-[60%]'>
             <h1 className='text-2xl max-[400px]:text-xl font-light '>
                 FLEXIBLE PAYMENT
             </h1>

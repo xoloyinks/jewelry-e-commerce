@@ -96,7 +96,6 @@ const data = [
     }
 ]
 
-console.log(uuid());
 const Pop_item = () => {
     return data.map((datum,cart,key) =>  <Each_item key={key} carted={cart} image={datum.img} caption={datum.title} amount={datum.price} id={datum.id} data={datum} />)
 }
@@ -164,10 +163,10 @@ const Each_item = ({image ,caption,amount,id,data}) => {
     }
     return(
         <>
-            <div id={id} className='pop_item flex w-[90vw] h-[fit-content] snap-always snap-center min-[800px]:w-[500px] lg:w-[700px]'>
+            <div id={id} className='pop_item  flex w-[90vw] h-[fit-content] snap-always snap-center  lg:w-[700px]'>
                 <div className='h-full '>
-                    <img src={image} alt="Rings" className='w-[100%] h-[75%]' />
-                    <div className='py-3 flex w-[70vw] justify-between lg:w-[300px]'>
+                    <img src={image} alt="Rings" className='w-[100%] h-[75%] min-[750px]:w-[300px] min-[750px]:h-[400px]' />
+                    <div className='py-3 flex w-[70vw] justify-between min-[750px]:w-[300px] lg:w-[300px]' >
                         <span className='w-10/12 text-[10px] lg:w-[200px]'>{caption.toUpperCase()}</span>
                         <button id='cart_button' onClick={() => addItem(data)} className=' px-4 text-[20px]'>{check ? <AiFillHeart color='gold' /> :<FaRegHeart />}</button>
                     </div>
@@ -196,8 +195,8 @@ export default function Popular() {
                 <button  className='absolute hidden lg:block  top-[50%] right-[50px] bg-white p-2 rounded-full shadow-lg shadow-slate-300 text-4xl text-slate-300'><RxCaretRight /></button>
             </div>   
             
-            <div className='scroll-smooth w-[full] px-2  py-2 lg:flex lg:justify-center'>
-                <div id='carousel_control' className='flex flex-nowrap  max-[1020px]:w-[] lg:h-[fit-content] justify-between lg:w-[75vw] overflow-x-scroll snap-x snap-mandatory '>
+            <div className='scroll-smooth w-[full] px-2  py-2 min-[750px]:py-3 lg:flex lg:justify-center'>
+                <div id='carousel_control' className='flex flex-nowrap  min-[800px]:w-[800px] lg:h-[fit-content] justify-between lg:w-[75vw] overflow-x-scroll snap-x snap-mandatory '>
                         <Pop_item  />
                 </div>
             </div>

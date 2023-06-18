@@ -13,7 +13,7 @@ export default function Footer() {
     <>
                 <div className='subscribe flex justify-center items-center h-[fit-content] py-10 mt-8 text-white px-5 lg:py-36'> 
                     <form method='post' action='#' className='h-[fit-content] relative text-center tracking-[.25rem] lg:w-[65%]'>
-                        <div className='text-white text-sm opacity-70'>STAY TUNED</div>
+                        <div className='text-sm text-white opacity-70'>STAY TUNED</div>
                         <div className='text-xl leading-[35px] my-3 text-white opacity-80 lg:text-2xl lg:my-6'>SIGN UP FOR OUR NEWSLETTER</div>
                         <div className='lg:flex lg:w-[80%] lg:justify-around lg:mx-auto lg:items-center'>
                             <input type="email" placeholder='Enter your email' className='subscribe_input p-3 w-full transparent border-[2px] border-white tracking-wider lg:w-[70%] lg:py-2 lg:px-3 lg:h-[fit-content]' />
@@ -25,14 +25,14 @@ export default function Footer() {
             <br />
             <div className='text-[14px] tracking-wide h-[fit-content] flex justify-between lg:w-[50%]'>
                 <div className='flex flex-col h-full w-[40%]'>
-                    <span className='py-3 font-bold opacity-50 text-yellow-600'>NAVIGATION</span>
+                    <span className='py-3 font-bold text-yellow-600 opacity-50'>NAVIGATION</span>
                     <a href='#' className='py-3 w-[fit-content]'>ABOUT US</a>
                     <a href='#' className='py-3 w-[fit-content]'>MOST POPULAR</a>
                     <a href='#' className='py-3 w-[fit-content]'>SPECIAL</a>
                     <a href='#' className='py-3 w-[fit-content]'>NEW IN</a>
                 </div>
                 <div className='flex flex-col h-full w-[40%]'>
-                    <span className='py-3 font-bold opacity-50 text-yellow-600'>INFO</span>
+                    <span className='py-3 font-bold text-yellow-600 opacity-50'>INFO</span>
                     <a href='#' className='py-3 w-[fit-content]'>CONTACTS</a>
                     <a href='#' className='py-3 w-[fit-content]'>SHIPPING AND PAYMENT</a>
                     <a href='#' className='py-3 w-[fit-content]'>FAQ</a>
@@ -40,7 +40,7 @@ export default function Footer() {
             </div>
             <br />
             <div className='lg:flex lg:justify-between lg:items-center'>
-                <div className='flex justify-between text-gray-500 text-2xl px-10 py-5 border-b-2 border-gray-500 lg:w-[13%] lg:text-lg lg:border-b-0 lg:h-[fit-content] lg:px-0'>
+                <div className='flex justify-between text-gray-500 text-2xl px-10 py-5 border-b-2 border-gray-500 min-[750px]:w-[30%] lg:w-[13%] lg:text-lg lg:border-b-0 lg:h-[fit-content] lg:px-0'>
                     <a href='#'><TfiTwitter /></a>
                     <a href='#'><IoLogoInstagram /></a>
                     <a href='#'><SlSocialFacebook /></a>
@@ -56,7 +56,7 @@ export default function Footer() {
             </div>
             {/* <br /> */}
             <hr />
-            <div className='flex justify-between items-center px-2 py-2 lg:px-0'>
+            <div className='flex items-center justify-between px-2 py-2 lg:px-0'>
                 <span className='text-[13px] lg:text-[10px] '> &copy; 2023 XOLO. All rights reserved</span>
                 <span className='text-[10px]'>Privacy Statement</span>
             </div>

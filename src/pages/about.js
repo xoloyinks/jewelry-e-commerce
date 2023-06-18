@@ -21,8 +21,8 @@ export default function About() {
   return ( 
     <>
         <br id='about'/><br/><br/><br/>
-        <section className='overflow-hidden min-[800px]:flex min-[800px]:flex-col min-[800px]:items-center lg:flex-row  lg:flex lg:justify-around'>
-            <div className='about_text -translate-x-[1500px] text-center min-[800px]:text-center min-[800px]:w-[60%] lg:w-[60%] xl:w-[40%] lg:text-left'>
+        <section className='overflow-hidden min-[750px]:flex min-[750px]:flex-col min-[750px]:items-center lg:flex-row  lg:flex lg:justify-around'>
+            <div className='about_text -translate-x-[1500px] text-center min-[750px]:text-center min-[750px]:w-[60%] lg:w-[60%] xl:w-[40%] lg:text-left'>
                 <h1 className='text-sm max-[400px]:text-[12px] tracking-widest min-[800px]:px-6 lg:px-6'>
                     FROM STOCKHOLM, SWEDEN
                 </h1>

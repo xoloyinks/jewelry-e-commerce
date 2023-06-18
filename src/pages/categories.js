@@ -61,7 +61,7 @@ const Category_item = () => {
 const Item = ({Image, title, subtitle, button_caption, id, key}) => {
     return(
         <>
-            <section id={id}  className= {`${id}  max-[400px]:h-[60vh] mx-auto h-[55vh] w-[91%] py-5 my-8 relative xl:w-[30%] lg:h-[40vh] lg:w-[45%] xl:h-[80vh]`}   style={{ backgroundImage: `url(${Image})`}}>
+            <section id={id}  className= {`${id}  max-[400px]:h-[60vh] mx-auto h-[55vh] w-[91%] py-5 my-8 relative xl:w-[30%] min-[750px]:h-[40vh] min-[750px]:w-[45%] xl:h-[80vh]`}   style={{ backgroundImage: `url(${Image})`}}>
                 <div id={id} className=' w-full absolute px-3 tracking-[.25rem] bottom-0 py-5 '>
                     <div className='py-2 max-[400px]:text-[12px] text-sm font-bold lg:font-light lg:text-xs'>{subtitle.toUpperCase()}</div>
                     <div className='py-2 max-[400px]:text-xl text-3xl lg:text-2xl'>{title.toUpperCase()}</div>
@@ -80,7 +80,7 @@ export default function Categories() {
         <h1 className='py-2 mt-10 text-[14px] tracking-widest lg:text-xl text-center  font-bold'>
             CATEGORIES
         </h1>
-        <section className='overflow-hidden px-3 h-[fit-content] lg:flex lg:flex-wrap lg:justify-between lg:px-5'>
+        <section className='overflow-hidden px-3 h-[fit-content] min-[750px]:flex min-[750px]:flex-wrap min-[750px]:justify-between min-[750px]:px-5'>
             <Category_item />
            
         </section>
