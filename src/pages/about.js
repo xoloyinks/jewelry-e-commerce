@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import golden from "./images/pexels-fox-998521.jpg"
 import diamond from "./images/dia2_d0d0f2ca-e2ea-4344-b409-ab3f2c925a6e_700x.jpg"
-import vid from './videos/Pexels-Anastasia-Shuraeva-47395199-4096X2160-24Fps_preview.mp4'
 
 
 
