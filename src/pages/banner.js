@@ -6,7 +6,7 @@ import image_4 from './images/pexels-the-glorious-studio-1202605w5.jpg'
 import image_5 from './images/cleo-lilac_kopiera_160d0x.jpeg'
 import { useState , useRef } from 'react'
 import { FaGreaterThan } from 'react-icons/fa'
-import vid from './images/exibit.mp4'
+// import vid from './images/exibit.mp4'
 import ban from './images/pexels-bestbe-models-2301285.jpg'
 import { RxCaretDown, RxDot, RxDotFilled } from 'react-icons/rx'
 import { BsFillFileEarmarkRichtextFill } from 'react-icons/bs'
@@ -159,7 +159,7 @@ export default function Banner() {
 
               </div>
         </section>
-        <div className='direction absolute flex justify-center bottom-[0px] h-[5vh] bg-white  text-center  w-full text-white px-10 font-bold xl:h-[5vh] lg:h-[3vh] lg:bottom-[0px]'>
+        <div className='direction absolute flex justify-center bottom-[0px] h-[5vh] bg-white  text-center  w-full text-white px-10 font-bold xl:h-[5vh] max-[830px]:h-[3vh] lg:h-[3vh] lg:bottom-[0px]'>
             <a href='#about' className='px-3 py-3 w-[fit-content] absolute bottom-[12px] bg-slate-100 shadow-sm shadow-slate-500 rounded-full mx-3 h-[fit-content]  xl:bottom-[20px]'>
                 <RxCaretDown className='text-4xl max-[400px]:text-2xl text-slate-500 lg:text-2xl' />
             </a>

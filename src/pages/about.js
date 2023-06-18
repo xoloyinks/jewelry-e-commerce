@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import golden from "./images/pexels-fox-998521.jpg"
 import diamond from "./images/dia2_d0d0f2ca-e2ea-4344-b409-ab3f2c925a6e_700x.jpg"
-import vid from './videos/Pexels-Anastasia-Shuraeva-47395199-4096X2160-24Fps.mp4'
+import vid from './videos/Pexels-Anastasia-Shuraeva-47395199-4096X2160-24Fps_preview.mp4'
 
 
 
@@ -22,12 +22,12 @@ export default function About() {
   return ( 
     <>
         <br id='about'/><br/><br/><br/>
-        <section className='overflow-hidden lg:flex lg:justify-around'>
-            <div className='about_text -translate-x-[1500px] text-center lg:w-[60%] xl:w-[40%] lg:text-left'>
-                <h1 className='text-sm max-[400px]:text-[12px] tracking-widest lg:px-6'>
+        <section className='overflow-hidden min-[800px]:flex min-[800px]:flex-col min-[800px]:items-center lg:flex-row  lg:flex lg:justify-around'>
+            <div className='about_text -translate-x-[1500px] text-center min-[800px]:text-center min-[800px]:w-[60%] lg:w-[60%] xl:w-[40%] lg:text-left'>
+                <h1 className='text-sm max-[400px]:text-[12px] tracking-widest min-[800px]:px-6 lg:px-6'>
                     FROM STOCKHOLM, SWEDEN
                 </h1>
-                <h1 className='tracking-[.25rem] font-[5px] leading-[40px] max-[400px]:text-xl text-2xl w-7/12 mx-auto mt-6 lg:mx-0 lg:px-6 lg:w-full lg:font-thin'>
+                <h1 className='tracking-[.25rem] font-[5px] leading-[40px] max-[400px]:text-xl text-2xl w-7/12 mx-auto min-[800px]:px-6  mt-6 lg:mx-0 lg:px-6 lg:w-full lg:font-thin'>
                     HANDMADE IMPERFECTION
                 </h1>
                 <h5 className='px-6 py-5 text-sm max-[400px]:text-[12px] leading-[28px] tracking-xl lg:font-thin'>
@@ -40,16 +40,16 @@ export default function About() {
                 that will stand the test of time and never go out of style.
                 </h5>
             </div>
-            <div className='about_img flex translate-x-[1500px] justify-center xl:w-[50%] lg:w-[40%] lg:flex lg:items-center'>
+            <div className='about_img flex translate-x-[1500px] justify-center min-[800px]:w-[50%] xl:w-[50%] lg:w-[40%] lg:flex lg:items-center'>
                 <img src={diamond} alt="" />
             </div>
             
         </section>
-        <div className='vid'>
+        {/* <div className='vid'>
             <video autoPlay={true} loop muted >
                 <source src={vid} type='video/mp4' />
             </video>
-        </div>
+        </div> */}
     </>
   )
 }

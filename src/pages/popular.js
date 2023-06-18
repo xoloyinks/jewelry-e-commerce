@@ -164,7 +164,7 @@ const Each_item = ({image ,caption,amount,id,data}) => {
     }
     return(
         <>
-            <div id={id} className='pop_item flex w-[90vw] h-[fit-content] snap-always snap-center lg:w-[700px]'>
+            <div id={id} className='pop_item flex w-[90vw] h-[fit-content] snap-always snap-center min-[800px]:w-[500px] lg:w-[700px]'>
                 <div className='h-full '>
                     <img src={image} alt="Rings" className='w-[100%] h-[75%]' />
                     <div className='py-3 flex w-[70vw] justify-between lg:w-[300px]'>
