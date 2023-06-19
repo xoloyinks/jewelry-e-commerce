@@ -1551,10 +1551,6 @@ video {
     display: flex;
   }
 
-  .max-\[1020px\]\:w-\[\] {
-    width: ;
-  }
-
   .max-\[1020px\]\:items-center {
     align-items: center;
   }
@@ -1650,12 +1646,6 @@ video {
   }
 }
 
-@media (min-width: 700px) {
-  .min-\[700px\]\:block {
-    display: block;
-  }
-}
-
 @media (min-width: 750px) {
   .min-\[750px\]\:mx-auto {
     margin-left: auto;
@@ -1666,40 +1656,36 @@ video {
     display: flex;
   }
 
-  .min-\[750px\]\:h-\[40vh\] {
-    height: 40vh;
-  }
-
   .min-\[750px\]\:h-\[400px\] {
     height: 400px;
   }
 
-  .min-\[750px\]\:w-\[50\%\] {
-    width: 50%;
-  }
-
-  .min-\[750px\]\:w-\[15\%\] {
-    width: 15%;
+  .min-\[750px\]\:h-\[40vh\] {
+    height: 40vh;
   }
 
   .min-\[750px\]\:w-\[30\%\] {
     width: 30%;
   }
 
-  .min-\[750px\]\:w-\[45\%\] {
-    width: 45%;
+  .min-\[750px\]\:w-\[300px\] {
+    width: 300px;
   }
 
   .min-\[750px\]\:w-\[40\%\] {
     width: 40%;
   }
 
-  .min-\[750px\]\:w-\[60\%\] {
-    width: 60%;
+  .min-\[750px\]\:w-\[45\%\] {
+    width: 45%;
   }
 
-  .min-\[750px\]\:w-\[300px\] {
-    width: 300px;
+  .min-\[750px\]\:w-\[50\%\] {
+    width: 50%;
+  }
+
+  .min-\[750px\]\:w-\[60\%\] {
+    width: 60%;
   }
 
   .min-\[750px\]\:flex-col {
@@ -1758,76 +1744,28 @@ video {
     display: none;
   }
 
-  .min-\[800px\]\:h-\[500px\] {
-    height: 500px;
-  }
-
-  .min-\[800px\]\:h-\[400px\] {
-    height: 400px;
-  }
-
-  .min-\[800px\]\:h-\[40vh\] {
-    height: 40vh;
+  .min-\[800px\]\:w-\[37\%\] {
+    width: 37%;
   }
 
   .min-\[800px\]\:w-\[50\%\] {
     width: 50%;
   }
 
-  .min-\[800px\]\:w-\[500px\] {
-    width: 500px;
-  }
-
-  .min-\[800px\]\:w-\[60\%\] {
-    width: 60%;
-  }
-
   .min-\[800px\]\:w-\[800px\] {
     width: 800px;
-  }
-
-  .min-\[800px\]\:w-\[100px\] {
-    width: 100px;
-  }
-
-  .min-\[800px\]\:w-\[300px\] {
-    width: 300px;
-  }
-
-  .min-\[800px\]\:w-\[40\%\] {
-    width: 40%;
-  }
-
-  .min-\[800px\]\:w-\[37\%\] {
-    width: 37%;
-  }
-
-  .min-\[800px\]\:w-\[45\%\] {
-    width: 45%;
   }
 
   .min-\[800px\]\:flex-col {
     flex-direction: column;
   }
 
-  .min-\[800px\]\:flex-wrap {
-    flex-wrap: wrap;
-  }
-
   .min-\[800px\]\:items-start {
     align-items: flex-start;
   }
 
-  .min-\[800px\]\:items-center {
-    align-items: center;
-  }
-
   .min-\[800px\]\:justify-center {
     justify-content: center;
-  }
-
-  .min-\[800px\]\:justify-between {
-    justify-content: space-between;
   }
 
   .min-\[800px\]\:self-center {
@@ -1847,42 +1785,19 @@ video {
     padding: 1.25rem;
   }
 
-  .min-\[800px\]\:px-6 {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
-
-  .min-\[800px\]\:py-3 {
-    padding-top: 0.75rem;
-    padding-bottom: 0.75rem;
-  }
-
   .min-\[800px\]\:px-20 {
     padding-left: 5rem;
     padding-right: 5rem;
   }
 
-  .min-\[800px\]\:px-5 {
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
-  }
-
-  .min-\[800px\]\:text-center {
-    text-align: center;
+  .min-\[800px\]\:px-6 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
 
   .min-\[800px\]\:text-xs {
     font-size: 0.75rem;
     line-height: 1rem;
-  }
-
-  .min-\[800px\]\:text-xl {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
-  }
-
-  .min-\[800px\]\:tracking-widest {
-    letter-spacing: 0.1em;
   }
 
   .min-\[800px\]\:text-white {
@@ -1947,10 +1862,6 @@ video {
     height: 3vh;
   }
 
-  .lg\:h-\[40vh\] {
-    height: 40vh;
-  }
-
   .lg\:h-\[60vh\] {
     height: 60vh;
   }
@@ -1997,16 +1908,8 @@ video {
     width: 32%;
   }
 
-  .lg\:w-\[37\%\] {
-    width: 37%;
-  }
-
   .lg\:w-\[40\%\] {
     width: 40%;
-  }
-
-  .lg\:w-\[45\%\] {
-    width: 45%;
   }
 
   .lg\:w-\[50\%\] {
@@ -2061,14 +1964,6 @@ video {
     flex-direction: row;
   }
 
-  .lg\:flex-col {
-    flex-direction: column;
-  }
-
-  .lg\:flex-wrap {
-    flex-wrap: wrap;
-  }
-
   .lg\:items-center {
     align-items: center;
   }
@@ -2085,29 +1980,12 @@ video {
     justify-content: space-around;
   }
 
-  .lg\:self-center {
-    align-self: center;
-  }
-
   .lg\:overflow-hidden {
     overflow: hidden;
   }
 
   .lg\:border-b-0 {
     border-bottom-width: 0px;
-  }
-
-  .lg\:border-l-\[2px\] {
-    border-left-width: 2px;
-  }
-
-  .lg\:border-gray-300 {
-    --tw-border-opacity: 1;
-    border-color: rgb(209 213 219 / var(--tw-border-opacity));
-  }
-
-  .lg\:p-5 {
-    padding: 1.25rem;
   }
 
   .lg\:px-0 {
@@ -2248,11 +2126,6 @@ video {
 
   .lg\:tracking-widest {
     letter-spacing: 0.1em;
-  }
-
-  .lg\:text-white {
-    --tw-text-opacity: 1;
-    color: rgb(255 255 255 / var(--tw-text-opacity));
   }
 }
 
