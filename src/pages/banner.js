@@ -5,11 +5,7 @@ import image_3 from './images/Studiosession-563_cbe73ea4-2486-4587-8b6f-86a04e31
 import image_4 from './images/pexels-the-glorious-studio-1202605w5.jpg'
 import image_5 from './images/cleo-lilac_kopiera_160d0x.jpeg'
 import { useState , useRef } from 'react'
-import { FaGreaterThan } from 'react-icons/fa'
-// import vid from './images/exibit.mp4'
-import ban from './images/pexels-bestbe-models-2301285.jpg'
 import { RxCaretDown, RxDot, RxDotFilled } from 'react-icons/rx'
-import { BsFillFileEarmarkRichtextFill } from 'react-icons/bs'
 import {GoPrimitiveDot} from 'react-icons/go'
 
 const banner = [
@@ -114,7 +110,6 @@ const Cover = () => {
   }
     
   setTimeout(() => {
-      // console.log(bannerIndex);
       setBannerIndex(bannerIndex + 1);
       
   }, 10000);

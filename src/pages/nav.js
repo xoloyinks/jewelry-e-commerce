@@ -15,20 +15,12 @@ const nav_change = () => {
         document.getElementById('nav').style.cssText = 'background-color:white; transition:0.5s; top:0; border-bottom:solid #d1d5db 1px;';
         document.querySelector('.info').style.cssText = 'display:none';
         document.getElementById('logo').style.cssText = 'color:#d1d5db; font-weight:bold; font-size:large;';
-        // document.getElementById('bar-1').style.cssText = "border:solid 2px black; background-color:black;";
-        // document.getElementById('bar-2').style.cssText = "border:solid 2px black; background-color:black;";
-        // document.getElementById('bar-3').style.cssText = "border:solid 2px black; background-color:black;";
         document.querySelector('.cart').style.cssText = "color:black;";
-        // document.querySelector('.__marked').style.cssText = "color:black; background-color:white;";
     }else{
         document.getElementById('nav').style.cssText = 'background-color: transperent; transition:0.5s; border:none;';
         document.querySelector('.info').style.cssText = 'display:block';
         document.getElementById('logo').style.cssText = 'color:black; transition:0.5s; ';
-        // document.getElementById('bar-1').style.cssText = "border:solid 2px black; transition:0.5s; background-color:black;";
-        // document.getElementById('bar-2').style.cssText = "border:solid 2px black; transition:0.5s; background-color:black;";
-        // document.getElementById('bar-3').style.cssText = "border:solid 2px black; transition:0.5s; background-color:black;";
         document.querySelector('.cart').style.cssText = "color:black; transition:0.5s;";
-        // document.querySelector('.__marked').style.cssText = "color:white;";
         return;
     }
 
@@ -69,7 +61,7 @@ export default function Nav() {
     <>
         <Menu />
         {/* NAV BAR */}
-        <section id='nav' className='nav fixed w-screen'>
+        <section id='nav' className='fixed w-screen nav'>
             <div className='info p-2 bg-slate-100 text-slate-400 text-[12px] tracking-widest text-center'>
               HANDMADE IN SWEDEN | WORLDWIDE SHIP
             </div>
@@ -79,12 +71,12 @@ export default function Nav() {
                         <VscMenu className='text-xl font-bold lg:text-2xl'/>
                     </div>
                 </button>
-                <div id='logo' className='text-md text-black font-extrabold lg:text-2xl'> 
+                <div id='logo' className='font-extrabold text-black text-md lg:text-2xl'> 
                     XOLO YINKS
                 </div>
                 <div className='w-[50px] flex justify-between text-xl'>
                     <button className='relative p-2' onClick={showCart}>
-                        <BsFillBagHeartFill className='cart font-bold text-black' />
+                        <BsFillBagHeartFill className='font-bold text-black cart' />
                         <span className='__marked flex items-center text-white absolute h-[20px] px-[5px] text-[11px] rounded-full -top-[2px] -right-[0px] font-[10px]'>{cartLength > 0 ? <GoPrimitiveDot className='cart_indicatior text-red-700 text-[13px]'/> : ""}</span>
                     </button>
                 </div>

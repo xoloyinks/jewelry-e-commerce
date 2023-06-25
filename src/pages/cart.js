@@ -44,12 +44,10 @@ export default function Cart() {
     
     const removeItem = (id) => {
         setCart(cart.filter((item) => item.id !== id));
-        // setCheck(!check);
     }
     const emptyArray = () => {
         setCart(cart.length = []);
     }
-    // cart =  carted;
     
     
   return (

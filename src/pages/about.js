@@ -44,11 +44,7 @@ export default function About() {
             </div>
             
         </section>
-        {/* <div className='vid'>
-            <video autoPlay={true} loop muted >
-                <source src={vid} type='video/mp4' />
-            </video>
-        </div> */}
+        
     </>
   )
 }

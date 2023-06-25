@@ -2,7 +2,6 @@ import React from 'react'
 import cat_1 from './images/pexels-cottonbro-studio-94312876.jpg'
 import cat_2 from './images/pexels-julia-kuzenkov-11318560.jpg'
 import cat_3 from './images/pexels-uzziiii-33853715.jpg'
-import {GiBigDiamondRing } from 'react-icons/gi'
 const data = [
     {
         id: 'cat_one',
