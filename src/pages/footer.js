@@ -21,6 +21,7 @@ export default function Footer() {
                         </div>
                     </form>
                 </div>
+                
         <section className='py-10 p-5 h-[fit-content]'>
             <br />
             <div className='text-[14px] tracking-wide h-[fit-content] flex justify-between lg:w-[50%]'>

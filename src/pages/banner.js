@@ -151,10 +151,6 @@ export default function Banner() {
                    <GoPrimitiveDot className='mr-2 text-blue-500'/> Message us
                   </a>
               </div>
-              
-              <div>
-
-              </div>
         </section>
         <div className='direction absolute flex justify-center bottom-[0px] h-[5vh] bg-white  text-center  w-full text-white px-10 font-bold xl:h-[5vh] max-[830px]:h-[3vh] lg:h-[3vh] lg:bottom-[0px]'>
             <a href='#about' className='px-3 py-3 w-[fit-content] absolute bottom-[12px] bg-slate-100 shadow-sm shadow-slate-500 rounded-full mx-3 h-[fit-content]  xl:bottom-[20px]'>

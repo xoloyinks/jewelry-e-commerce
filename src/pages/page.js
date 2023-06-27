@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react'
 import Nav from './nav'
-import useScrollSnap from 'react-use-scroll-snap'
 import { useRef, useContext, createContext, useState } from 'react'
 import Banner from './banner'
 import Popular from './popular'
@@ -19,7 +18,6 @@ export default function Page() {
     const [check, setCheck] = useState(false);
 
 
-    // useScrollSnap({ref:scrollRef, duration:20, delay:20});
   return (
     <>
         <section ref={scrollRef}>

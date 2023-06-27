@@ -1,6 +1,4 @@
 import React, { createContext, useContext, useState } from 'react'
-import uuid from 'react-uuid'
-import { useRef } from 'react'
 import { UseContext, Check } from './page'
 import ring from "./images/IMG_7162_1400x.jpg"
 import bracelet from "./images/fleur-semi-old-cut-0.25_800x.jpg"
@@ -10,8 +8,6 @@ import earring from './images/fleur-semi-old-cut-0.25_800x.jpg'
 import { FaHeart, FaRegHeart, FaRegTimesCircle } from 'react-icons/fa'
 import {AiFillHeart, AiOutlineCheck, AiOutlineCheckCircle} from 'react-icons/ai'
 import {RxCaretLeft, RxCaretRight, RxDot} from 'react-icons/rx'
-import { useEffect } from 'react'
-import { GiConsoleController } from 'react-icons/gi'
 
 
 const data = [
@@ -166,7 +162,7 @@ const Each_item = ({image ,caption,amount,id,data}) => {
             <div id={id} className='pop_item  flex w-[90vw] h-[fit-content] snap-always snap-center  lg:w-[700px]'>
                 <div className='h-full '>
                     <img src={image} alt="Rings" className='w-[100%] h-[75%] min-[750px]:w-[300px] min-[750px]:h-[400px]' />
-                    <div className='py-3 flex w-[70vw] justify-between min-[750px]:w-[300px] lg:w-[300px]' >
+                    <div className='py-3 flex w-[70vw] justify-between min-[750pxn]:w-[300px] lg:w-[300px]' >
                         <span className='w-10/12 text-[10px] lg:w-[200px]'>{caption.toUpperCase()}</span>
                         <button id='cart_button' onClick={() => addItem(data)} className=' px-4 text-[20px]'>{check ? <AiFillHeart color='gold' /> :<FaRegHeart />}</button>
                     </div>
@@ -195,7 +191,7 @@ export default function Popular() {
                 <button  className='absolute hidden lg:block  top-[50%] right-[50px] bg-white p-2 rounded-full shadow-lg shadow-slate-300 text-4xl text-slate-300'><RxCaretRight /></button>
             </div>   
             
-            <div className='scroll-smooth w-[full] px-2  py-2 min-[750px]:py-3 lg:flex lg:justify-center'>
+            <div className='scroll-smooth w-[full] px-2  py-2 min-[750pxn]:py-3 lg:flex lg:justify-center'>
                 <div id='carousel_control' className='flex flex-nowrap  min-[800px]:w-[800px] lg:h-[fit-content] justify-between lg:w-[75vw] overflow-x-scroll snap-x snap-mandatory '>
                         <Pop_item  />
                 </div>

@@ -114,7 +114,7 @@ export default function Menu() {
                         <FaTimes className='text-2xl text-neutral-400'/>
                     </a>
                 
-            <div className='nav_slide_child relative h-[80%] px-4 w-full overflow-y-scroll h-screen text-gray-100 tracking-[.17rem]
+            <div className='nav_slide_child relative px-4 w-full overflow-y-scroll h-screen text-gray-100 tracking-[.17rem]
              lg: lg:w-full'> 
                 <div className='text-[13px] max-[400px]:text-[12px]  py-5 lg:text-[10px] lg:py-5'>
                     <a href="d#" className='py-5 '>NEW COLLECTION - LES FEMMES</a>
