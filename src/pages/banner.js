@@ -53,7 +53,13 @@ const banner = [
   
 ];
 
-const getHeight = window.innerHeight + 'px';
+// GETTING HEIGHT OF DEVICE
+var getHeight = window.innerHeight + 'px';
+
+const setBannerHeight = () => {
+  getHeight = window.innerHeight + 'px';
+}
+window.addEventListener('resize', setBannerHeight);
 
 const Cover = () => {
   const [bannerIndex, setBannerIndex] = useState(0);
