@@ -16,6 +16,7 @@ export default function Page() {
     const scrollRef = useRef(null);
     const [cart, setCart] = useState([]);
     const [check, setCheck] = useState(false);
+    const [quantity , setQuantity]= useState(1);
 
 
   return (
@@ -26,8 +27,10 @@ export default function Page() {
               <Nav />
               <Banner />
               <About className=""/>
+            <TotalPrice.Provider value={[quantity, setQuantity]}> 
               <Popular />
               <New />
+            </TotalPrice.Provider>
               <Promotion />
               <Categories />
               <Explore />
@@ -42,4 +45,5 @@ export default function Page() {
 }
 
 export const UseContext = React.createContext(null)
+export const TotalPrice = React.createContext(null)
 export const Check = React.createContext(null)

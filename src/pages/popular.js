@@ -15,80 +15,93 @@ const data = [
         img: earring,
         id: 'pop_one',
         title: 'Twirl pearl Earrings(Italian)',
-        price: '20,000'
+        price: 20000,
+        quantity: 1
     },
     {
         img: ring,
         id: 'pop_two',
         title: 'The tri Silver Golden Ring for men/women',
-        price: '90,000'
+        price: 90000,
+        quantity: 1
     },
     {
         img: earring,
         id: 'pop_three',
         title: 'Twirl pearl Earrings(Italian)',
-        price: '20,000'
+        price: 20000,
+        quantity: 1
     },
     {
         img: 
         earring,
         id: 'pop_four',
         title: 'Twirl pearl Earrings(Italian)',
-        price: '20,000'
+        price: 20000,
+        quantity: 1
     },
     {
         img: ring,
         id: 'pop_five',
         title: 'The tri Silver Golden Ring for men/women',
-        price: '90,000'
+        price: 90000,
+        quantity: 1
     },
     {
         img: earring,
         id: 'pop_six',
         title: 'Twirl pearl Earrings(Italian)',
-        price: '20,000'
+        price: 20000,
+        quantity: 1
     },
     {
         img: earring,
         id: 'pop_seven',
         title: 'Twirl pearl Earrings(Italian)',
-        price: '20,000'
+        price: 20000,
+        quantity: 1
     },
     {
         img: earring,
         id: 'pop_eight',
         title: 'Twirl pearl Earrings(Italian)',
-        price: '20,000'
+        price: 20000,
+        quantity: 1
     },
     {
         img: ring,
         id: 'pop_nine',
         title: 'The tri Silver Golden Ring for men/women',
-        price: '90,000'
+        price: 90000,
+        quantity: 1
     },
     {
         img: bracelet,
         id: 'pop_ten',
         title: 'The magnificent couple engagement ring',
-        price: '200,000'
+        price: 20000,
+        quantity: 1
     },
     {
         img: ring,
         id: 'pop_eleven',
         title: 'The tri Silver Golden Ring for men/women',
-        price: '90,000'
+        price: 90000,
+        quantity: 1
     },
     {
         img: chain,
         id: 'pop_twelve',
         title: 'The Paris vail choker eye contact lens',
-        price: '50,000'
+        price: 50000,
+        quantity: 1
     },
     {
         img: trad_anklets,
         id: "pop_thirteen",
         title: "Traditional ankle bracelets",
-        price: "10,000"
+        price: 10000,
+        quantity: 1
     }
 ]
 
@@ -120,6 +133,8 @@ const Feed_back_remove = () => {
 const Each_item = ({image ,caption,amount,id,data}) => {
     const [check, setCheck] = useState(false);
     const [cart, setCart] = useContext(UseContext);
+
+    // console.log(cart);
 
     // FUNCTION RUN FOR 'ADD TO CART' BUTTON
     const addItem = (data) => {     
@@ -167,7 +182,7 @@ const Each_item = ({image ,caption,amount,id,data}) => {
                         <button id='cart_button' onClick={() => addItem(data)} className=' px-4 text-[20px]'>{check ? <AiFillHeart color='gold' /> :<FaRegHeart />}</button>
                     </div>
                     <div className='text-yellow-600 py'>
-                        &#x20A6;{amount}
+                        &#x20A6;{amount.toLocaleString()}
                     </div>
                 </div>
             </div>

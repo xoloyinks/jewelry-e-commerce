@@ -13,19 +13,22 @@ const data = [
         img: necklace,
         id: 'new_two',
         title: 'Pearl earings with blue thread',
-        price: '5,000'
+        price: 5000,
+        quantity:1
     },
     {
         img: glass,
         id: 'new_one',
         title: 'Simple italian specs with sun protective lens',
-        price: '10,000'
+        price: 10000,
+        quantity:1
     },
     {
         img: pair,
         id: 'new_three',
         title: 'Fenti earings and necklace 2in1 master piece',
-        price: '40,000'
+        price: 40000,
+        quantity:1
     }
 ]
 
@@ -75,7 +78,20 @@ const Feed_back_remove = () => {
 const Each_item = ({image, title, price, data}) => {
     const [check, setCheck] = useState(false);
     const [cart, setCart]= useContext(UseContext);
+
+    // ADD ITEM TO CART
     const addItem = (data) => {
+        if(cart.length === 0){
+            // FEED BACK FOR SUCCESS
+            const feed_back_success = document.getElementById('feed_back_success');
+            feed_back_success.style.transform = 'translateX(0px)';
+            setTimeout(()=> {
+                feed_back_success.style.transform = 'translateX(-500px)';
+            }, 3000);
+            setCart([...cart,data]);
+            setCheck(true);
+            return;
+        }
         if(cart.includes(data)){
             const feed_back_remove = document.getElementById('feed_back_remove');
             feed_back_remove.style.transform = 'translateX(0px)';
@@ -106,7 +122,7 @@ const Each_item = ({image, title, price, data}) => {
                         <button className=' px-4 text-[20px]' onClick={() => addItem(data)}>{check ? <AiFillHeart color='gold' /> :<FaRegHeart />}</button>
                     </div>
                     <div className='text-yellow-600 py'>
-                        &#x20A6;{price}
+                        &#x20A6;{price.toLocaleString()}
                     </div>
                 </div>
             </div>

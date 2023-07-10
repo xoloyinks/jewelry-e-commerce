@@ -1,5 +1,5 @@
 import React, { createContext, useEffect, useState } from 'react'
-import { UseContext, Check } from './page';
+import { UseContext, Check, TotalPrice } from './page';
 import { FaTimes } from 'react-icons/fa';
 import { useContext } from 'react';
 import {BsFillBagHeartFill} from 'react-icons/bs'
@@ -12,23 +12,29 @@ const hideCart = () => {
     body.style.overflowY = '';
 }
 
-const Cart_item = ({image, title, price,id,datum, removeItem}) => {
+const Cart_item = ({image, title, price,id, quantity, removeItem}) => {
     const cart = useContext(UseContext);
-    const [quantity, setQuantity] = useState(1)
+    const [myQuantity, setQuantity] = useState(quantity);
+    const priceAndQuantity = myQuantity * price;
+    
+
     return(
         <>
             <section className='w-full py-2 flex h-[fit-content]'>
                 <div className={`cart_img w-[30%] flex items-center `}>
-                    <img src={image} alt='' className='h-[120px] w-[120px] rounded-lg' />
+                   <img src={image} alt='' className='h-[120px] w-[120px] rounded-lg' />
                 </div>
                 <div className='w-[70%] py-2 px-2 flex flex-col justify-between '>
                     <div className='py-2 text-sm'>{title}</div>
-                    <div className='font-extrabold'>&#x20A6;{price}</div>
+                    <div className='flex justify-between'>
+                        <div className='text-xs font-extrabold '>&#x20A6;{price.toLocaleString()}</div>
+                        <div className='text-xs font-light'>Sub Total:&#x20A6;{priceAndQuantity.toLocaleString()}</div>
+                    </div>
                     <div className='flex items-center justify-between w-full'>
                         <div className='flex items-center justify-between w-7/12 py-2'>
-                            <button onClick={() => quantity <= 1 ? quantity :setQuantity(parseInt(quantity) - 1)} className='py-0 px-2 rounded-full font-bold text-xl border-2 border-gray-100 text-gray-500 h-[fit-content]'>-</button>
-                            <input id='item_num' type="number" value={quantity} onChange={(e) => setQuantity(e.target.value)} className=' w-[30%] text-center text-sm font-bold' />
-                            <button onClick={() => setQuantity(parseInt(quantity) + 1)} className='px-2 py-0 text-xl font-bold text-gray-500 border-2 border-gray-100 rounded-full'>+</button>
+                            <button onClick={() => myQuantity <= 1 ? myQuantity :setQuantity(parseInt(myQuantity) - 1)} className='py-0 px-2 rounded-full font-bold text-xl border-2 border-gray-100 text-gray-500 h-[fit-content]'>-</button>
+                            <input id='item_num' type="number" value={myQuantity} onChange={(e) => setQuantity(e.target.value)} className=' w-[30%] text-center text-sm font-bold' />
+                            <button onClick={() => setQuantity(parseInt(myQuantity) + 1)} className='px-2 py-0 text-xl font-bold text-gray-500 border-2 border-gray-100 rounded-full'>+</button>
                         </div>
                         <button onClick={() => removeItem(id)} className='text-sm text-gray-400'>Remove</button>
                     </div>
@@ -38,10 +44,13 @@ const Cart_item = ({image, title, price,id,datum, removeItem}) => {
         </>
     )
 }
+
+
+
 export default function Cart() {
     const [cart, setCart] = useContext(UseContext);
     const [check, setCheck] = useContext(Check);
-    
+   
     const removeItem = (id) => {
         setCart(cart.filter((item) => item.id !== id));
     }
@@ -49,7 +58,7 @@ export default function Cart() {
         setCart(cart.length = []);
     }
     
-    
+   
   return (
     <>
         <section id='cart_container' className=' w-[100%] translate-x-[1500px] fixed overflow-x-hidden overflow-y-scroll h-[100vh]  top-0 right-0 lg:translate-x-[1500px]'>
@@ -58,14 +67,14 @@ export default function Cart() {
                     <div onClick={hideCart} className='py-5 ' >
                         <FaTimes className='text-2xl text-neutral-400'/>
                     </div>
-                    <div className='text-lg w-[70%] text-gray-400 tracking-wider flex justify-between items-center lg:text-sm'>
-                        <span>MY CART ({cart.length} items)</span> <BsFillBagHeartFill className='ml-2 font-bold cart' />
+                    <div className='text-lg w-[70%] text-gray-400 tracking-wider flex justify-betwdeen items-center lg:text-sm'>
+                        <span>MY CART ({cart.length} items)</span> 
                     </div>
                 </div>
                 
                 <div className='mt-24'>
                     {
-                       cart.length > 0 ? cart.map((data, i) => <Cart_item key={i} id={data.id} image={data.img} title={data.title} price={data.price} datum={data} removeItem={removeItem} />) : <span className='text-xl'>Cart is Empty!</span>
+                       cart.length > 0 ? cart.map((data, i) => <Cart_item  key={i} id={data.id} image={data.img} quantity={data.quantity} title={data.title} price={data.price} datum={data} removeItem={removeItem} />) : <span className='text-xl'>Cart is Empty!</span>
                     }
                 </div>
                 <div className='my-5'>
